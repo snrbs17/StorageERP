@@ -16,5 +16,10 @@ namespace TheStorageERP
         {
             InitializeComponent();
         }
+
+        private void treeMapControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
