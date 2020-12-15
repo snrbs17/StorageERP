@@ -98,6 +98,12 @@
     <Compile Include="Forms\StorageMap.Designer.cs">
       <DependentUpon>StorageMap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\StorageGanttChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StorageGanttChart.Designer.cs">
+      <DependentUpon>StorageGanttChart.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
     <EmbeddedResource Include="Forms\StorageMap.resx">
       <DependentUpon>StorageMap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StorageGanttChart.resx">
+      <DependentUpon>StorageGanttChart.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -132,5 +141,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="SvgFile\828px-Map_Seoul-teukbyeolsi.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
