@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace ERPDatabase
 {
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
-    [MetadataType(typeof(CustomerMeta))]
+    //[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+    //[MetadataType(typeof(CustomerMeta))]
     public partial class Customer
     {
     }
