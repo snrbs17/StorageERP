@@ -12,26 +12,19 @@ namespace ERPDatabase
     using System;
     using System.Collections.Generic;
     
-    public partial class Customer
+    public partial class StorageSize
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Customer()
+        public StorageSize()
         {
-            this.Purchases = new HashSet<Purchase>();
+            this.Fares = new HashSet<Fare>();
         }
     
-        public int CustomerId { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerPhone { get; set; }
-        public string CustomerEmail { get; set; }
-        public System.DateTime RegistrationDate { get; set; }
-        public string LoginId { get; set; }
-        public string Password { get; set; }
-        public string OtherDetails { get; set; }
-        public int CustomerTypeId { get; set; }
+        public int StorageSizeId { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
     
-        public virtual CustomerType CustomerType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Purchase> Purchases { get; set; }
+        public virtual ICollection<Fare> Fares { get; set; }
     }
 }

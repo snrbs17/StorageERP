@@ -22,12 +22,12 @@ namespace ERPDatabase
     
         public int StorageId { get; set; }
         public int FacilityId { get; set; }
-        public int StorageTypeId { get; set; }
-        public bool Activation { get; set; }
+        public bool Activated { get; set; }
+        public int FareId { get; set; }
     
         public virtual Facility Facility { get; set; }
+        public virtual Fare Fare { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PurchaseItem> PurchaseItems { get; set; }
-        public virtual StorageType StorageType { get; set; }
     }
 }

@@ -18,11 +18,9 @@ namespace ERPDatabase
         public System.DateTime InTime { get; set; }
         public System.DateTime OutTime { get; set; }
         public int StorageId { get; set; }
-        public int StorageTypeId { get; set; }
         public int PurchaseId { get; set; }
     
         public virtual Purchase Purchase { get; set; }
         public virtual Storage Storage { get; set; }
-        public virtual StorageType StorageType { get; set; }
     }
 }

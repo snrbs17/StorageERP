@@ -21,7 +21,7 @@ namespace ERPDatabase
         }
     
         public int EmployeeId { get; set; }
-        public string EmployeeDescription { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Facility> Facilities { get; set; }

@@ -21,7 +21,7 @@ namespace ERPDatabase
         }
     
         public int PurchaseId { get; set; }
-        public System.DateTime Date { get; set; }
+        public System.DateTime PurchaseTime { get; set; }
         public string OtherDetails { get; set; }
         public int CustomerId { get; set; }
         public int PurchaseAmount { get; set; }

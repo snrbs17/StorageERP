@@ -21,9 +21,9 @@ namespace ERPDatabase
         }
     
         public int RegionId { get; set; }
-        public string RegionDescription_City_ { get; set; }
-        public string RegionDescription_District_ { get; set; }
-        public string RegionDescription_Town_ { get; set; }
+        public string City { get; set; }
+        public string District { get; set; }
+        public string Town { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Facility> Facilities { get; set; }

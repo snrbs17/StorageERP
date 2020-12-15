@@ -13,44 +13,44 @@ using ERPDatabase;
 
 namespace ERPAPI.Controllers
 {
-    public class StorageTypesController : ApiController
+    public class StorageSizesController : ApiController
     {
         private StorageEntities db = new StorageEntities();
 
-        // GET: api/StorageTypes
-        public IQueryable<StorageType> GetStorageTypes()
+        // GET: api/StorageSizes
+        public IQueryable<StorageSize> GetStorageSizes()
         {
-            return db.StorageTypes;
+            return db.StorageSizes;
         }
 
-        // GET: api/StorageTypes/5
-        [ResponseType(typeof(StorageType))]
-        public async Task<IHttpActionResult> GetStorageType(int id)
+        // GET: api/StorageSizes/5
+        [ResponseType(typeof(StorageSize))]
+        public async Task<IHttpActionResult> GetStorageSize(int id)
         {
-            StorageType storageType = await db.StorageTypes.FindAsync(id);
-            if (storageType == null)
+            StorageSize storageSize = await db.StorageSizes.FindAsync(id);
+            if (storageSize == null)
             {
                 return NotFound();
             }
 
-            return Ok(storageType);
+            return Ok(storageSize);
         }
 
-        // PUT: api/StorageTypes/5
+        // PUT: api/StorageSizes/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutStorageType(int id, StorageType storageType)
+        public async Task<IHttpActionResult> PutStorageSize(int id, StorageSize storageSize)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != storageType.StorageTypeId)
+            if (id != storageSize.StorageSizeId)
             {
                 return BadRequest();
             }
 
-            db.Entry(storageType).State = EntityState.Modified;
+            db.Entry(storageSize).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace ERPAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StorageTypeExists(id))
+                if (!StorageSizeExists(id))
                 {
                     return NotFound();
                 }
@@ -71,16 +71,16 @@ namespace ERPAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/StorageTypes
-        [ResponseType(typeof(StorageType))]
-        public async Task<IHttpActionResult> PostStorageType(StorageType storageType)
+        // POST: api/StorageSizes
+        [ResponseType(typeof(StorageSize))]
+        public async Task<IHttpActionResult> PostStorageSize(StorageSize storageSize)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.StorageTypes.Add(storageType);
+            db.StorageSizes.Add(storageSize);
 
             try
             {
@@ -88,7 +88,7 @@ namespace ERPAPI.Controllers
             }
             catch (DbUpdateException)
             {
-                if (StorageTypeExists(storageType.StorageTypeId))
+                if (StorageSizeExists(storageSize.StorageSizeId))
                 {
                     return Conflict();
                 }
@@ -98,23 +98,23 @@ namespace ERPAPI.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = storageType.StorageTypeId }, storageType);
+            return CreatedAtRoute("DefaultApi", new { id = storageSize.StorageSizeId }, storageSize);
         }
 
-        // DELETE: api/StorageTypes/5
-        [ResponseType(typeof(StorageType))]
-        public async Task<IHttpActionResult> DeleteStorageType(int id)
+        // DELETE: api/StorageSizes/5
+        [ResponseType(typeof(StorageSize))]
+        public async Task<IHttpActionResult> DeleteStorageSize(int id)
         {
-            StorageType storageType = await db.StorageTypes.FindAsync(id);
-            if (storageType == null)
+            StorageSize storageSize = await db.StorageSizes.FindAsync(id);
+            if (storageSize == null)
             {
                 return NotFound();
             }
 
-            db.StorageTypes.Remove(storageType);
+            db.StorageSizes.Remove(storageSize);
             await db.SaveChangesAsync();
 
-            return Ok(storageType);
+            return Ok(storageSize);
         }
 
         protected override void Dispose(bool disposing)
@@ -126,9 +126,9 @@ namespace ERPAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool StorageTypeExists(int id)
+        private bool StorageSizeExists(int id)
         {
-            return db.StorageTypes.Count(e => e.StorageTypeId == id) > 0;
+            return db.StorageSizes.Count(e => e.StorageSizeId == id) > 0;
         }
     }
 }

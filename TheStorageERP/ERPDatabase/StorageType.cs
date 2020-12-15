@@ -17,17 +17,13 @@ namespace ERPDatabase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StorageType()
         {
-            this.PurchaseItems = new HashSet<PurchaseItem>();
-            this.Storages = new HashSet<Storage>();
+            this.Fares = new HashSet<Fare>();
         }
     
         public int StorageTypeId { get; set; }
-        public string StorageTypen { get; set; }
-        public Nullable<int> FarePerMinute { get; set; }
+        public string StorageTypeName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PurchaseItem> PurchaseItems { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Storage> Storages { get; set; }
+        public virtual ICollection<Fare> Fares { get; set; }
     }
 }

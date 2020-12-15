@@ -13,10 +13,10 @@ namespace ERPDatabase
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ERPEntities : DbContext
+    public partial class StorageEntities : DbContext
     {
-        public ERPEntities()
-            : base("name=ERPEntities")
+        public StorageEntities()
+            : base("name=StorageEntities")
         {
         }
     
@@ -25,17 +25,17 @@ namespace ERPDatabase
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AccountType> AccountTypes { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<CustomerType> CustomerTypes { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Facility> Facilities { get; set; }
+        public virtual DbSet<FakeAccountInfo> FakeAccountInfoes { get; set; }
+        public virtual DbSet<Fare> Fares { get; set; }
         public virtual DbSet<Purchase> Purchases { get; set; }
         public virtual DbSet<PurchaseItem> PurchaseItems { get; set; }
         public virtual DbSet<Region> Regions { get; set; }
         public virtual DbSet<Storage> Storages { get; set; }
+        public virtual DbSet<StorageSize> StorageSizes { get; set; }
         public virtual DbSet<StorageType> StorageTypes { get; set; }
-        public virtual DbSet<TransactionType> TransactionTypes { get; set; }
-        public virtual DbSet<FakeAccountInfo> FakeAccountInfoes { get; set; }
     }
 }

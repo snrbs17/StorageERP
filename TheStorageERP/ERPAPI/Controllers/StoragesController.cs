@@ -15,7 +15,7 @@ namespace ERPAPI.Controllers
 {
     public class StoragesController : ApiController
     {
-        private ERPEntities db = new ERPEntities();
+        private StorageEntities db = new StorageEntities();
 
         // GET: api/Storages
         public IQueryable<Storage> GetStorages()

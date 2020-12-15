@@ -13,44 +13,44 @@ using ERPDatabase;
 
 namespace ERPAPI.Controllers
 {
-    public class StorageTypesController : ApiController
+    public class FaresController : ApiController
     {
         private StorageEntities db = new StorageEntities();
 
-        // GET: api/StorageTypes
-        public IQueryable<StorageType> GetStorageTypes()
+        // GET: api/Fares
+        public IQueryable<Fare> GetFares()
         {
-            return db.StorageTypes;
+            return db.Fares;
         }
 
-        // GET: api/StorageTypes/5
-        [ResponseType(typeof(StorageType))]
-        public async Task<IHttpActionResult> GetStorageType(int id)
+        // GET: api/Fares/5
+        [ResponseType(typeof(Fare))]
+        public async Task<IHttpActionResult> GetFare(int id)
         {
-            StorageType storageType = await db.StorageTypes.FindAsync(id);
-            if (storageType == null)
+            Fare fare = await db.Fares.FindAsync(id);
+            if (fare == null)
             {
                 return NotFound();
             }
 
-            return Ok(storageType);
+            return Ok(fare);
         }
 
-        // PUT: api/StorageTypes/5
+        // PUT: api/Fares/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutStorageType(int id, StorageType storageType)
+        public async Task<IHttpActionResult> PutFare(int id, Fare fare)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != storageType.StorageTypeId)
+            if (id != fare.FareId)
             {
                 return BadRequest();
             }
 
-            db.Entry(storageType).State = EntityState.Modified;
+            db.Entry(fare).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace ERPAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StorageTypeExists(id))
+                if (!FareExists(id))
                 {
                     return NotFound();
                 }
@@ -71,16 +71,16 @@ namespace ERPAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/StorageTypes
-        [ResponseType(typeof(StorageType))]
-        public async Task<IHttpActionResult> PostStorageType(StorageType storageType)
+        // POST: api/Fares
+        [ResponseType(typeof(Fare))]
+        public async Task<IHttpActionResult> PostFare(Fare fare)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.StorageTypes.Add(storageType);
+            db.Fares.Add(fare);
 
             try
             {
@@ -88,7 +88,7 @@ namespace ERPAPI.Controllers
             }
             catch (DbUpdateException)
             {
-                if (StorageTypeExists(storageType.StorageTypeId))
+                if (FareExists(fare.FareId))
                 {
                     return Conflict();
                 }
@@ -98,23 +98,23 @@ namespace ERPAPI.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = storageType.StorageTypeId }, storageType);
+            return CreatedAtRoute("DefaultApi", new { id = fare.FareId }, fare);
         }
 
-        // DELETE: api/StorageTypes/5
-        [ResponseType(typeof(StorageType))]
-        public async Task<IHttpActionResult> DeleteStorageType(int id)
+        // DELETE: api/Fares/5
+        [ResponseType(typeof(Fare))]
+        public async Task<IHttpActionResult> DeleteFare(int id)
         {
-            StorageType storageType = await db.StorageTypes.FindAsync(id);
-            if (storageType == null)
+            Fare fare = await db.Fares.FindAsync(id);
+            if (fare == null)
             {
                 return NotFound();
             }
 
-            db.StorageTypes.Remove(storageType);
+            db.Fares.Remove(fare);
             await db.SaveChangesAsync();
 
-            return Ok(storageType);
+            return Ok(fare);
         }
 
         protected override void Dispose(bool disposing)
@@ -126,9 +126,9 @@ namespace ERPAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool StorageTypeExists(int id)
+        private bool FareExists(int id)
         {
-            return db.StorageTypes.Count(e => e.StorageTypeId == id) > 0;
+            return db.Fares.Count(e => e.FareId == id) > 0;
         }
     }
 }

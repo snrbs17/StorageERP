@@ -15,7 +15,7 @@ namespace ERPAPI.Controllers
 {
     public class EmployeesController : ApiController
     {
-        private ERPEntities db = new ERPEntities();
+        private StorageEntities db = new StorageEntities();
 
         // GET: api/Employees
         public IQueryable<Employee> GetEmployees()

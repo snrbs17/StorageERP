@@ -15,7 +15,7 @@ namespace ERPAPI.Controllers
 {
     public class PurchasesController : ApiController
     {
-        private ERPEntities db = new ERPEntities();
+        private StorageEntities db = new StorageEntities();
 
         // GET: api/Purchases
         public IQueryable<Purchase> GetPurchases()

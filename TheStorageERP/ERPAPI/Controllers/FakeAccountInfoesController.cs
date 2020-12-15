@@ -15,7 +15,7 @@ namespace ERPAPI.Controllers
 {
     public class FakeAccountInfoesController : ApiController
     {
-        private ERPEntities db = new ERPEntities();
+        private StorageEntities db = new StorageEntities();
 
         // GET: api/FakeAccountInfoes
         public IQueryable<FakeAccountInfo> GetFakeAccountInfoes()
@@ -25,7 +25,7 @@ namespace ERPAPI.Controllers
 
         // GET: api/FakeAccountInfoes/5
         [ResponseType(typeof(FakeAccountInfo))]
-        public async Task<IHttpActionResult> GetFakeAccountInfo(DateTime id)
+        public async Task<IHttpActionResult> GetFakeAccountInfo(int id)
         {
             FakeAccountInfo fakeAccountInfo = await db.FakeAccountInfoes.FindAsync(id);
             if (fakeAccountInfo == null)
@@ -38,14 +38,14 @@ namespace ERPAPI.Controllers
 
         // PUT: api/FakeAccountInfoes/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutFakeAccountInfo(DateTime id, FakeAccountInfo fakeAccountInfo)
+        public async Task<IHttpActionResult> PutFakeAccountInfo(int id, FakeAccountInfo fakeAccountInfo)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != fakeAccountInfo.Date)
+            if (id != fakeAccountInfo.InfoId)
             {
                 return BadRequest();
             }
@@ -81,29 +81,14 @@ namespace ERPAPI.Controllers
             }
 
             db.FakeAccountInfoes.Add(fakeAccountInfo);
+            await db.SaveChangesAsync();
 
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (FakeAccountInfoExists(fakeAccountInfo.Date))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtRoute("DefaultApi", new { id = fakeAccountInfo.Date }, fakeAccountInfo);
+            return CreatedAtRoute("DefaultApi", new { id = fakeAccountInfo.InfoId }, fakeAccountInfo);
         }
 
         // DELETE: api/FakeAccountInfoes/5
         [ResponseType(typeof(FakeAccountInfo))]
-        public async Task<IHttpActionResult> DeleteFakeAccountInfo(DateTime id)
+        public async Task<IHttpActionResult> DeleteFakeAccountInfo(int id)
         {
             FakeAccountInfo fakeAccountInfo = await db.FakeAccountInfoes.FindAsync(id);
             if (fakeAccountInfo == null)
@@ -126,9 +111,9 @@ namespace ERPAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool FakeAccountInfoExists(DateTime id)
+        private bool FakeAccountInfoExists(int id)
         {
-            return db.FakeAccountInfoes.Count(e => e.Date == id) > 0;
+            return db.FakeAccountInfoes.Count(e => e.InfoId == id) > 0;
         }
     }
 }

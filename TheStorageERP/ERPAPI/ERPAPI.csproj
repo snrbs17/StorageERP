@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{37A36F0E-032C-4F55-9F84-C8FCC2C9FF23}</ProjectGuid>
+    <ProjectGuid>{C8792DBD-014E-4BB0-9C20-3FDEBAED4146}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -166,11 +166,13 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\FacilitiesController.cs" />
     <Compile Include="Controllers\FakeAccountInfoesController.cs" />
+    <Compile Include="Controllers\FaresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PurchaseItemsController.cs" />
     <Compile Include="Controllers\PurchasesController.cs" />
     <Compile Include="Controllers\RegionsController.cs" />
     <Compile Include="Controllers\StoragesController.cs" />
+    <Compile Include="Controllers\StorageSizesController.cs" />
     <Compile Include="Controllers\StorageTypesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -263,7 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ERPDatabase\ERPDatabase.csproj">
-      <Project>{bfe8f5c8-0503-4305-8f93-047c7e63b7eb}</Project>
+      <Project>{793c0e31-a073-4161-8e75-154322f7d48e}</Project>
       <Name>ERPDatabase</Name>
     </ProjectReference>
   </ItemGroup>
@@ -283,7 +285,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>17827</DevelopmentServerPort>
+          <DevelopmentServerPort>1547</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:17827/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

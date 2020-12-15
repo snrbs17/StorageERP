@@ -15,7 +15,7 @@ namespace ERPAPI.Controllers
 {
     public class RegionsController : ApiController
     {
-        private ERPEntities db = new ERPEntities();
+        private StorageEntities db = new StorageEntities();
 
         // GET: api/Regions
         public IQueryable<Region> GetRegions()

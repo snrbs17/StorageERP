@@ -14,19 +14,20 @@ namespace ERPDatabase
     
     public partial class FakeAccountInfo
     {
+        public int InfoId { get; set; }
         public System.DateTime Date { get; set; }
         public int Sales { get; set; }
-        public int Other_Revenue { get; set; }
-        public int C_Sales_Returns { get; set; }
-        public int Gross_Profit { get; set; }
-        public int Salarie___Wages { get; set; }
+        public int OtherRevenues { get; set; }
+        public int SalesReturns { get; set; }
+        public int GrossProfit { get; set; }
+        public int Wages { get; set; }
         public int Depreciation { get; set; }
         public int Rent { get; set; }
-        public int Office_Supplies { get; set; }
+        public int OtherSupplies { get; set; }
         public int Utilities { get; set; }
         public int Insurance { get; set; }
         public int Maintenance { get; set; }
         public int Advertising { get; set; }
-        public int Other_Expense { get; set; }
+        public int OtherExpenses { get; set; }
     }
 }
