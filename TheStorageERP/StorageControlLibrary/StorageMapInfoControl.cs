@@ -10,11 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TheStorageERP
+namespace StorageControlLibrary
 {
-    public partial class UserControl1 : XtraUserControl
+    public partial class StorageMapInfoControl : XtraUserControl
     {
-        public UserControl1()
+        public StorageMapInfoControl()
         {
             InitializeComponent();
             mapControl.MapItemClick += OnPinClick;
@@ -53,48 +53,5 @@ namespace TheStorageERP
                 new MapPushpin() { Text = "가양역", Location = new GeoPoint(37.56099, 126.85495) }
             };
         }
-
-        //없어도 가능
-        #region PinClicked event things for C# 3.0
-        public event EventHandler<PinClickedEventArgs> PinClicked;
-
-        protected virtual void OnPinClicked(PinClickedEventArgs e)
-        {
-            if (PinClicked != null)
-                PinClicked(this, e);
-        }
-
-        private PinClickedEventArgs OnPinClicked(string name)
-        {
-            PinClickedEventArgs args = new PinClickedEventArgs(name);
-            OnPinClicked(args);
-
-            return args;
-        }
-
-        private PinClickedEventArgs OnPinClickedForOut()
-        {
-            PinClickedEventArgs args = new PinClickedEventArgs();
-            OnPinClicked(args);
-
-            return args;
-        }
-
-        public class PinClickedEventArgs : EventArgs
-        {
-            public string Name { get; set; }
-
-            public PinClickedEventArgs()
-            {
-            }
-
-            public PinClickedEventArgs(string name)
-            {
-                Name = name;
-            }
-        }
-        #endregion
-
-
     }
 }
