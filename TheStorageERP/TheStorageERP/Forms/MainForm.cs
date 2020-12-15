@@ -23,12 +23,12 @@ namespace TheStorageERP
             form.Show();
         }
 
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void StorageInfoBtn(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CreateForm(new StorageInfo());
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void StorageMapBtn(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CreateForm(new StorageMap());
         }
