@@ -60,14 +60,14 @@ namespace TheStorageERP
             this.barButtonItem1.Caption = "barButtonItem1";
             this.barButtonItem1.Id = 1;
             this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.StorageMapBtn);
             // 
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "barButtonItem2";
             this.barButtonItem2.Id = 2;
             this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.StorageInfoBtn);
             // 
             // ribbonPage1
             // 

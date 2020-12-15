@@ -18,6 +18,8 @@ namespace TheStorageERP
         {
             InitializeComponent();
             mapControl.MapItemClick += OnPinClick;
+            mapControl.MouseHover += OnPinHoverd;
+
         }
 
         protected override void OnLoad(EventArgs e)
@@ -34,6 +36,8 @@ namespace TheStorageERP
             MapItem[] capitals = GetCapitals();
             storage.Items.AddRange(capitals);
             itemsLayer.Data = storage;
+
+
         }
 
         private void OnPinClick(object sender, MapItemClickEventArgs e)
@@ -41,6 +45,23 @@ namespace TheStorageERP
             MessageBox.Show(((MapPushpin)e.Item).Text);
         }
 
+        private void OnPinHoverd(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            MapPushpin pin = sender as MapPushpin;
+
+            if (pin == null)
+                return;
+            if (pin.Text == null)
+                return;
+            
+            toolTip.SetToolTip(mapControl, "h");
+
+            
+
+
+        }
+        
 
         // 리스트 생성
         MapItem[] GetCapitals()
@@ -53,5 +74,7 @@ namespace TheStorageERP
                 new MapPushpin() { Text = "가양역", Location = new GeoPoint(37.56099, 126.85495) }
             };
         }
+
+        
     }
 }
