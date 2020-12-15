@@ -14,6 +14,59 @@ namespace ERPDatabase
     {
     }
 
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(EmployeeMeta))]
+    public partial class Employee
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(FacilityMeta))]
+    public partial class Facility
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(FakeAccountInfo))]
+    public partial class FakeAcountInfoc
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(FareMeta))]
+    public partial class Fare
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(PurchaseMeta))]
+    public partial class Purchase
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(PurchaseItemMeta))]
+    public partial class PurchaseItem
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(RegionMeta))]
+    public partial class Region
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(StorageMeta))]
+    public partial class Storage
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(StorageSizeMeta))]
+    public partial class StorageSize
+    {
+    }
+    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [MetadataType(typeof(StorageTypeMeta))]
+    public partial class StorageType
+    {
+    }
+
+
+
     public class CustomerTypeMeta
     {
         [JsonProperty] public int CustomerTypeId { get; set; }
@@ -28,80 +81,78 @@ namespace ERPDatabase
 
     public class FacilityMeta
     {
-        public int FacilityId { get; set; }
-        public string FacilitySpecDescription { get; set; }
-        public int RegionId { get; set; }
-        public int EmployeeId { get; set; }
+        [JsonProperty] public int FacilityId { get; set; }
+        [JsonProperty] public string FacilitySpecDescription { get; set; }
+        [JsonProperty]public int RegionId { get; set; }
+        [JsonProperty] public int EmployeeId { get; set; }
 
     }
-    public class FakeAccoutInfo
+    public class FakeAccoutInfoMeta
     {
-        public int InfoId { get; set; }
-        public System.DateTime Date { get; set; }
-        public int Sales { get; set; }
-        public int OtherRevenues { get; set; }
-        public int SalesReturns { get; set; }
-        public int GrossProfit { get; set; }
-        public int Wages { get; set; }
-        public int Depreciation { get; set; }
-        public int Rent { get; set; }
-        public int OtherSupplies { get; set; }
-        public int Utilities { get; set; }
-        public int Insurance { get; set; }
-        public int Maintenance { get; set; }
-        public int Advertising { get; set; }
-        public int OtherExpenses { get; set; }
+        [JsonProperty] public int InfoId { get; set; }
+        [JsonProperty] public System.DateTime Date { get; set; }
+        [JsonProperty] public int Sales { get; set; }
+        [JsonProperty] public int OtherRevenues { get; set; }
+        [JsonProperty] public int SalesReturns { get; set; }
+        [JsonProperty] public int Depreciation { get; set; }
+        [JsonProperty] public int Rent { get; set; }
+        [JsonProperty] public int OtherSupplies { get; set; }
+        [JsonProperty] public int Utilities { get; set; }
+        [JsonProperty] public int Insurance { get; set; }
+        [JsonProperty] public int Maintenance { get; set; }
+        [JsonProperty] public int Advertising { get; set; }
+        [JsonProperty] public int OtherExpenses { get; set; }
 
     }
     public class FareMeta
     {
-        public int FareId { get; set; }
-        public int StorageTypeId { get; set; }
-        public int FarePerMinute { get; set; }
-        public int StorageSizeId { get; set; }
+        [JsonProperty] public int FareId { get; set; }
+        [JsonProperty] public int StorageTypeId { get; set; }
+        [JsonProperty] public int FarePerMinute { get; set; }
+        [JsonProperty] public int StorageSizeId { get; set; }
     }
     public class PurchaseMeta
     {
-        public int PurchaseId { get; set; }
-        public System.DateTime PurchaseTime { get; set; }
-        public string OtherDetails { get; set; }
-        public int CustomerId { get; set; }
-        public int PurchaseAmount { get; set; }
-        public int TransactionId { get; set; }
+        [JsonProperty] public int PurchaseId { get; set; }
+        [JsonProperty] public System.DateTime PurchaseTime { get; set; }
+        [JsonProperty] public string OtherDetails { get; set; }
+        [JsonProperty] public int CustomerId { get; set; }
+        [JsonProperty] public int PurchaseAmount { get; set; }
+        [JsonProperty] public int TransactionId { get; set; }
     }
     public class PurchaseItemMeta
     {
-        public int PurchaseItemId { get; set; }
-        public System.DateTime InTime { get; set; }
-        public System.DateTime OutTime { get; set; }
-        public int StorageId { get; set; }
-        public int PurchaseId { get; set; }
+        [JsonProperty] public int PurchaseItemId { get; set; }
+        [JsonProperty] public System.DateTime InTime { get; set; }
+        [JsonProperty] public System.DateTime OutTime { get; set; }
+        [JsonProperty] public int StorageId { get; set; }
+        [JsonProperty] public int PurchaseId { get; set; }
     }
     public class RegionMeta
     {
-        public int RegionId { get; set; }
-        public string City { get; set; }
-        public string District { get; set; }
-        public string Town { get; set; }
+        [JsonProperty] public int RegionId { get; set; }
+        [JsonProperty] public string City { get; set; }
+        [JsonProperty] public string District { get; set; }
+        [JsonProperty] public string Town { get; set; }
     }
     public class StorageMeta
     {    
-        public int StorageId { get; set; }
-        public int FacilityId { get; set; }
-        public bool Activated { get; set; }
-        public int FareId { get; set; }
+        [JsonProperty] public int StorageId { get; set; }
+        [JsonProperty] public int FacilityId { get; set; }
+        [JsonProperty] public bool Activated { get; set; }
+        [JsonProperty] public int FareId { get; set; }
 
     }
     public class StorageSizeMeta
     {
-        public int StorageSizeId { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
+        [JsonProperty] public int StorageSizeId { get; set; }
+        [JsonProperty] public int Width { get; set; }
+        [JsonProperty] public int Height { get; set; }
 
     }
     public class StorageTypeMeta
     {
-        public int StorageTypeId { get; set; }
-        public string StorageTypeName { get; set; }
+        [JsonProperty] public int StorageTypeId { get; set; }
+        [JsonProperty] public string StorageTypeName { get; set; }
     }
 }
