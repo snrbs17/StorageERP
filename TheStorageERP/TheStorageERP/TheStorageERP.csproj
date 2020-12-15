@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\APIClients.cs" />
     <Compile Include="Clients\Clients.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
