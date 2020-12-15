@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TheStorageERP
 {
-    public partial class Form1 : Form
+    public partial class StorageInfo : Form
     {
-        public Form1()
+        public StorageInfo()
         {
             InitializeComponent();
         }
