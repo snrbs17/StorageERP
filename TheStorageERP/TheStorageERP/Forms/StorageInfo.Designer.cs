@@ -29,49 +29,50 @@ namespace TheStorageERP
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle1 = new DevExpress.XtraTreeMap.HatchFillStyle();
+            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle2 = new DevExpress.XtraTreeMap.HatchFillStyle();
+            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle3 = new DevExpress.XtraTreeMap.HatchFillStyle();
+            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle4 = new DevExpress.XtraTreeMap.HatchFillStyle();
+            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle5 = new DevExpress.XtraTreeMap.HatchFillStyle();
+            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle6 = new DevExpress.XtraTreeMap.HatchFillStyle();
+            DevExpress.XtraTreeMap.TreeMapFlatDataAdapter treeMapFlatDataAdapter1 = new DevExpress.XtraTreeMap.TreeMapFlatDataAdapter();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SplineAreaSeriesView splineAreaSeriesView1 = new DevExpress.XtraCharts.SplineAreaSeriesView();
-            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle5 = new DevExpress.XtraTreeMap.HatchFillStyle();
-            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle6 = new DevExpress.XtraTreeMap.HatchFillStyle();
-            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle3 = new DevExpress.XtraTreeMap.HatchFillStyle();
-            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle4 = new DevExpress.XtraTreeMap.HatchFillStyle();
-            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle1 = new DevExpress.XtraTreeMap.HatchFillStyle();
-            DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle2 = new DevExpress.XtraTreeMap.HatchFillStyle();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.treeMapControl1 = new DevExpress.XtraTreeMap.TreeMapControl();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.treeMapControl2 = new DevExpress.XtraTreeMap.TreeMapControl();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.treeMapControl3 = new DevExpress.XtraTreeMap.TreeMapControl();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.treeMapControl3 = new DevExpress.XtraTreeMap.TreeMapControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.treeMapControl2 = new DevExpress.XtraTreeMap.TreeMapControl();
+            this.treeMapControl1 = new DevExpress.XtraTreeMap.TreeMapControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(splineAreaSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -96,23 +97,76 @@ namespace TheStorageERP
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // Root
+            // labelControl4
             // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.emptySpaceItem1,
-            this.layoutControlItem8});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(976, 450);
-            this.Root.TextVisible = false;
+            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl4.Location = new System.Drawing.Point(499, 237);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(465, 18);
+            this.labelControl4.StyleController = this.layoutControl1;
+            this.labelControl4.TabIndex = 11;
+            this.labelControl4.Text = "labelControl4";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl3.Location = new System.Drawing.Point(12, 271);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(483, 18);
+            this.labelControl3.StyleController = this.layoutControl1;
+            this.labelControl3.TabIndex = 10;
+            this.labelControl3.Text = "labelControl3";
+            // 
+            // treeMapControl3
+            // 
+            this.treeMapControl3.Appearance.GroupStyle.TextGlowColor = System.Drawing.Color.Empty;
+            this.treeMapControl3.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle1;
+            this.treeMapControl3.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle2;
+            this.treeMapControl3.Location = new System.Drawing.Point(12, 293);
+            this.treeMapControl3.Name = "treeMapControl3";
+            this.treeMapControl3.Size = new System.Drawing.Size(483, 145);
+            this.treeMapControl3.TabIndex = 9;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.Location = new System.Drawing.Point(250, 12);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(245, 18);
+            this.labelControl2.StyleController = this.layoutControl1;
+            this.labelControl2.TabIndex = 8;
+            this.labelControl2.Text = "labelControl2";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(12, 12);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(234, 18);
+            this.labelControl1.StyleController = this.layoutControl1;
+            this.labelControl1.TabIndex = 7;
+            this.labelControl1.Text = "labelControl1";
+            // 
+            // treeMapControl2
+            // 
+            this.treeMapControl2.Appearance.GroupStyle.TextGlowColor = System.Drawing.Color.Empty;
+            this.treeMapControl2.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle3;
+            this.treeMapControl2.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle4;
+            this.treeMapControl2.Location = new System.Drawing.Point(250, 34);
+            this.treeMapControl2.Name = "treeMapControl2";
+            this.treeMapControl2.Size = new System.Drawing.Size(245, 233);
+            this.treeMapControl2.TabIndex = 6;
+            // 
+            // treeMapControl1
+            // 
+            this.treeMapControl1.Appearance.GroupStyle.TextGlowColor = System.Drawing.Color.Empty;
+            this.treeMapControl1.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle5;
+            this.treeMapControl1.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle6;
+            this.treeMapControl1.DataAdapter = treeMapFlatDataAdapter1;
+            this.treeMapControl1.Location = new System.Drawing.Point(12, 34);
+            this.treeMapControl1.Name = "treeMapControl1";
+            this.treeMapControl1.Size = new System.Drawing.Size(234, 233);
+            this.treeMapControl1.TabIndex = 5;
             // 
             // chartControl1
             // 
@@ -131,6 +185,24 @@ namespace TheStorageERP
             this.chartControl1.Size = new System.Drawing.Size(465, 179);
             this.chartControl1.TabIndex = 4;
             // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.emptySpaceItem1,
+            this.layoutControlItem8});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(976, 450);
+            this.Root.TextVisible = false;
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.chartControl1;
@@ -139,16 +211,6 @@ namespace TheStorageERP
             this.layoutControlItem1.Size = new System.Drawing.Size(469, 183);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // treeMapControl1
-            // 
-            this.treeMapControl1.Appearance.GroupStyle.TextGlowColor = System.Drawing.Color.Empty;
-            this.treeMapControl1.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle5;
-            this.treeMapControl1.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle6;
-            this.treeMapControl1.Location = new System.Drawing.Point(12, 34);
-            this.treeMapControl1.Name = "treeMapControl1";
-            this.treeMapControl1.Size = new System.Drawing.Size(234, 233);
-            this.treeMapControl1.TabIndex = 5;
             // 
             // layoutControlItem2
             // 
@@ -159,16 +221,6 @@ namespace TheStorageERP
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // treeMapControl2
-            // 
-            this.treeMapControl2.Appearance.GroupStyle.TextGlowColor = System.Drawing.Color.Empty;
-            this.treeMapControl2.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle3;
-            this.treeMapControl2.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle4;
-            this.treeMapControl2.Location = new System.Drawing.Point(250, 34);
-            this.treeMapControl2.Name = "treeMapControl2";
-            this.treeMapControl2.Size = new System.Drawing.Size(245, 233);
-            this.treeMapControl2.TabIndex = 6;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.treeMapControl2;
@@ -177,16 +229,6 @@ namespace TheStorageERP
             this.layoutControlItem3.Size = new System.Drawing.Size(249, 237);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(12, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(234, 18);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 7;
-            this.labelControl1.Text = "labelControl1";
             // 
             // layoutControlItem4
             // 
@@ -200,16 +242,6 @@ namespace TheStorageERP
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // labelControl2
-            // 
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(250, 12);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(245, 18);
-            this.labelControl2.StyleController = this.layoutControl1;
-            this.labelControl2.TabIndex = 8;
-            this.labelControl2.Text = "labelControl2";
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.labelControl2;
@@ -222,16 +254,6 @@ namespace TheStorageERP
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // treeMapControl3
-            // 
-            this.treeMapControl3.Appearance.GroupStyle.TextGlowColor = System.Drawing.Color.Empty;
-            this.treeMapControl3.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle1;
-            this.treeMapControl3.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle2;
-            this.treeMapControl3.Location = new System.Drawing.Point(12, 293);
-            this.treeMapControl3.Name = "treeMapControl3";
-            this.treeMapControl3.Size = new System.Drawing.Size(483, 145);
-            this.treeMapControl3.TabIndex = 9;
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.treeMapControl3;
@@ -240,16 +262,6 @@ namespace TheStorageERP
             this.layoutControlItem6.Size = new System.Drawing.Size(487, 149);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.Location = new System.Drawing.Point(12, 271);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(483, 18);
-            this.labelControl3.StyleController = this.layoutControl1;
-            this.labelControl3.TabIndex = 10;
-            this.labelControl3.Text = "labelControl3";
             // 
             // layoutControlItem7
             // 
@@ -270,16 +282,6 @@ namespace TheStorageERP
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(469, 225);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.Location = new System.Drawing.Point(499, 237);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(465, 18);
-            this.labelControl4.StyleController = this.layoutControl1;
-            this.labelControl4.TabIndex = 11;
-            this.labelControl4.Text = "labelControl4";
             // 
             // layoutControlItem8
             // 
@@ -303,19 +305,19 @@ namespace TheStorageERP
             this.Text = "StorageInfo";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(splineAreaSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treeMapControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
