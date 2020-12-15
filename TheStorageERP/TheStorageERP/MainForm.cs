@@ -16,5 +16,17 @@ namespace TheStorageERP
         {
             InitializeComponent();
         }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.MdiParent = this;
+            form1.Show();
+        }
     }
 }
