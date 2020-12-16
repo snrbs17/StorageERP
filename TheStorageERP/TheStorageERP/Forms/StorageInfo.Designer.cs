@@ -307,7 +307,7 @@ namespace TheStorageERP
             this.svgMapControl.Size = new System.Drawing.Size(450, 385);
             this.svgMapControl.TabIndex = 12;
             this.vectorItemsLayer1.Data = this.svgFileDataAdapter1;
-            this.svgFileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\예시자료\\Map_Seoul-teukbyeolsi.svg", System.UriKind.Absolute);
+           // this.svgFileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\예시자료\\Map_Seoul-teukbyeolsi.svg", System.UriKind.Absolute);
             // 
             // StorageInfo
             // 
