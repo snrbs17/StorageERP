@@ -26,37 +26,13 @@ namespace TheStorageERP
 
             startChart();
 
-            
-
-            //Series series = new Series("일반", ViewType.Gantt);
-
-            //series.ValueScaleType = ScaleType.DateTime;
-
-            //series.Points.AddRange(new SeriesPoint[] { new SeriesPoint("storageNum1", new DateTime[] { new DateTime(2019, 02, 02, 07, 06, 01), new DateTime(2019, 02, 03, 15, 06, 01) }), new SeriesPoint("storageNum1", new DateTime[] { new DateTime(2019, 02, 05, 07, 06, 01), new DateTime(2019, 02, 06, 07, 06, 01) }) });
-            //series.Points.Add(new SeriesPoint("storageNum2", new DateTime[] { new DateTime(2019, 02, 01, 07, 06, 01), new DateTime(2019, 02, 03, 10, 06, 01) }));
-            //series.Points.Add(new SeriesPoint("storageNum3", new DateTime[] { new DateTime(2019, 02, 04, 09, 06, 01), new DateTime(2019, 02, 06, 13, 06, 01) }));
-
-            //Series series2 = new Series("신선", ViewType.Gantt);
-            //series2.ValueScaleType = ScaleType.DateTime;
-            //series2.Points.AddRange(new SeriesPoint[] { new SeriesPoint("storageNum4", new DateTime[] { new DateTime(2019, 02, 03, 07, 06, 01), new DateTime(2019, 02, 03, 15, 06, 01) }), new SeriesPoint("storageNum1", new DateTime[] { new DateTime(2019, 02, 05, 07, 06, 01), new DateTime(2019, 02, 06, 07, 06, 01) }) });
-
-            //Series[] se;
-            //se = new Series[] { series, series2 };
-            //chartControl.Series.AddRange(se);
-            //chartControl.Series.AddRange(series);
-            //chartControl.Series.AddRange(series2);
-
-
             GanttDiagram myDiagram = (GanttDiagram)chartControl.Diagram;
 
             myDiagram.AxisX.Title.Visible = true;
             myDiagram.AxisX.Title.Text = "보관함 번호";
-            //myDiagram.AxisY.Title.Visible = true;
-            //myDiagram.AxisY.Title.Text = "시각";
             myDiagram.AxisY.Interlaced = true;
             myDiagram.AxisY.GridSpacing = 10;
             myDiagram.AxisY.Label.Angle = -30;
-            //myDiagram.AxisY.DateTimeOptions.Format = DateTimeFormat.MonthAndDay;
             myDiagram.AxisY.DateTimeOptions.Format = DateTimeFormat.Custom;
             myDiagram.AxisY.DateTimeOptions.FormatString = "yy/MM/dd hh:mm";  
         }
