@@ -105,6 +105,12 @@
     <Compile Include="Dao\AccountInfoDao.cs" />
     <Compile Include="Dao\Dao.cs" />
     <Compile Include="Entities\InfoReorganized.cs" />
+    <Compile Include="Forms\BreakEvenAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BreakEvenAnalysis.Designer.cs">
+      <DependentUpon>BreakEvenAnalysis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FinancialStatementViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <Compile Include="FinancialStatement.Designer.cs">
       <DependentUpon>FinancialStatement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\BreakEvenAnalysis.resx">
+      <DependentUpon>BreakEvenAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinancialStatementViewer.resx">
       <DependentUpon>FinancialStatementViewer.cs</DependentUpon>
     </EmbeddedResource>

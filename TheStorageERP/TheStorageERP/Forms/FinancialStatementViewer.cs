@@ -21,6 +21,7 @@ namespace TheStorageERP
         {
             InitializeComponent();
         }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -53,5 +54,4 @@ namespace TheStorageERP
             timeSelectFlag = 1;
         }
     }
-    
 }

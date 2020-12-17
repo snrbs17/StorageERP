@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheStorageERP.Client;
+using TheStorageERP.Forms;
 
 namespace TheStorageERP
 {
@@ -17,7 +18,7 @@ namespace TheStorageERP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FinancialStatementViewer());
+            Application.Run(new BreakEvenAnalysis());
         }
     }
 }
