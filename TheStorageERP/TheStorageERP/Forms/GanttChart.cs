@@ -38,7 +38,7 @@ namespace TheStorageERP
 
             GanttDiagram myDiagram = (GanttDiagram)chartControl.Diagram;
 
-            myDiagram.AxisX.Title.Visible = true;
+            _ = myDiagram.AxisX.Title.Visibility;
             myDiagram.AxisX.Title.Text = "Tasks";
             //myDiagram.AxisY.Title.Visible = true;
             myDiagram.AxisY.Interlaced = true;
