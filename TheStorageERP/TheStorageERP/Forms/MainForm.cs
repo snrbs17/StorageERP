@@ -15,10 +15,12 @@ namespace TheStorageERP
         public MainForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void CreateForm(Form form)
         {
+            
             form.MdiParent = this;
             form.Show();
         }
@@ -26,11 +28,6 @@ namespace TheStorageERP
         private void StorageInfoBtn(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CreateForm(new StorageInfo());
-        }
-
-        private void StorageMapBtn(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            CreateForm(new StorageMap());
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -42,7 +39,6 @@ namespace TheStorageERP
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CreateForm(new GanttChart());
-
         }
     }
 }

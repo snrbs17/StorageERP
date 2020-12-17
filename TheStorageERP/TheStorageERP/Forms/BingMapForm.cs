@@ -24,21 +24,14 @@ namespace TheStorageERP
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
             mapControl.CenterPoint = new GeoPoint(37.54164, 126.84035);
             mapControl.ZoomLevel = 13;
-
             VectorItemsLayer itemsLayer = new VectorItemsLayer();
             mapControl.Layers.Add(itemsLayer);
-
             MapItemStorage storage = new MapItemStorage();
             List<MapItem> capitals = GetCapitals();
-            //MapItem[] capitals = GetCapitals();
-
             storage.Items.AddRange(capitals);
             itemsLayer.Data = storage;
-
-
         }
 
         private void OnPinClick(object sender, MapItemClickEventArgs e)
@@ -46,15 +39,10 @@ namespace TheStorageERP
             MessageBox.Show(((MapPushpin)e.Item).Text);
         }
 
-
-
         // 리스트 생성
         List<MapItem> GetCapitals()
         {
-
             int storageCount = Clients.Facilities.GetFacilitiesAsync().Result.Count;
-
-
             List<MapItem> mapItems = new List<MapItem>();
 
             for (int i = 1; i <= storageCount; i++)
@@ -71,24 +59,7 @@ namespace TheStorageERP
                 MapPushpin pushpin = new MapPushpin() { Text = $"{storageName}", Location = new GeoPoint(latitude, longitude), ToolTipPattern = $"보관소 : {storageName}\n담당직원 : {employeeName}\n" };
                 mapItems.Add(pushpin);
             }
-
             return mapItems;
-
         }
-
-        // 리스트 생성
-        //MapItem[] GetCapitals()
-        //{
-        //    string storageName = Class1.regionsClient.GetRegionAsync(1).Result.Town;
-        //    string employeeName = Class1.employeeClient.GetEmployeeAsync(1).Result.Name;
-
-        //    return new MapItem[] {
-        //        new MapPushpin() { Text = "화곡역", Location = new GeoPoint(37.54164, 126.84035), ToolTipPattern = $"보관소 : {storageName}\n담당직원 : {employeeName}\n"},
-        //        new MapPushpin() { Text = "송정역", Location = new GeoPoint(37.56124, 126.81155) },
-        //        new MapPushpin() { Text = "영등포구청역", Location = new GeoPoint(37.52422, 126.89512) },
-        //        new MapPushpin() { Text = "합정역", Location = new GeoPoint(37.54904, 126.91336) },
-        //        new MapPushpin() { Text = "가양역", Location = new GeoPoint(37.56099, 126.85495) }
-        //    };
-        //}
     }
 }
