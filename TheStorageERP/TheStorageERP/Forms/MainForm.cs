@@ -32,5 +32,17 @@ namespace TheStorageERP
         {
             CreateForm(new StorageMap());
         }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            CreateForm(new BingMapForm());
+
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            CreateForm(new GanttChart());
+
+        }
     }
 }
