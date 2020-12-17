@@ -113,6 +113,7 @@ namespace TheStorageERP
             ganttDiagram1.AxisY.CrosshairAxisLabelOptions.Visibility = DevExpress.Utils.DefaultBoolean.True;
             ganttDiagram1.AxisY.DateTimeScaleOptions.AutoGrid = false;
             ganttDiagram1.AxisY.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Hour;
+            ganttDiagram1.AxisY.Label.Alignment = DevExpress.XtraCharts.AxisLabelAlignment.Center;
             ganttDiagram1.AxisY.ShowBehind = true;
             ganttDiagram1.AxisY.Visibility = DevExpress.Utils.DefaultBoolean.True;
             ganttDiagram1.AxisY.VisibleInPanesSerializable = "-1";

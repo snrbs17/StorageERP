@@ -30,11 +30,17 @@ namespace TheStorageERP
 
             myDiagram.AxisX.Title.Visible = true;
             myDiagram.AxisX.Title.Text = "보관함 번호";
+
             myDiagram.AxisY.Interlaced = true;
             myDiagram.AxisY.GridSpacing = 10;
             myDiagram.AxisY.Label.Angle = -30;
             myDiagram.AxisY.DateTimeOptions.Format = DateTimeFormat.Custom;
-            myDiagram.AxisY.DateTimeOptions.FormatString = "yy/MM/dd hh:mm";  
+            myDiagram.AxisY.DateTimeOptions.FormatString = "yy/MM/dd hh:mm";
+            myDiagram.AxisY.WholeRange.Auto = false;
+
+            XYDiagram xYDiagram = (XYDiagram)chartControl.Diagram;
+            xYDiagram.AxisY.WholeRange.Auto = false;
+            //xYDiagram.AxisY.WholeRange.SetMinMaxValues = 
         }
 
         private void startChart()
@@ -67,7 +73,7 @@ namespace TheStorageERP
         private int getFacilityId(string text)
         {
             var facility = Clients.Facilities.GetFacilitiesAsync().Result;
-            var region = Clients.Regions.GetRegionsAsync().Result;
+            var region = Clients.Regions.GetRegionsAsync().Result; 
 
             var facilityId = from x in facility
                              join y in region on x.RegionId equals y.RegionId
@@ -113,13 +119,6 @@ namespace TheStorageERP
 
             if (typeText == 3)
             {
-                //for (int i = 0; i < list.Count(); i++)
-                //{
-                //   series.Points.Add(new SeriesPoint($"{list[i].storageId}", new DateTime[] 
-                //   { new DateTime(list[i].InTime.Year, list[i].InTime.Month, list[i].InTime.Day, list[i].InTime.Hour, list[i].InTime.Minute, list[i].InTime.Second), 
-                //       new DateTime(list[i].OutTime.Year, list[i].OutTime.Month, list[i].OutTime.Day, list[i].OutTime.Hour, list[i].OutTime.Minute, list[i].OutTime.Second) }));
-                //}
-
                 for (int i = 0; i < basic.Count(); i++)
                 {
                     series.Points.Add(new SeriesPoint($"{basic[i].storageId}", new DateTime[]
@@ -152,48 +151,7 @@ namespace TheStorageERP
                        new DateTime(fridge[i].OutTime.Year, fridge[i].OutTime.Month, fridge[i].OutTime.Day, fridge[i].OutTime.Hour, fridge[i].OutTime.Minute, fridge[i].OutTime.Second) }));
                 }
             }
-
-
             se = new Series[] { series, series2 };
-
-
-            //Series series = new Series("일반", ViewType.Gantt);
-
-            //series.ValueScaleType = ScaleType.DateTime;
-
-            //series.Points.AddRange(new SeriesPoint[] { new SeriesPoint($"{a}", new DateTime[] { new DateTime(2019, 02, 02, 07, 06, 01), new DateTime(2019, 02, 03, 15, 06, 01) }), new SeriesPoint("storageNum1", new DateTime[] { new DateTime(2019, 02, 05, 07, 06, 01), new DateTime(2019, 02, 06, 07, 06, 01) }) });
-            //series.Points.Add(new SeriesPoint("storageNum2", new DateTime[] { new DateTime(2019, 02, 01, 07, 06, 01), new DateTime(2019, 02, 03, 10, 06, 01) }));
-            //series.Points.Add(new SeriesPoint("storageNum3", new DateTime[] { new DateTime(2019, 02, 04, 09, 06, 01), new DateTime(2019, 02, 06, 13, 06, 01) }));
-
-            //se = new Series[]{series};
-            //if (typeText == "전체")
-            //{
-            //    for (int i = 0; i < a; i++)
-            //    {
-
-            //    }
-            //    Series series = new Series("일반", ViewType.Gantt);
-
-            //    series.ValueScaleType = ScaleType.DateTime;
-
-            //    series.Points.AddRange(new SeriesPoint[] { new SeriesPoint("storageNum1", new DateTime[] { new DateTime(2019, 02, 02, 07, 06, 01), new DateTime(2019, 02, 03, 15, 06, 01) }), new SeriesPoint("storageNum1", new DateTime[] { new DateTime(2019, 02, 05, 07, 06, 01), new DateTime(2019, 02, 06, 07, 06, 01) }) });
-            //    series.Points.Add(new SeriesPoint("storageNum2", new DateTime[] { new DateTime(2019, 02, 01, 07, 06, 01), new DateTime(2019, 02, 03, 10, 06, 01) }));
-            //    series.Points.Add(new SeriesPoint("storageNum3", new DateTime[] { new DateTime(2019, 02, 04, 09, 06, 01), new DateTime(2019, 02, 06, 13, 06, 01) }));
-
-            //    Series series2 = new Series("신선", ViewType.Gantt);
-            //    series2.ValueScaleType = ScaleType.DateTime;
-            //    series2.Points.AddRange(new SeriesPoint[] { new SeriesPoint("storageNum4", new DateTime[] { new DateTime(2019, 02, 03, 07, 06, 01), new DateTime(2019, 02, 03, 15, 06, 01) }), new SeriesPoint("storageNum1", new DateTime[] { new DateTime(2019, 02, 05, 07, 06, 01), new DateTime(2019, 02, 06, 07, 06, 01) }) });
-
-            //    se = new Series[] { series, series2 };
-            //}
-            //else if (typeText == "일반")
-            //{
-
-            //}
-            //else if (typeText == "신선")
-            //{
-
-            //}
         }
 
         private void checkType(out List<Test> basic, out List<Test> fridge, List<Test> list)
@@ -216,10 +174,6 @@ namespace TheStorageERP
                 else if(list[i].storageType ==2)
                 {
                     basicList.Add(new Test() { storageId = list[i].storageId, storageType = list[i].storageType, InTime = list[i].InTime, OutTime = list[i].OutTime });
-                }
-                else
-                {
-                    comboType.Text = "1111111111111";
                 }
             }
             basic = basicList;
