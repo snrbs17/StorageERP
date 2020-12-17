@@ -134,6 +134,8 @@ namespace ERPDatabase
         [JsonProperty] public string City { get; set; }
         [JsonProperty] public string District { get; set; }
         [JsonProperty] public string Town { get; set; }
+        [JsonProperty] public Nullable<decimal> Latitude { get; set; }
+        [JsonProperty] public Nullable<decimal> Longitude { get; set; }
     }
     public class StorageMeta
     {    
