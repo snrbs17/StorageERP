@@ -122,6 +122,11 @@ namespace TheStorageERP.Forms
         {
             var hitInfo = vGridControl2.CalcHitInfo(e.Location).RecordIndex;
 
+            if(hitInfo <0)
+            {
+                return;
+            }
+
             VGridControl cn = sender as VGridControl;
             string a = cn.FocusedRow.Name;
 
