@@ -15,7 +15,7 @@ namespace TheStorageERP
     public partial class FinancialStatementViewer : Form
     {
 
-        Func<FakeAccountInfo, int> SelectTimeScope;
+        //Func<FakeAccountInfo, int> SelectTimeScope;
         int timeSelectFlag;
         public FinancialStatementViewer()
         {
@@ -30,7 +30,7 @@ namespace TheStorageERP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var list = Dao.Dao.fakeAccountInfo.GetInfoReorganized(SelectTimeScope);
+            var list = Dao.Dao.fakeAccountInfo.GetInfoReorganized();
             FinancialStatement finance = new FinancialStatement();
             finance.DataSource = list;
 
@@ -43,14 +43,14 @@ namespace TheStorageERP
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            SelectTimeScope = x => x.Date.Day;
+            Factors.SelectTimeScope = x => x.Date.Day;
             
             timeSelectFlag = 0;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            SelectTimeScope = x => x.Date.Month;
+            Factors.SelectTimeScope = x => x.Date.Month;
             timeSelectFlag = 1;
         }
     }
