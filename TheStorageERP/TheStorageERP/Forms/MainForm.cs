@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheStorageERP.Forms;
 
 namespace TheStorageERP
 {
@@ -39,6 +40,11 @@ namespace TheStorageERP
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CreateForm(new GanttChart());
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            CreateForm(new BreakEvenAnalysis());
         }
     }
 }
