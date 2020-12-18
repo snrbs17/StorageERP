@@ -44,7 +44,6 @@ namespace TheStorageERP
             XYDiagram xYDiagram = (XYDiagram)chartControl.Diagram;
             xYDiagram.AxisY.WholeRange.Auto = false;
             //xYDiagram.AxisY.WholeRange.SetMinMaxValues = 
-
         }
 
         private void startChart()
