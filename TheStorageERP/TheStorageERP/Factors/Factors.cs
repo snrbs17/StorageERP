@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace TheStorageERP
 {
-    class Class1
+    public static class Factors
     {
+        public static Func<FakeAccountInfo, int> SelectTimeScope { get; set; }
+        = x => x.Date.Day;
     }
 }

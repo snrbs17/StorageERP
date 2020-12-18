@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc0a155449f64751bcd5ccfedde3411f" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CustomerType" Width="1.5" PointX="0.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Employee" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Facility" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FakeAccountInfo" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Fare" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Purchase" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PurchaseItem" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Region" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Storage" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.StorageSize" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.StorageType" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Customer_Customer_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Customer_Purchase_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Facility_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Facility_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Storage_Facility" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Fare_StorageSize" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Fare_StorageType" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Storage_Fare" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_Customer_Purchase1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_Storage" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
