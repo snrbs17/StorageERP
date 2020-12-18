@@ -313,7 +313,7 @@ namespace TheStorageERP.Forms
             // accountInfoDaoBindingSource
             // 
             this.accountInfoDaoBindingSource.DataSource = typeof(TheStorageERP.Dao.AccountInfoDao);
-            this.accountInfoDaoBindingSource.CurrentChanged += new System.EventHandler(this.accountInfoDaoBindingSource_CurrentChanged);
+            //this.accountInfoDaoBindingSource.CurrentChanged += new System.EventHandler(this.accountInfoDaoBindingSource_CurrentChanged);
             // 
             // infoSummarizedBindingSource
             // 
