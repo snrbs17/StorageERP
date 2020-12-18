@@ -18,7 +18,7 @@ namespace TheStorageERP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BreakEvenAnalysis());
+            Application.Run(new StorageInfo());
             //Application.Run(new FinancialStatementViewer());
         }
     }
