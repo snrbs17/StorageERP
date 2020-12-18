@@ -36,7 +36,10 @@ namespace TheStorageERP
             myDiagram.AxisY.Label.Angle = -30;
             myDiagram.AxisY.DateTimeOptions.Format = DateTimeFormat.Custom;
             myDiagram.AxisY.DateTimeOptions.FormatString = "yy/MM/dd hh:mm";
-            myDiagram.AxisY.WholeRange.Auto = false;
+            //myDiagram.AxisY.WholeRange.Auto = false;
+
+            DateTime nowDate = DateTime.Now;
+            myDiagram.AxisY.WholeRange.SetMinMaxValues(nowDate.AddDays(-2) , nowDate);
 
             XYDiagram xYDiagram = (XYDiagram)chartControl.Diagram;
             xYDiagram.AxisY.WholeRange.Auto = false;
@@ -97,7 +100,7 @@ namespace TheStorageERP
                        join z in storageTypes on y.StorageTypeId equals z.StorageTypeId
                        join a in purchaseItems on x.StorageId equals a.StorageId
                        where x.FacilityId == facilityId
-                       select new Test
+                       select new DbDate
                        { 
                             storageId = x.StorageId,
                             InTime = a.InTime,
@@ -111,9 +114,9 @@ namespace TheStorageERP
             Series series2 = new Series("신선", ViewType.Gantt);
             series2.ValueScaleType = ScaleType.DateTime;
 
-            List<Test> list = seriesData.ToList();
-            List<Test> basic = new List<Test>();
-            List<Test> fridge = new List<Test>();
+            List<DbDate> list = seriesData.ToList();
+            List<DbDate> basic = new List<DbDate>();
+            List<DbDate> fridge = new List<DbDate>();
 
             checkType(out basic, out fridge, list);
 
@@ -154,16 +157,16 @@ namespace TheStorageERP
             se = new Series[] { series, series2 };
         }
 
-        private void checkType(out List<Test> basic, out List<Test> fridge, List<Test> list)
+        private void checkType(out List<DbDate> basic, out List<DbDate> fridge, List<DbDate> list)
         {
-            List<Test> basicList = new List<Test>();
-            List<Test> fridgeList = new List<Test>();
+            List<DbDate> basicList = new List<DbDate>();
+            List<DbDate> fridgeList = new List<DbDate>();
 
             for (int i = 0; i < list.Count(); i++)
             {
                 if(list[i].storageType == 1)
                 {
-                    fridgeList.Add(new Test() 
+                    fridgeList.Add(new DbDate() 
                     { 
                         storageId = list[i].storageId, 
                         storageType = list[i].storageType, 
@@ -173,20 +176,20 @@ namespace TheStorageERP
                 }
                 else if(list[i].storageType ==2)
                 {
-                    basicList.Add(new Test() { storageId = list[i].storageId, storageType = list[i].storageType, InTime = list[i].InTime, OutTime = list[i].OutTime });
+                    basicList.Add(new DbDate() { storageId = list[i].storageId, storageType = list[i].storageType, InTime = list[i].InTime, OutTime = list[i].OutTime });
                 }
             }
             basic = basicList;
             fridge = fridgeList;
         }
 
-        public class Test
+        public class DbDate
         {
-            public Test()
+            public DbDate()
             {
 
             }
-            public Test(int _storageId, int _storageType, DateTimeOffset _InTime, DateTimeOffset _OutTime)
+            public DbDate(int _storageId, int _storageType, DateTimeOffset _InTime, DateTimeOffset _OutTime)
             {
                 storageId = _storageId;
                 storageType = _storageType;
@@ -208,6 +211,92 @@ namespace TheStorageERP
         private void comboType_SelectedIndexChanged(object sender, EventArgs e)
         {
             startChart();
+        }
+
+        private void calendarControl_DateTimeChanged(object sender, EventArgs e)
+        {
+            if (startDayText.Text == "")
+            {
+                startDayText.Text = calendarControl.DateTime.ToString("MM/dd/yyyy HH:mm");
+                comboStartHour.SelectedIndex = 0;
+                comboStartMin.SelectedIndex = 0;
+            }
+            else if (startDayText.Text != "")
+            {
+                DateTime startDate = Convert.ToDateTime(startDayText.Text);
+                DateTime clickDate = Convert.ToDateTime(calendarControl.DateTime);
+                if (startDate <= clickDate)
+                {
+                    endDayText.Text = calendarControl.DateTime.ToString("MM/dd/yyyy HH:mm");
+                    comboEndHour.SelectedIndex = 0;
+                    comboEndMin.SelectedIndex = 0;
+                }
+                else if (startDate > clickDate)
+                {
+                    startDayText.Text = calendarControl.DateTime.ToString("MM/dd/yyyy HH:mm");
+                    comboStartHour.SelectedIndex = 0;
+                    comboStartMin.SelectedIndex = 0;
+                }
+            }
+        }
+
+        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBoxEdit combo = sender as ComboBoxEdit;
+
+            if (combo.Name.Contains("Start"))
+            {
+                DateTime startDateTime = Convert.ToDateTime(startDayText.Text);
+                double startOldHour = Convert.ToDouble(-(startDateTime.Hour));
+                double startNewHour = Convert.ToDouble(combo.Text);
+                double startOldMin = Convert.ToDouble(-(startDateTime.Minute));
+                double startNewMin = Convert.ToDouble(combo.Text);
+
+                switch (combo.Name)
+                {
+                    case "comboStartHour":
+                        startDayText.Text = startDateTime.AddHours(startOldHour + startNewHour).ToString("MM/dd/yyyy HH:mm");
+                        break;
+                    case "comboStartMin":
+                        startDayText.Text = startDateTime.AddMinutes(startOldMin + startNewMin).ToString("MM/dd/yyyy HH:mm");
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (combo.Name.Contains("End"))
+            {
+                DateTime endDateTime = Convert.ToDateTime(endDayText.Text);
+                double endOldHour = Convert.ToDouble(-(endDateTime.Hour));
+                double endNewHour = Convert.ToDouble(combo.Text);
+                double endOldMin = Convert.ToDouble(-(endDateTime.Minute));
+                double endNewMin = Convert.ToDouble(combo.Text);
+
+                switch (combo.Name)
+                {
+                    case "comboEndHour":
+                        endDayText.Text = endDateTime.AddHours(endOldHour + endNewHour).ToString("MM/dd/yyyy HH:mm");
+                        break;
+                    case "comboEndMin":
+                        endDayText.Text = endDateTime.AddMinutes(endOldMin + endNewMin).ToString("MM/dd/yyyy HH:mm");
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            DateTime startDate = Convert.ToDateTime(startDayText.Text);
+            DateTime endDate = Convert.ToDateTime(endDayText.Text);
+
+            GanttDiagram myDiagram = (GanttDiagram)chartControl.Diagram;
+            myDiagram.AxisY.WholeRange.SetMinMaxValues(startDate, endDate);
+
+            startDayText.Text = "";
+            endDayText.Text = "";
         }
     }
 }

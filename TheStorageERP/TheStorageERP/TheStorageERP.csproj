@@ -101,7 +101,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\InfoSummarizedDao.cs" />
+    <Compile Include="Entities\InfoSummarized.cs" />
     <Compile Include="Entities\PieChartInfo.cs" />
+    <Compile Include="Factors\Factors.cs" />
     <Compile Include="Forms\BingMapForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +216,7 @@
     <None Include="Properties\DataSources\FakeAccountInfo.datasource" />
     <None Include="Properties\DataSources\TheStorageERP.Dao.AccountInfoDao.datasource" />
     <None Include="Properties\DataSources\TheStorageERP.Entities.InfoReorganized.datasource" />
+    <None Include="Properties\DataSources\TheStorageERP.Entities.InfoSummarized.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
