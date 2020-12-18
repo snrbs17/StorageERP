@@ -1,4 +1,10 @@
 ﻿using DevExpress.XtraCharts;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.XtraVerticalGrid;
+using DevExpress.XtraVerticalGrid.Rows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +41,7 @@ namespace TheStorageERP.Forms
 
             }*/
 
-            var list = Dao.Dao.fakeAccountInfo.GetInfoReorganized(x => x.Date.Day).ToList();
+            var list = Dao.Dao.fakeAccountInfo.GetInfoReorganized().ToList();
 
             //chartControl2.Series[0].Points.AddRange(series.ToArray());
             chartControl2.Titles.Add(new ChartTitle() { Text = "Profit&Loss" });
@@ -57,9 +63,15 @@ namespace TheStorageERP.Forms
                 chartControl1.Series[2].Points.Add(new SeriesPoint(x.InfoId.ToString(), (x.OtherSupplies + x.Utilities + x.Insurance + x.Maintenance)));
 
             }
+
+            vGridControl1.DataSource = Dao.Dao.fakeAccountInfo.GetInfoReorganized()
+                .Where(x => x.InfoId == 0)
+                .Select(x => x).ToList();
+
+            vGridControl2.DataSource = Dao.Dao.InfoSummarized.GetInfoes();
         }
 
-        
+
 
         public class DataPoint
         {
@@ -69,7 +81,7 @@ namespace TheStorageERP.Forms
             public static List<DataPoint> GetDataPoints(InfoReorganized info)
             {
                 return new List<DataPoint> {
-                new DataPoint { Argument = "InfoId", Value = info.InfoId },
+                //new DataPoint { Argument = "InfoId", Value = info.InfoId },
                 new DataPoint { Argument = "Sales", Value = info.Sales},
                 new DataPoint { Argument = "OtherRevenues", Value = info.OtherRevenues},
                 new DataPoint { Argument = "SalesReturns", Value = info.SalesReturns},
@@ -87,7 +99,76 @@ namespace TheStorageERP.Forms
         }
         private void chartControl2_Click(object sender, EventArgs e)
         {
+           
+        }
+        private void vGridControl1_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+           
+            double TotalBudget;
+            for (int i = 0; i < vGridControl1.RecordCount; i++)
+            {
+                TotalBudget = 0;
+                foreach (BaseRow row in vGridControl1.Rows["budget"].ChildRows)
+                {
+                    for (int j = 0; j < row.RowPropertiesCount; j++)
+                    {
+                        TotalBudget += Convert.ToDouble(row.GetRowProperties(j).Value);
+                    }
+                }
+                vGridControl1.SetCellValue(vGridControl1.Rows["Total"], i, TotalBudget);
+            }
+        }
+        private void vGridControl2_Click(object sender, MouseEventArgs e)
+        {
+            var hitInfo = vGridControl2.CalcHitInfo(e.Location).RecordIndex;
+
+            if(hitInfo <0)
+            {
+                return;
+            }
+
+            VGridControl cn = sender as VGridControl;
+            string a = cn.FocusedRow.Name;
+
+            string q;
+            foreach (BaseRow row in vGridControl2.Rows)
+            {
+                if (row is EditorRow)
+                {
+                    if (a == row.Name)
+                    {
+                        q = cn.GetCellDisplayText(row, hitInfo).ToString();
+                        vGridControl1.DataSource = Dao.Dao.fakeAccountInfo.GetInfoReorganized()
+                                                    .Where(x => x.InfoId == int.Parse(q))
+                                                    .Select(x => x).ToList();
+                    }
+
+                }
+            }
+        }
+
+        private void vGridControl2_SelectedChanged(object sender, DevExpress.XtraVerticalGrid.Events.SelectedChangedEventArgs e)
+        {
+            MessageBox.Show("asdf");
+        }
+
+        private void vGridView2_SelectChanged(object sender, MouseEventArgs e)
+        {
+            
+            MessageBox.Show("");
+        }
+
+        private void vGridControl2_MouseCaptureChanged(object sender, EventArgs e)
+        {
 
         }
+
+        private void vGridControl2_Click_1(object sender, EventArgs e)
+        {
+            DataGridCell dataGridCell = (DataGridCell)sender;
+            MessageBox.Show(dataGridCell.ColumnNumber.ToString());
+        }
+
+        
     }
 }

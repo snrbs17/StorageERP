@@ -29,16 +29,24 @@ namespace TheStorageERP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle1 = new DevExpress.XtraTreeMap.HatchFillStyle();
             DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle2 = new DevExpress.XtraTreeMap.HatchFillStyle();
+            DevExpress.XtraTreeMap.TreeMapSliceAndDiceLayoutAlgorithm treeMapSliceAndDiceLayoutAlgorithm1 = new DevExpress.XtraTreeMap.TreeMapSliceAndDiceLayoutAlgorithm();
             DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle3 = new DevExpress.XtraTreeMap.HatchFillStyle();
             DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle4 = new DevExpress.XtraTreeMap.HatchFillStyle();
+            DevExpress.XtraTreeMap.TreeMapPaletteColorizer treeMapPaletteColorizer1 = new DevExpress.XtraTreeMap.TreeMapPaletteColorizer();
+            DevExpress.XtraTreeMap.TreeMapFlatDataAdapter treeMapFlatDataAdapter1 = new DevExpress.XtraTreeMap.TreeMapFlatDataAdapter();
+            DevExpress.XtraTreeMap.TreeMapSliceAndDiceLayoutAlgorithm treeMapSliceAndDiceLayoutAlgorithm2 = new DevExpress.XtraTreeMap.TreeMapSliceAndDiceLayoutAlgorithm();
             DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle5 = new DevExpress.XtraTreeMap.HatchFillStyle();
             DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle6 = new DevExpress.XtraTreeMap.HatchFillStyle();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SplineAreaSeriesView splineAreaSeriesView1 = new DevExpress.XtraCharts.SplineAreaSeriesView();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.svgMapControl = new DevExpress.XtraMap.MapControl();
+            this.vectorItemsLayer1 = new DevExpress.XtraMap.VectorItemsLayer();
+            this.svgFileDataAdapter1 = new DevExpress.XtraMap.SvgFileDataAdapter();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.treeMapControl3 = new DevExpress.XtraTreeMap.TreeMapControl();
@@ -57,11 +65,10 @@ namespace TheStorageERP
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.svgMapControl = new DevExpress.XtraMap.MapControl();
-            this.vectorItemsLayer1 = new DevExpress.XtraMap.VectorItemsLayer();
-            this.svgFileDataAdapter1 = new DevExpress.XtraMap.SvgFileDataAdapter();
+            this.infoReorganizedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgMapControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeMapControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeMapControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeMapControl1)).BeginInit();
@@ -79,7 +86,7 @@ namespace TheStorageERP
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgMapControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoReorganizedBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -100,6 +107,15 @@ namespace TheStorageERP
             this.layoutControl1.Size = new System.Drawing.Size(946, 602);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // svgMapControl
+            // 
+            this.svgMapControl.Layers.Add(this.vectorItemsLayer1);
+            this.svgMapControl.Location = new System.Drawing.Point(484, 12);
+            this.svgMapControl.Name = "svgMapControl";
+            this.svgMapControl.Size = new System.Drawing.Size(450, 385);
+            this.svgMapControl.TabIndex = 12;
+            this.vectorItemsLayer1.Data = this.svgFileDataAdapter1;
             // 
             // labelControl4
             // 
@@ -126,6 +142,8 @@ namespace TheStorageERP
             this.treeMapControl3.Appearance.GroupStyle.TextGlowColor = System.Drawing.Color.Empty;
             this.treeMapControl3.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle1;
             this.treeMapControl3.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle2;
+            this.treeMapControl3.Colorizer = null;
+            this.treeMapControl3.LayoutAlgorithm = treeMapSliceAndDiceLayoutAlgorithm1;
             this.treeMapControl3.Location = new System.Drawing.Point(12, 392);
             this.treeMapControl3.Name = "treeMapControl3";
             this.treeMapControl3.Size = new System.Drawing.Size(468, 198);
@@ -156,6 +174,12 @@ namespace TheStorageERP
             this.treeMapControl2.Appearance.GroupStyle.TextGlowColor = System.Drawing.Color.Empty;
             this.treeMapControl2.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle3;
             this.treeMapControl2.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle4;
+            treeMapPaletteColorizer1.ColorizeGroups = true;
+            treeMapPaletteColorizer1.Palette = DevExpress.XtraTreeMap.Palette.OfficePalette;
+            this.treeMapControl2.Colorizer = treeMapPaletteColorizer1;
+            treeMapFlatDataAdapter1.DataSource = this.infoReorganizedBindingSource;
+            this.treeMapControl2.DataAdapter = treeMapFlatDataAdapter1;
+            this.treeMapControl2.LayoutAlgorithm = treeMapSliceAndDiceLayoutAlgorithm2;
             this.treeMapControl2.Location = new System.Drawing.Point(243, 34);
             this.treeMapControl2.Name = "treeMapControl2";
             this.treeMapControl2.Size = new System.Drawing.Size(237, 332);
@@ -299,15 +323,9 @@ namespace TheStorageERP
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
-            // svgMapControl
+            // infoReorganizedBindingSource
             // 
-            this.svgMapControl.Layers.Add(this.vectorItemsLayer1);
-            this.svgMapControl.Location = new System.Drawing.Point(484, 12);
-            this.svgMapControl.Name = "svgMapControl";
-            this.svgMapControl.Size = new System.Drawing.Size(450, 385);
-            this.svgMapControl.TabIndex = 12;
-            this.vectorItemsLayer1.Data = this.svgFileDataAdapter1;
-           // this.svgFileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\예시자료\\Map_Seoul-teukbyeolsi.svg", System.UriKind.Absolute);
+            this.infoReorganizedBindingSource.DataSource = typeof(TheStorageERP.Entities.InfoReorganized);
             // 
             // StorageInfo
             // 
@@ -319,6 +337,7 @@ namespace TheStorageERP
             this.Text = "StorageInfo";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.svgMapControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeMapControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeMapControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeMapControl1)).EndInit();
@@ -336,7 +355,7 @@ namespace TheStorageERP
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgMapControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoReorganizedBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,5 +384,6 @@ namespace TheStorageERP
         private DevExpress.XtraMap.VectorItemsLayer vectorItemsLayer1;
         private DevExpress.XtraMap.SvgFileDataAdapter svgFileDataAdapter1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private System.Windows.Forms.BindingSource infoReorganizedBindingSource;
     }
 }

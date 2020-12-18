@@ -9,5 +9,6 @@ namespace TheStorageERP.Dao
     public static class Dao
     {
         public static AccountInfoDao fakeAccountInfo = new AccountInfoDao();
+        public static InfoSummarizedDao InfoSummarized = new InfoSummarizedDao();
     }
 }
