@@ -14,11 +14,11 @@ namespace TheStorageERP.Dao
 
         //Func<FakeAccountInfo, int> SelectTimeScope = x => x.Date.Day;
 
-        public List<InfoReorganized> GetInfoReorganized(Func<FakeAccountInfo, int> SelectTimeScope)
+        public List<InfoReorganized> GetInfoReorganized()
         {
             var value = Clients.FakeAccountInfoes.GetFakeAccountInfoesAsync().Result
                 .Where(x => x.Date.Year == DateTime.Now.Year)
-                .GroupBy(SelectTimeScope, x => x,
+                .GroupBy(Factors.SelectTimeScope, x => x,
                 (timeUnit, info) => new InfoReorganized
                 {
                     InfoId = timeUnit,
