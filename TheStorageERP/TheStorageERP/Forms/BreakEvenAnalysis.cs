@@ -3,6 +3,7 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraVerticalGrid;
 using DevExpress.XtraVerticalGrid.Rows;
 using System;
@@ -169,6 +170,41 @@ namespace TheStorageERP.Forms
             MessageBox.Show(dataGridCell.ColumnNumber.ToString());
         }
 
-        
+        private void chartControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var list = Dao.Dao.fakeAccountInfo.GetInfoReorganized();
+            FinancialStatement finance = new FinancialStatement();
+            finance.DataSource = list;
+
+            finance.tableCell15.TextFormatString = timeSelectFlag == 0 ? "Day {0}" : "Month {0}";
+            ReportPrintTool printTool = new ReportPrintTool(finance);
+
+            //objectData
+            printTool.ShowPreview();
+
+        }
+
+        int timeSelectFlag;
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Factors.SelectTimeScope = x => x.Date.Day;
+            vGridControl2.DataSource = Dao.Dao.InfoSummarized.GetInfoes();
+            
+            timeSelectFlag = 0;
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            Factors.SelectTimeScope = x => x.Date.Month;
+            vGridControl2.DataSource = Dao.Dao.InfoSummarized.GetInfoes();
+            timeSelectFlag = 1;
+        }
+
     }
 }
