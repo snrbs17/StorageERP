@@ -89,6 +89,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -139,6 +140,12 @@
     <Compile Include="Forms\GanttChart.Designer.cs">
       <DependentUpon>GanttChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Monitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Monitoring.Designer.cs">
+      <DependentUpon>Monitoring.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\StorageInfo.cs">
@@ -179,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GanttChart.resx">
       <DependentUpon>GanttChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Monitoring.resx">
+      <DependentUpon>Monitoring.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

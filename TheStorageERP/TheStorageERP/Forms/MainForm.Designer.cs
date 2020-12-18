@@ -46,6 +46,7 @@ namespace TheStorageERP
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -137,7 +138,8 @@ namespace TheStorageERP
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
             this.ribbonPageGroup3,
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup5});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "ribbonPage1";
             // 
@@ -167,10 +169,17 @@ namespace TheStorageERP
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
             // barButtonItem7
             // 
-            this.barButtonItem7.Caption = "barButtonItem7";
+            this.barButtonItem7.Caption = "Monitoring";
             this.barButtonItem7.Id = 9;
+            this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
+            this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
@@ -208,5 +217,6 @@ namespace TheStorageERP
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
     }
 }

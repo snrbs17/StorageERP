@@ -8,58 +8,58 @@ using System.Threading.Tasks;
 
 namespace ERPDatabase
 {
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(CustomerTypeMeta))]
     public partial class CustomerType
     {
     }
 
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(EmployeeMeta))]
     public partial class Employee
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(FacilityMeta))]
     public partial class Facility
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(FakeAccountInfo))]
     public partial class FakeAcountInfoc
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(FareMeta))]
     public partial class Fare
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(PurchaseMeta))]
     public partial class Purchase
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(PurchaseItemMeta))]
     public partial class PurchaseItem
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(RegionMeta))]
     public partial class Region
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(StorageMeta))]
     public partial class Storage
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(StorageSizeMeta))]
     public partial class StorageSize
     {
     }
-    [JsonObject(MemberSerialization =MemberSerialization.OptIn)]
+    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     [MetadataType(typeof(StorageTypeMeta))]
     public partial class StorageType
     {
@@ -83,7 +83,7 @@ namespace ERPDatabase
     {
         [JsonProperty] public int FacilityId { get; set; }
         [JsonProperty] public string FacilitySpecDescription { get; set; }
-        [JsonProperty]public int RegionId { get; set; }
+        [JsonProperty] public int RegionId { get; set; }
         [JsonProperty] public int EmployeeId { get; set; }
 
     }
