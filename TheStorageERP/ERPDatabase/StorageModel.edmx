@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="CustomerId" />
@@ -100,6 +100,8 @@
           <Property Name="City" Type="nvarchar(max)" Nullable="false" />
           <Property Name="District" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Town" Type="nvarchar(max)" />
+          <Property Name="Latitude" Type="decimal" Precision="10" Scale="5" />
+          <Property Name="Longitude" Type="decimal" Precision="10" Scale="5" />
         </EntityType>
         <EntityType Name="Storage">
           <Key>
@@ -299,8 +301,7 @@
             <End Role="Storage" EntitySet="Storage" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -414,6 +415,8 @@
           <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Town" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Facilities" Relationship="Self.FK_Facility_Region" FromRole="Region" ToRole="Facility" />
+          <Property Name="Latitude" Type="Decimal" Precision="10" Scale="5" />
+          <Property Name="Longitude" Type="Decimal" Precision="10" Scale="5" />
         </EntityType>
         <EntityType Name="Storage">
           <Key>
@@ -722,6 +725,8 @@
           <EntitySetMapping Name="Regions">
             <EntityTypeMapping TypeName="Model.Region">
               <MappingFragment StoreEntitySet="Region">
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
                 <ScalarProperty Name="RegionId" ColumnName="RegionId" />
                 <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="District" ColumnName="District" />

@@ -6236,6 +6236,12 @@ namespace TheStorageERP
         [Newtonsoft.Json.JsonProperty("Town", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string Town { get; set; }
 
+        [Newtonsoft.Json.JsonProperty("Latitude", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public decimal? Latitude { get; set; }
+
+        [Newtonsoft.Json.JsonProperty("Longitude", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public decimal? Longitude { get; set; }
+
 
     }
 
@@ -6323,7 +6329,6 @@ namespace TheStorageERP
 
 #pragma warning restore 1591
 #pragma warning restore 1573
-#pragma warning restore  472
-#pragma warning restore  114
-#pragma warning restore  108
-
+#pragma warning restore 472
+#pragma warning restore 114
+#pragma warning restore 108
