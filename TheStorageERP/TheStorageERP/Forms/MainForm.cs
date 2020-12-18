@@ -40,5 +40,10 @@ namespace TheStorageERP
         {
             CreateForm(new GanttChart());
         }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            CreateForm(new Monitoring());
+        }
     }
 }

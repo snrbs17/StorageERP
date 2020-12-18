@@ -89,5 +89,10 @@ namespace TheStorageERP.Forms
         {
 
         }
+
+        private void accountInfoDaoBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
