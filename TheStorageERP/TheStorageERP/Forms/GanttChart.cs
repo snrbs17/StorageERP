@@ -288,7 +288,7 @@ namespace TheStorageERP
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void searchBtn_Click(object sender, EventArgs e)
         {
             DateTime startDate = Convert.ToDateTime(startDayText.Text);
             DateTime endDate = Convert.ToDateTime(endDayText.Text);

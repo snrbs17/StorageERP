@@ -1,5 +1,10 @@
 ﻿using DevExpress.XtraCharts;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraVerticalGrid;
+using DevExpress.XtraVerticalGrid.Rows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -94,12 +99,47 @@ namespace TheStorageERP.Forms
         }
         private void chartControl2_Click(object sender, EventArgs e)
         {
-
+           
         }
-
-        private void vGridControl2_Click(object sender, EventArgs e)
+        private void vGridControl1_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
+           
+            double TotalBudget;
+            for (int i = 0; i < vGridControl1.RecordCount; i++)
+            {
+                TotalBudget = 0;
+                foreach (BaseRow row in vGridControl1.Rows["budget"].ChildRows)
+                {
+                    for (int j = 0; j < row.RowPropertiesCount; j++)
+                    {
+                        TotalBudget += Convert.ToDouble(row.GetRowProperties(j).Value);
+                    }
+                }
+                vGridControl1.SetCellValue(vGridControl1.Rows["Total"], i, TotalBudget);
+            }
+        }
+        private void vGridControl2_Click(object sender, MouseEventArgs e)
+        {
+            var hitInfo = vGridControl2.CalcHitInfo(e.Location).RecordIndex;
 
+            VGridControl cn = sender as VGridControl;
+            string a = cn.FocusedRow.Name;
+
+            string q;
+            foreach (BaseRow row in vGridControl2.Rows)
+            {
+                if (row is EditorRow)
+                {
+                    if (a == row.Name)
+                    {
+                        q = cn.GetCellDisplayText(row, hitInfo).ToString();
+                        vGridControl1.DataSource = Dao.Dao.fakeAccountInfo.GetInfoReorganized()
+                                                    .Where(x => x.InfoId == int.Parse(q))
+                                                    .Select(x => x).ToList();
+                    }
+
+                }
+            }
         }
 
         private void vGridControl2_SelectedChanged(object sender, DevExpress.XtraVerticalGrid.Events.SelectedChangedEventArgs e)
@@ -123,5 +163,7 @@ namespace TheStorageERP.Forms
             DataGridCell dataGridCell = (DataGridCell)sender;
             MessageBox.Show(dataGridCell.ColumnNumber.ToString());
         }
+
+        
     }
 }
