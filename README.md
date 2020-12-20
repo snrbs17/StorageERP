@@ -11,47 +11,6 @@
 
 # 기능 목록
 
-## 물품 보관용 프로그램
-
-### 1. 회원 가입 및 로그인
-
-<div>
-<img src="./TheProject/TheProject/Resources/동작화면/회원가입.png" width="45%">
-<img src="./TheProject/TheProject/Resources/동작화면/로그인.png" width="45%">
-</div>
-
-- 회원 가입을 하면 ID 중복판단 후 Password가 맞으면 다음 창으로 넘어간다.
-- ID와 Password 확인 후 로그인.
-
-### 2. 선택 (입고, 출고, 검색)
-
-<img src="./TheProject/TheProject/Resources/동작화면/선택화면.png" width="45%">
-
-- 원하는 항목을 선택한다.
-
-### 2-1. 입고 선택
-
-<img src="./TheProject/TheProject/Resources/동작화면/선택_입고.png" width="45%">
-
-- 입고 선택시 일반/신선에 따라 다른 보관함을 지정하여 사용한다.
-- 보관함을 선택하고 시간을 지정한 뒤 결제를 한다.
-
-### 2-2. 출고 선택
-
-<img src="./TheProject/TheProject/Resources/동작화면/선택_출고.png" width="45%">
-
-- 원하는 보관함을 선택하고 출고한다.
-- 출고 시 시간이 지났다면 추과금이 부여된다.
-
-### 2-3. 검색 선택
-
-<img src="./TheProject/TheProject/Resources/동작화면/선택_검색.png" width="45%">
-
-- 현재 사용중인 보관함을 확인한다.
-- 과거 데이터를 확인한다.
-
-
-
 ## 관리자용 프로그램
 
 ### 1. 관리자 화면
@@ -151,42 +110,6 @@
 - 작업중
 
 
-# DGV_Payment 에 선택하는 ComboBox가 실시간으로 반영되지 않은 문제 [#8](https://github.com/snrbs17/603_TeamProject/issues/8)
-
-## 증상
-- DGV에 ComboBox를 넣어 선택 시 실시간으로 반영되지않고 옆의 Cell이나 다른 버튼의 동작 이후에 결과가 반영된다.
-
-## 원인
-- 클릭 문제로 예상된다. (원인 찾는중)
-
-## 결과
-- 작업중
-
-
-# DGV_Storage 에 나타나는 DB 데이터가 코드 변환 에러가 떠서 반영되지 않은 문제 [#7](https://github.com/snrbs17/603_TeamProject/issues/7)
-
-## 증상
-- DGV에 DB를 가져올때 에러 발생
-
-## 원인
-- DB와 코드상에 CanUse는 bool로 StorageTypeId는 int로 설정되어있어 string으로 변경 불가하다고 에러창에 표기되었다.
-- DateTime은 시간이 같이 나와야하나 날짜만 나오고 있다.
-
-## 결과
-- 작업중
-
-# Data Grid View에 값이 출력되지 않는 오류
-
-## 증상
-- LINQ문으로 데이터를 가지고는 와지나 DGV에 입력되지 않았다.
-## 원인
-- Data Grid View에 바인딩되지 않았다.
-- MSSQL 테이블에서 직접 가져오지 않고 join문과 groupby문을 거쳐왔기 때문에 추가적인 작업이 필요했다.
-## 결과
-- LINQ의 결과로 가져온 데이터를 나타낼 수 있는 class들을 선언해 Entities 폴더를 구성했다.
-- 각 class들을 DGV에 인식시킨 후 LINQ로 각 class의 인스턴스 list를 가져와 DGV에 입력했다.
-
-<img src="./TheProject/TheProject/Resources/동작화면/DGV해결.png">
 
 
 
