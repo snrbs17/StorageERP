@@ -13,7 +13,7 @@
 
 ## 관리자용 프로그램
 
-### 1. 관리자 화면
+### 1. 관리자 메인 화면
 
 <div>
 <img src="./TheProject/TheProject/Resources/동작화면/관리자_초기.png" width="45%">
@@ -23,6 +23,27 @@
 - 연간/월간 수입을 월별/일별로 구분하여 시각화한다.
 - 보관함의 종류별로 구분하여 시각화 가능하다.
 - Storage Activate/Deactivate를 통해 보관함의 활성화 여부를 실시간 업데이트 가능하다.
+
+### 2. BingMap 화면
+
+<div>
+<img src="./TheProject/TheProject/Resources/동작화면/관리자_초기.png" width="45%">
+<img src="./TheProject/TheProject/Resources/동작화면/관리자_출력.png" width="45%">
+</div>
+
+- 서울내에 보관함의 위치를 MapPushPin을 사용하여 BingMap에 나타낸다.
+- MapPushPin에 마우스를 가져다대면 ToolTip으로 간단한 정보가 나타난다.
+- MapPushPin을 클릭하면 상세 정보가 나타난다.
+
+### 3. GanttChart 화면
+
+<div>
+<img src="./TheProject/TheProject/Resources/동작화면/관리자_초기.png" width="45%">
+<img src="./TheProject/TheProject/Resources/동작화면/관리자_출력.png" width="45%">
+</div>
+
+- 보관소 위치별 보관함 사용 현황을 알 수 있다.
+- 일반 / 신선 함별로 또는 기간별로 필터가 가능하다.
 
 
 # 관리 항목
