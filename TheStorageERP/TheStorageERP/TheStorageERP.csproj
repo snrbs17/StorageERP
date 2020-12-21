@@ -244,6 +244,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Picture\BingMap.png" />
+    <Content Include="Picture\DB.png" />
     <Content Include="Picture\flowChart.JPG" />
     <Content Include="Picture\GanttChart.png" />
     <Content Include="SvgFile\828px-Map_Seoul-teukbyeolsi.svg" />

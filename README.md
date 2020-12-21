@@ -80,9 +80,9 @@
 
 # 데이터베이스 스키마
 
-<img src="./TheProject/TheProject/Resources/동작화면/DatabaseSchema.png">
+<img src="./TheStorageERP/TheStorageERP/Picture/DB.png" width="100%">
 
-- StorageSelection table의 ExitDateExpected항목과 Reciept table의 TotalCost 항목은 역정규화한 결과이다.
+- Purchase 테이블의 PurchaseAmount 항목은 역정규화한 결과이다.
 
 - 이외의 모든 항목이 제 3 정규화까지 완료됐다
 
