@@ -21,7 +21,9 @@ namespace TheStorageERP.Dao
                     VariableCost = Info.Sum(x => x.Utilities + x.OtherSupplies + x.Depreciation + x.Maintenance + x.Advertising),
                     FixedCost = Info.Sum(x => x.Wages + x.Rent + x.Insurance + x.OtherExpenses)
 
-                }).ToList();
+                })
+                .OrderBy(x=>x._Date)
+                .ToList();
             return list;
         }
     }

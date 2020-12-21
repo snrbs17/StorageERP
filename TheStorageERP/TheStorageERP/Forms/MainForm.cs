@@ -54,6 +54,11 @@ namespace TheStorageERP
             CreateForm(new Monitoring());
         }
 
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            CreateForm(new BreakEvenAnalysis());
+        }
+
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Close();

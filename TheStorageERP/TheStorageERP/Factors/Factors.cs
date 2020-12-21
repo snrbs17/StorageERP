@@ -9,6 +9,6 @@ namespace TheStorageERP
     public static class Factors
     {
         public static Func<FakeAccountInfo, int> SelectTimeScope { get; set; }
-        = x => x.Date.Day;
+        = x => x.Date.Month;
     }
 }
