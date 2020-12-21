@@ -29,9 +29,9 @@ namespace TheStorageERP
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.GanttDiagram ganttDiagram4 = new DevExpress.XtraCharts.GanttDiagram();
-            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.OverlappedGanttSeriesView overlappedGanttSeriesView4 = new DevExpress.XtraCharts.OverlappedGanttSeriesView();
+            DevExpress.XtraCharts.GanttDiagram ganttDiagram1 = new DevExpress.XtraCharts.GanttDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.OverlappedGanttSeriesView overlappedGanttSeriesView1 = new DevExpress.XtraCharts.OverlappedGanttSeriesView();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.comboEndMin = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -74,9 +74,9 @@ namespace TheStorageERP
             ((System.ComponentModel.ISupportInitialize)(this.comboType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboFacility.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(ganttDiagram4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(overlappedGanttSeriesView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(ganttDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(overlappedGanttSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -288,14 +288,11 @@ namespace TheStorageERP
             // 
             // comboFacility
             // 
-            this.comboFacility.EditValue = "화곡역";
+            this.comboFacility.EditValue = "";
             this.comboFacility.Location = new System.Drawing.Point(1093, 12);
             this.comboFacility.Name = "comboFacility";
             this.comboFacility.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboFacility.Properties.Items.AddRange(new object[] {
-            "화곡역",
-            "송정역"});
             this.comboFacility.Size = new System.Drawing.Size(153, 24);
             this.comboFacility.StyleController = this.layoutControl1;
             this.comboFacility.TabIndex = 5;
@@ -303,29 +300,29 @@ namespace TheStorageERP
             // 
             // chartControl
             // 
-            ganttDiagram4.AxisX.CrosshairAxisLabelOptions.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            ganttDiagram4.AxisX.NumericScaleOptions.AutoGrid = false;
-            ganttDiagram4.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            ganttDiagram4.AxisX.VisibleInPanesSerializable = "-1";
-            ganttDiagram4.AxisY.CrosshairAxisLabelOptions.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
-            ganttDiagram4.AxisY.CrosshairAxisLabelOptions.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            ganttDiagram4.AxisY.DateTimeScaleOptions.AutoGrid = false;
-            ganttDiagram4.AxisY.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Hour;
-            ganttDiagram4.AxisY.Label.Alignment = DevExpress.XtraCharts.AxisLabelAlignment.Center;
-            ganttDiagram4.AxisY.ShowBehind = true;
-            ganttDiagram4.AxisY.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            ganttDiagram4.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl.Diagram = ganttDiagram4;
+            ganttDiagram1.AxisX.CrosshairAxisLabelOptions.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            ganttDiagram1.AxisX.NumericScaleOptions.AutoGrid = false;
+            ganttDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            ganttDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            ganttDiagram1.AxisY.CrosshairAxisLabelOptions.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
+            ganttDiagram1.AxisY.CrosshairAxisLabelOptions.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            ganttDiagram1.AxisY.DateTimeScaleOptions.AutoGrid = false;
+            ganttDiagram1.AxisY.DateTimeScaleOptions.GridAlignment = DevExpress.XtraCharts.DateTimeGridAlignment.Hour;
+            ganttDiagram1.AxisY.Label.Alignment = DevExpress.XtraCharts.AxisLabelAlignment.Center;
+            ganttDiagram1.AxisY.ShowBehind = true;
+            ganttDiagram1.AxisY.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            ganttDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl.Diagram = ganttDiagram1;
             this.chartControl.Legend.Name = "Default Legend";
             this.chartControl.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
             this.chartControl.Location = new System.Drawing.Point(12, 12);
             this.chartControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartControl.Name = "chartControl";
-            series4.Name = "Series 1";
-            series4.ValueScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
-            series4.View = overlappedGanttSeriesView4;
+            series1.Name = "Series 1";
+            series1.ValueScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
+            series1.View = overlappedGanttSeriesView1;
             this.chartControl.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series4};
+        series1};
             this.chartControl.Size = new System.Drawing.Size(1021, 598);
             this.chartControl.TabIndex = 4;
             // 
@@ -535,9 +532,9 @@ namespace TheStorageERP
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboFacility.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(ganttDiagram4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(overlappedGanttSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(ganttDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(overlappedGanttSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();

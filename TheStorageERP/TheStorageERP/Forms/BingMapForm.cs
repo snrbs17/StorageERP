@@ -36,6 +36,7 @@ namespace TheStorageERP
 
         private void OnPinClick(object sender, MapItemClickEventArgs e)
         {
+            //((MapPushpin)e.Item).Text
             MessageBox.Show(((MapPushpin)e.Item).Text);
         }
 
@@ -44,11 +45,13 @@ namespace TheStorageERP
         {
             int storageCount = Clients.Facilities.GetFacilitiesAsync().Result.Count;
             List<MapItem> mapItems = new List<MapItem>();
+            var facilities = Clients.Facilities.GetFacilitiesAsync().Result.ToList();
 
-            for (int i = 1; i <= storageCount; i++)
+            for (int i = 0; i < storageCount; i++)
             {
-                int employeeId = Clients.Facilities.GetFacilityAsync(i).Result.EmployeeId;
-                int regionId = Clients.Facilities.GetFacilityAsync(i).Result.RegionId;
+                int facilityId = facilities[i].FacilityId;
+                int employeeId = Clients.Facilities.GetFacilityAsync(facilityId).Result.EmployeeId;
+                int regionId = Clients.Facilities.GetFacilityAsync(facilityId).Result.RegionId;
 
                 string storageName = Clients.Regions.GetRegionAsync(regionId).Result.Town;
                 string employeeName = Clients.Employees.GetEmployeeAsync(employeeId).Result.Name;
