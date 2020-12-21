@@ -115,7 +115,7 @@
 
 # Point of Interest
 
-# Data Analysis시 기본값이 제대로 출력되지 않는 문제 [#11](https://github.com/snrbs17/603_TeamProject/issues/11)
+# Data Analysis시 기본값이 제대로 출력되지 않는 문제 [#11](https://github.com/snrbs17/StorageERP/issues/11)
 
 ## 증상
 - TimeScope를 Yearly로 설정한 후 바로 Search를 누를 경우 잘못된 값이 출력됨
@@ -127,6 +127,15 @@
 - TimeScope 설정이 바꿨을 때 default값이 새로 지정되도록 함수의 위치를 변경
 
 
+# BingMap MapPushPin ToolTip 좌표값 문제 [#16](https://github.com/snrbs17/StorageERP/issues/16)
 
+## 증상
+- MapPushPin을 runtime에 추가해주고 그 위에 마우스를 가져다대면 Tooltip이 떠야하나 좌표값이 맞지않아 다른 위치에서 뜬다.
+
+## 원인
+- BingMap이 runtime 후 좌표가 안맞는걸로 사료됨(정확하게 못찾음)
+
+## 결과
+- 따로 Tooltip을 추가하지않고 애초에 mapPushPin의 메서드로 toolTip을 찾아서 사용하였더니 위치가 서로 맞았다.
 
 
