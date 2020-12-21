@@ -43,6 +43,16 @@
 - 일반 / 신선 함별로 또는 기간별로 필터가 가능하다.
 
 
+### 4. Monitoring 화면
+
+<div>
+<img width="90%" src="https://user-images.githubusercontent.com/32934089/102735884-e2855680-4386-11eb-94bf-49f65c293a43.gif">
+</div>
+
+- 보관소 내 온도, 습도, 진동을 실시간으로 파악할 수 있다.
+
+
+
 # 관리 항목
 
 ### 1. 보관함 정보
