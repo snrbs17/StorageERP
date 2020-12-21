@@ -27,25 +27,8 @@ namespace TheStorageERP
 
             svgMapControl.ZoomLevel = 5;
 
-            var list = LoadData(csvFilepath);
-
-            TreeMapFlatDataAdapter dataAdapter = treeMapControl3.DataAdapter as TreeMapFlatDataAdapter;
-            dataAdapter.DataSource = list;
         }
 
-        private List<SeoulTown> LoadData(string path)
-        {
-            var reader = new StreamReader(File.OpenRead(path));
-            var list = new List<SeoulTown>();
-            while (!reader.EndOfStream)
-            {
-                var line = reader.ReadLine();
-                var values = line.Split(';');
-
-                list.Add(new SeoulTown(int.Parse(values[0]), values[1],/* values[2], values[3],*/ int.Parse(values[2])));
-            }
-            return list;
-        }
 
         //List<BillionaireInfo> CreateBillionaireInfos()
         //{
@@ -64,23 +47,6 @@ namespace TheStorageERP
         //    return infos;
         //}
 
-    }
-}
-public class SeoulTown
-{
-    public int emd_cd { get; }
-    public string emd_eng_nm { get; }
-    //public string name { get; }
-    //public string emd_kor_nm { get; }
-    public int val1 { get; }
-
-    public SeoulTown(int emd_cd, string emd_eng_nm,/* string name, string emd_kor_nm,*/ int val1)
-    {
-        this.emd_cd = emd_cd;
-        this.emd_eng_nm = emd_eng_nm;
-        //this.name = name;
-        //this.emd_kor_nm = emd_eng_nm;
-        this.val1 = val1;
     }
 }
 
