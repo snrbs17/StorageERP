@@ -22,6 +22,7 @@ namespace TheStorageERP.Forms
 {
     public partial class BreakEvenAnalysis : Form
     {
+        string q = "1";
         public BreakEvenAnalysis()
         {
             InitializeComponent();
@@ -31,28 +32,14 @@ namespace TheStorageERP.Forms
         {
             base.OnLoad(e);
 
-            /*var info = new InfoReorganized();
-            Type type = info.GetType();
-            PropertyInfo[] properties = type.GetProperties();
-            List<SeriesPoint> series = new List<SeriesPoint>();
-            //string asdf = nameof(InfoReorganized.Advertising);
-            foreach (var x in properties)
-            {
-                series.Add(new SeriesPoint(x.Name, 3));
-
-            }*/
-
             var list = Dao.Dao.fakeAccountInfo.GetInfoReorganized().ToList();
 
-            //chartControl2.Series[0].Points.AddRange(series.ToArray());
             chartControl2.Titles.Add(new ChartTitle() { Text = "Profit&Loss" });
             chartControl2.Series[0].DataSource = DataPoint.GetDataPoints(list[0]);
             chartControl2.Series[0].ArgumentDataMember = "Argument";
             chartControl2.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
-            //chartControl2.Series[0].ArgumentDataMember = SeriesPoint.ArgumentProperty;
             chartControl2.Series[0].LegendTextPattern = "{A}";
 
-            //SeriesPoint[] seriesPoints;
             for (int i = 0; i < 3; i++)
                 chartControl1.Series.Add(new Series($"series{i}", ViewType.Line));
             foreach (var x in list)
@@ -131,7 +118,7 @@ namespace TheStorageERP.Forms
             VGridControl cn = sender as VGridControl;
             string a = cn.FocusedRow.Name;
 
-            string q;
+            //string q;
             foreach (BaseRow row in vGridControl2.Rows)
             {
                 if (row is EditorRow)
@@ -139,9 +126,11 @@ namespace TheStorageERP.Forms
                     if (a == row.Name)
                     {
                         q = cn.GetCellDisplayText(row, hitInfo).ToString();
+                        
                         vGridControl1.DataSource = Dao.Dao.fakeAccountInfo.GetInfoReorganized()
-                                                    .Where(x => x.InfoId == int.Parse(q))
+                                                    .Where(x => x.InfoId == int.Parse(q)-1)
                                                     .Select(x => x).ToList();
+                        chartControl2.Series[0].DataSource = DataPoint.GetDataPoints(Dao.Dao.fakeAccountInfo.GetInfoReorganized().ToList()[int.Parse(q)-1]);
                     }
 
                 }
@@ -181,7 +170,7 @@ namespace TheStorageERP.Forms
             FinancialStatement finance = new FinancialStatement();
             finance.DataSource = list;
 
-            finance.tableCell15.TextFormatString = timeSelectFlag == 0 ? "Day {0}" : "Month {0}";
+            finance.tableCell15.TextFormatString = timeSelectFlag == 0 ? "Quarter {0}" : "Month {0}";
             ReportPrintTool printTool = new ReportPrintTool(finance);
 
             //objectData
@@ -192,7 +181,7 @@ namespace TheStorageERP.Forms
         int timeSelectFlag;
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            Factors.SelectTimeScope = x => x.Date.Day;
+            Factors.SelectTimeScope = x => (x.Date.Month-1) /3 +1;
             vGridControl2.DataSource = Dao.Dao.InfoSummarized.GetInfoes();
             
             timeSelectFlag = 0;
