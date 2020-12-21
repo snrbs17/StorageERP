@@ -16,13 +16,14 @@
 ### 1. 관리자 메인 화면
 
 <div>
-<img src="./TheStorageERP/TheStorageERP/Picture/GanttChart.png" width="100%">
+<img src="./TheStorageERP/TheStorageERP/Picture/BreakEvenAnalysis.png" width="100%">
 </div>
 
-- 연간/월간 수입을 월별/일별로 구분하여 시각화한다.
-- 보관함의 종류별로 구분하여 시각화 가능하다.
-- Storage Activate/Deactivate를 통해 보관함의 활성화 여부를 실시간 업데이트 가능하다.
-
+- 좌측 상단 버튼으로 월별/분기별 분석 선택 가능
+- View_Report 버튼을 누르면 출력 가능한 형태의 report 생성 가능
+- 하단 grid view에는 총 수입, 고정 비용, 변동 비용을 출력, 같은 내용이 우측 chart에 표현됨
+- 하단 view의 날짜를 누르면 좌측 view와 pie chart에 상세 내용 출력
+- 상단 report 버튼으로도 해당 form을 부를 수 있음.
 ### 2. BingMap 화면
 
 <div>
@@ -50,6 +51,15 @@
 </div>
 
 - 보관소 내 온도, 습도, 진동을 실시간으로 파악할 수 있다.
+
+### 5. Storage Info 화면
+
+<div>
+<img src="./TheStorageERP/TheStorageERP/Picture/StorageInfo.png" width="100%">
+</div>
+- 좌측 tree map은 지역별 보관함 이용 획수를 크기로 형상화해 표현
+- 우측 map control은 지역별로 구분해 표현.
+- 하단 버튼을 통해 지역별 색상 변경 가능
 
 
 

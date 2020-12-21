@@ -37,7 +37,7 @@ namespace TheStorageERP
             fakeDBs.Add(new fakeDB() { Name = "강북구", Sale = 20 });
             fakeDBs.Add(new fakeDB() { Name = "강동구", Sale = 15 });
             fakeDBs.Add(new fakeDB() { Name = "종로구", Sale = 7 });
-            fakeDBs.Add(new fakeDB() { Name = "어디구", Sale = 40 });
+            fakeDBs.Add(new fakeDB() { Name = "노원구", Sale = 40 });
 
             svgMapControl.CenterPoint = new GeoPoint(37.51243, 126.96995);
             svgMapControl.ZoomLevel = 10;

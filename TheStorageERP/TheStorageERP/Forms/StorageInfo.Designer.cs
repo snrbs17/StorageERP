@@ -34,6 +34,10 @@ namespace TheStorageERP
             DevExpress.XtraTreeMap.HatchFillStyle hatchFillStyle2 = new DevExpress.XtraTreeMap.HatchFillStyle();
             DevExpress.XtraTreeMap.TreeMapFlatDataAdapter treeMapFlatDataAdapter1 = new DevExpress.XtraTreeMap.TreeMapFlatDataAdapter();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.svgMapControl = new DevExpress.XtraMap.MapControl();
             this.vectorItemsLayer1 = new DevExpress.XtraMap.VectorItemsLayer();
             this.shapefileDataAdapter1 = new DevExpress.XtraMap.ShapefileDataAdapter();
@@ -43,13 +47,9 @@ namespace TheStorageERP
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.button2 = new System.Windows.Forms.Button();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.button3 = new System.Windows.Forms.Button();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.button4 = new System.Windows.Forms.Button();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.infoReorganizedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -83,6 +83,46 @@ namespace TheStorageERP
             this.layoutControl1.Size = new System.Drawing.Size(1072, 630);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(568, 593);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(161, 25);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Red";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(898, 593);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 25);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Blue";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(733, 593);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(161, 25);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Green";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(403, 593);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 25);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Normal";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // svgMapControl
             // 
@@ -162,16 +202,6 @@ namespace TheStorageERP
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(403, 593);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 25);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.button1;
@@ -180,16 +210,6 @@ namespace TheStorageERP
             this.layoutControlItem1.Size = new System.Drawing.Size(165, 29);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(733, 593);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 25);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // layoutControlItem3
             // 
@@ -200,16 +220,6 @@ namespace TheStorageERP
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(898, 593);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 25);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.button3;
@@ -218,16 +228,6 @@ namespace TheStorageERP
             this.layoutControlItem5.Size = new System.Drawing.Size(166, 29);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(568, 593);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 25);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // layoutControlItem6
             // 
