@@ -19,8 +19,8 @@ namespace TheStorageERP
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new StorageInfo());
-            Application.Run(new SeoulMap());
-            //Application.Run(new MainForm());
+            //Application.Run(new StorageInfo());
+            Application.Run(new MainForm());
             //Application.Run(new BreakEvenAnalysis());
             //Application.Run(new FinancialStatementViewer());
 
