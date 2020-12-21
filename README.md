@@ -1,7 +1,8 @@
 # StorageERP(v1.0.0) : 
 
 # 개요
-- 범용적으로 사용하는 물품 보관 시스템
+- 범용적으로 사용하는 물품 보관 시스템 ERP
+- Web API를 이용한 분산컴퓨팅 기술 적용
 
 # 개발 기간
 - 2020년 12월 14일 ~ 2020년 12월 21일 (2차 Mini Project)
@@ -57,23 +58,10 @@
 <div>
 <img src="./TheStorageERP/TheStorageERP/Picture/StorageInfo.png" width="100%">
 </div>
+
 - 좌측 tree map은 지역별 보관함 이용 획수를 크기로 형상화해 표현
 - 우측 map control은 지역별로 구분해 표현.
 - 하단 버튼을 통해 지역별 색상 변경 가능
-
-
-
-# 관리 항목
-
-### 1. 보관함 정보
-
-- 현재 보관함 상태에 따라 활성화/비활성화를 선택할 수 있다.
-### 2. 관리자용 정보
-
-- 월간/연간 매출액 추이를 그래프로 확인할 수 있다.
-- 보관함 종류에 따라 데이터를 구분해 시각화할 수 있다.
-
-
 
 # 사용 기술
 
@@ -102,10 +90,7 @@
 
 <img src="./TheStorageERP/TheStorageERP/Picture/DB.png" width="100%">
 
-- Purchase 테이블의 PurchaseAmount 항목은 역정규화한 결과이다.
-
-- 이외의 모든 항목이 제 3 정규화까지 완료됐다
-
+- FakeAccountInfo 테이블을 제외하고 모두 제3정규화까지 완료함.
 
 # UML
 
@@ -125,17 +110,65 @@
 
 # Point of Interest
 
-# Data Analysis시 기본값이 제대로 출력되지 않는 문제 [#11](https://github.com/snrbs17/StorageERP/issues/11)
+# Pie chart에 data입력이 안되는 문제 [#15](https://github.com/snrbs17/StorageERP/issues/15)
 
 ## 증상
-- TimeScope를 Yearly로 설정한 후 바로 Search를 누를 경우 잘못된 값이 출력됨
+- GridView와 같은 방식으로 DataSource에 list를 넣었으나 출력되지 않음
 
 ## 원인
-- Form 전체에 default값이 Monthly TimeScope 11월을 기준으로 설정되어 있음
+- Pie chart에는 string 변수와 double 변수가 쌍을 이루는 값이 여러개 입력되어야 함
 
 ## 결과
-- TimeScope 설정이 바꿨을 때 default값이 새로 지정되도록 함수의 위치를 변경
+~~~
+        var list = Dao.Dao.fakeAccountInfo.GetInfoReorganized().ToList();
 
+        chartControl2.Titles.Add(new ChartTitle() { Text = "Profit&Loss" });
+        chartControl2.Series[0].DataSource = DataPoint.GetDataPoints(list[0]);
+        chartControl2.Series[0].ArgumentDataMember = "Argument";
+        chartControl2.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
+        chartControl2.Series[0].LegendTextPattern = "{A}";
+
+        public class DataPoint
+        {
+            public string Argument { get; set; }
+            public int Value { get; set; }
+
+            public static List<DataPoint> GetDataPoints(InfoReorganized info)
+            {
+                return new List<DataPoint> {
+                new DataPoint { Argument = "Sales", Value = info.Sales},
+                new DataPoint { Argument = "OtherRevenues", Value = info.OtherRevenues},
+                new DataPoint { Argument = "SalesReturns", Value = info.SalesReturns},
+                new DataPoint { Argument = "GrossProfit", Value = info.GrossProfit},
+                new DataPoint { Argument = "Wages", Value = info.Wages},
+                new DataPoint { Argument = "Depreciation", Value = info.Depreciation},
+                new DataPoint { Argument = "OtherSupplies", Value = info.OtherSupplies},
+                new DataPoint { Argument = "Utilities", Value = info.Utilities},
+                new DataPoint { Argument = "Insurance", Value = info.Insurance},
+                new DataPoint { Argument = "Maintenance", Value = info.Maintenance},
+                new DataPoint { Argument = "Advertising", Value = info.Advertising},
+                new DataPoint { Argument = "OtherExpenses", Value = info.OtherExpenses}
+                };
+~~~
+- 공식 문서를 참고하여 해결.
+- DataSource외에 argumen와 value가 필요함.
+
+
+# Data Analysis시 기본값이 제대로 출력되지 않는 문제 [#8](https://github.com/snrbs17/StorageERP/issues/8)
+
+## 증상
+- Groupby 함수로 묶인 class들의 property 총합을 구할 수 없는 문제
+
+## 원인
+- Class들이 collection으로 묶여 있어 property를 추출해내기 어려움
+
+## 결과
+- Groupby 후 select 단계에서 lambda식을 이용해 계산
+~~~
+var value = Clients.FakeAccountInfoes.GetFakeAccountInfoesAsync().Result
+.GroupBy(x => x.Date.Day, x => x,
+(day, info) => new {Info.Sum(x => x.Sales)}
+~~~
 
 # BingMap MapPushPin ToolTip 좌표값 문제 [#16](https://github.com/snrbs17/StorageERP/issues/16)
 

@@ -19,7 +19,7 @@ namespace TheStorageERP
         //const string csvFilepath = @"C:\Users\kccistc\Desktop\StorageERP\Seoul.csv";
 
         ColorizerColorItem[] colorItems = Factors.Items1;
-            ShapefileDataAdapter adapter = new ShapefileDataAdapter();
+        ShapefileDataAdapter adapter = new ShapefileDataAdapter();
         public StorageInfo()
         {
             InitializeComponent();
