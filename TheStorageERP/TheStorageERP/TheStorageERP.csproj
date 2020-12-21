@@ -221,6 +221,7 @@
     <EmbeddedResource Include="FinancialStatement.resx">
       <DependentUpon>FinancialStatement.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\FakeAccountInfo.datasource" />
     <None Include="Properties\DataSources\TheStorageERP.Dao.AccountInfoDao.datasource" />
@@ -244,6 +245,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Picture\BingMap.png" />
+    <Content Include="Picture\class.png" />
     <Content Include="Picture\DB.png" />
     <Content Include="Picture\flowChart.JPG" />
     <Content Include="Picture\GanttChart.png" />

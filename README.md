@@ -100,7 +100,7 @@
 # UML
 
 ## 클래스 다이어그램
-<img src="./TheProject/TheProject/Resources/동작화면/ClassDiagram.png">
+<img src="./TheStorageERP/TheStorageERP/Picture/class.png" width="100%">
 
 
 ## User Case Diagram
