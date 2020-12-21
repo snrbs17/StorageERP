@@ -100,12 +100,12 @@
 # UML
 
 ## 클래스 다이어그램
-<img src="./TheProject/TheProject/Resources/동작화면/ClassDiagram.png">
+<img src="./TheStorageERP/TheStorageERP/Picture/class.png" width="100%">
 
 
 ## User Case Diagram
 
-<img src="./TheProject/TheProject/Resources/동작화면/UserCaseDiagram.png">
+<img src="./TheStorageERP/TheStorageERP/Picture/usecase.png" width="100%">
 
 ## 순서도
 
@@ -125,17 +125,6 @@
 
 ## 결과
 - TimeScope 설정이 바꿨을 때 default값이 새로 지정되도록 함수의 위치를 변경
-
-# DGV_Search 에 페이지를 나누는 동작이 반영되지 않은 문제 [#9](https://github.com/snrbs17/603_TeamProject/issues/9)
-
-## 증상
-- DGV에 항목을 5개씩 표시해주고 이전/다음페이지 누르면 넘어가게 구현중이나 항목 나눠지는게 안먹히고 한번에 다 나옴
-
-## 원인
-- 가져온 코드에서 상황에 맞춰 바꾼 부분이 원인으로 예상됨 (원인 찾는중)
-
-## 결과
-- 작업중
 
 
 

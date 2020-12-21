@@ -271,9 +271,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Picture\BingMap.png" />
+    <Content Include="Picture\class.png" />
     <Content Include="Picture\DB.png" />
     <Content Include="Picture\flowChart.JPG" />
     <Content Include="Picture\GanttChart.png" />
+    <Content Include="Picture\usecase.png" />
     <Content Include="SvgFile\828px-Map_Seoul-teukbyeolsi.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

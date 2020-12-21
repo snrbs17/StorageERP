@@ -1,2 +1,345 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TheStorageERP.CustomersClient" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEgAAAAAAIAAhBAAgAAAAAAgAAAgAAAIAwAEABA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.CustomerTypesClient" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAAQAhBAAgAgAAAAgAAAgAAIIAwAUAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.EmployeesClient" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAEAAhBAQgAAAAAAgACAgAAAKAwAEAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.FacilitiesClient" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAAAAhBAAgAAAAAAgAAIgAACIAwAUQAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.FakeAccountInfoesClient" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAACAAhBQAgAAAAAAgAAAhEAAIAwBEAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.FaresClient" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAQAAhRAAgAAAAAAgAABgACAIAwAEAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.PurchaseItemsClient" Collapsed="true">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAFgAABBAAAAAhBAAgAAAAAAgAEAgAAAIAwAEAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.PurchasesClient" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEgCAIAAAAAAhBAAgAAAAAAoAAAgAAAIAwAEIAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.RegionsClient" Collapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAkgAAAAAEAAAhBEAgAAAAAAgAAAgAAQIAwAEAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.StoragesClient" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEgAAAAAAAAAhBAAgEAAEAAgAAAgAIAIgwAEAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.StorageSizesClient" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAEgAAAAAAAgAhBAAgAAABAAgAAAgAAAIAwgEAQA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.StorageTypesClient" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgACAAAAIAApBAAgAAABAAgAAAgAAAIAwAEAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Customer" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABAAAAAAAAAAAAQAEQQAQABACAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.CustomerType" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Employee" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Facility" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.FakeAccountInfo" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAsgIgAAABgAEACAAAAABAAACAAAAQAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Fare" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAACAAAAAAAAAAAAAACAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.PurchaseItem" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAEAAABEAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Purchase" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAQACAAAAAEABAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Region" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAQAAAkAAAAAIAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Storage" Collapsed="true">
+    <Position X="8.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACEAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.StorageSize" Collapsed="true">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.StorageType" Collapsed="true">
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.ApiException" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAEAAAAAAAACAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.ApiException&lt;TResult&gt;" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\APIClients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Factors" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factors\Factors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.FinancialStatement" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ERgMBCb8BSwOINhOBwCDAAQKAAAAQAAAQhAAAAHQPxs=</HashCode>
+      <FileName>FinancialStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.BingMapForm" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAgAACAAACQAAACAQAACAAAAAAEAAAACAAAAAAA=</HashCode>
+      <FileName>Forms\BingMapForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.FinancialStatementViewer" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACQAAACAAAIAAAAAEAAAAAAgAI=</HashCode>
+      <FileName>Forms\FinancialStatementViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.GanttChart" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQBAABAAQCBAACQCAASAAAAShgEIAAAIAhIAKAwAAAA=</HashCode>
+      <FileName>Forms\GanttChart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.MainForm" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAfCAAAAIAAAGEEAAKIAACAAAAEABhADIECAQ=</HashCode>
+      <FileName>Forms\MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Monitoring" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQEAAAAAGAIISQAAACAgAQCIAggMIEAAA8QAAQBAAo=</HashCode>
+      <FileName>Forms\Monitoring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.StorageGanttChart" Collapsed="true">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAASAAACQAAACAAAACAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\StorageGanttChart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.StorageInfo" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAACUAAACAAAAKYAAAABgAAAAgAQAAAAA=</HashCode>
+      <FileName>Forms\StorageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.fakeDB" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\StorageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.StorageMap" Collapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAiAACAAACQAAACAQAACAAAAAAEAAAACAAAAAAA=</HashCode>
+      <FileName>Forms\StorageMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Program" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Client.Clients" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAcAAYAAQABAAAAAAEAAAAAACAAAQAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\Clients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Dao.AccountInfoDao" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAA=</HashCode>
+      <FileName>Dao\AccountInfoDao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Dao.Dao" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dao\Dao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Dao.InfoSummarizedDao" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Dao\InfoSummarizedDao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Entities.InfoReorganized" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAsgIgAAABgAEACAAAAAAAAACAAAAQAA=</HashCode>
+      <FileName>Entities\InfoReorganized.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Entities.InfoSummarized" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAABAAAAAAAAAAAABAAAAAAAAAE=</HashCode>
+      <FileName>Entities\InfoSummarized.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Entities.PieChartInfo" Collapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PieChartInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Forms.BreakEvenAnalysis" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAEAQBoAaCAAQBIgQCQEABjoAEIAAASCGAAgIkAgQI=</HashCode>
+      <FileName>Forms\BreakEvenAnalysis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Forms.SeoulMap" Collapsed="true">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAgAACAAAAAAAACAAAACAAAAABAAAAAACAAAAAA=</HashCode>
+      <FileName>Forms\SeoulMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Properties.Resources" Collapsed="true">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheStorageERP.Properties.Settings" Collapsed="true">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Malgun Gothic" Size="9" />
+</ClassDiagram>
