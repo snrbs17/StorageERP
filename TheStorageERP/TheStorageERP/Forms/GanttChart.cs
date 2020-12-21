@@ -24,6 +24,21 @@ namespace TheStorageERP
         {
             base.OnLoad(e);
 
+            var facilityList = Clients.Facilities.GetFacilitiesAsync().Result;
+
+            var region = Clients.Regions.GetRegionsAsync().Result;
+            var query = from x in facilityList
+                        join y in region on x.RegionId equals y.RegionId
+                        select y;
+            var queryList = query.ToList();
+
+            for (int i = 0; i < facilityList.Count; i++)
+            {
+                comboFacility.Properties.Items.Add(queryList[i].Town);
+            }
+
+            comboFacility.Text = queryList[0].Town;
+
             startChart();
 
             GanttDiagram myDiagram = (GanttDiagram)chartControl.Diagram;
@@ -39,11 +54,13 @@ namespace TheStorageERP
             //myDiagram.AxisY.WholeRange.Auto = false;
 
             DateTime nowDate = DateTime.Now;
-            myDiagram.AxisY.WholeRange.SetMinMaxValues(nowDate.AddDays(-2) , nowDate);
+            myDiagram.AxisY.WholeRange.SetMinMaxValues(nowDate.AddDays(-2), nowDate);
 
             XYDiagram xYDiagram = (XYDiagram)chartControl.Diagram;
             xYDiagram.AxisY.WholeRange.Auto = false;
             //xYDiagram.AxisY.WholeRange.SetMinMaxValues = 
+
+
         }
 
         private void startChart()
