@@ -165,7 +165,7 @@ namespace TheStorageERP
             this.ribbonPageGroup3,
             this.ribbonPageGroup4});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Text = "보관함 관리";
             // 
             // ribbonPageGroup1
             // 
@@ -201,7 +201,7 @@ namespace TheStorageERP
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "MainForm";
-            this.Text = "Main";
+            this.Text = "분산컴퓨팅 기반 스마트 보관함 관리시스템";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
