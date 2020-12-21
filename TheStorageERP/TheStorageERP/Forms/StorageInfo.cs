@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheStorageERP.Client;
 
 namespace TheStorageERP
 {
@@ -31,10 +32,22 @@ namespace TheStorageERP
             svgMapControl.CenterPoint = new GeoPoint(37.54164, 126.84035);
             svgMapControl.ZoomLevel = 13;
 
-
-
+            CreateDB();
         }
 
+        private void CreateDB()
+        {
+            var fakeDB = Clients.FakeAccountInfoes.GetFakeAccountInfoesAsync().Result;
+            
+            TreeMapFlatDataAdapter adapter = new TreeMapFlatDataAdapter
+            {
+                DataSource = fakeDB,
+                LabelDataMember = "InfoId",
+                ValueDataMember = "Sales"
+            };
+
+            treeMapControl.DataAdapter = adapter;
+        }
 
         //List<BillionaireInfo> CreateBillionaireInfos()
         //{
