@@ -102,6 +102,7 @@
 ## 순서도
 
 <div>
+<img src="./StorageERP/StorageERP/Picture/flowChart.JPG" width="45%">
 <img src="./TheProject/TheProject/Resources/동작화면/순서도1.png" width="30%">
 <img src="./TheProject/TheProject/Resources/동작화면/순서도2.png" width="60%">
 </div>
