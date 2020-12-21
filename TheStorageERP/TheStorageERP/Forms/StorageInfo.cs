@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraTreeMap;
+﻿using DevExpress.XtraMap;
+using DevExpress.XtraTreeMap;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace TheStorageERP
 {
     public partial class StorageInfo : Form
     {
-        const string csvFilepath = @"C:\Users\kccistc\Desktop\StorageERP\Seoul.csv";
+        //const string csvFilepath = @"C:\Users\kccistc\Desktop\StorageERP\Seoul.csv";
 
         public StorageInfo()
         {
@@ -25,7 +26,12 @@ namespace TheStorageERP
         {
             base.OnLoad(e);
 
-            svgMapControl.ZoomLevel = 5;
+           
+
+            svgMapControl.CenterPoint = new GeoPoint(37.54164, 126.84035);
+            svgMapControl.ZoomLevel = 13;
+
+
 
         }
 
