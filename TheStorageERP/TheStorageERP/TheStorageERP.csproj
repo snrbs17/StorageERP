@@ -241,6 +241,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Picture\flowChart.JPG" />
     <Content Include="SvgFile\828px-Map_Seoul-teukbyeolsi.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

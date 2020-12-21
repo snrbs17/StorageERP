@@ -236,11 +236,6 @@ namespace TheStorageERP
             public double Value { get; set; }
         }
 
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            isEnabled = false;
-            base.OnClosing(e);
-        }
 
         private void ChartControl2_Click(object sender, EventArgs e)
         {
@@ -260,6 +255,12 @@ namespace TheStorageERP
         private void timer3_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("G");
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            isEnabled = false;
+            base.OnClosing(e);
         }
     }
 }
