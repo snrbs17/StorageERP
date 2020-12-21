@@ -38,6 +38,8 @@ namespace TheStorageERP
             DevExpress.XtraCharts.SplineAreaSeriesView splineAreaSeriesView1 = new DevExpress.XtraCharts.SplineAreaSeriesView();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.svgMapControl = new DevExpress.XtraMap.MapControl();
+            this.vectorItemsLayer1 = new DevExpress.XtraMap.VectorItemsLayer();
+            this.shapefileDataAdapter1 = new DevExpress.XtraMap.ShapefileDataAdapter();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -50,8 +52,6 @@ namespace TheStorageERP
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.shapefileDataAdapter1 = new DevExpress.XtraMap.ShapefileDataAdapter();
-            this.vectorItemsLayer1 = new DevExpress.XtraMap.VectorItemsLayer();
             this.infoReorganizedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -94,6 +94,8 @@ namespace TheStorageERP
             this.svgMapControl.Name = "svgMapControl";
             this.svgMapControl.Size = new System.Drawing.Size(450, 385);
             this.svgMapControl.TabIndex = 12;
+            this.vectorItemsLayer1.Data = this.shapefileDataAdapter1;
+            this.shapefileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\StorageERP\\Seoul.shp", System.UriKind.Absolute);
             // 
             // labelControl4
             // 
@@ -131,7 +133,6 @@ namespace TheStorageERP
             this.treeMapControl.Appearance.HighlightedLeafStyle.FillStyle = hatchFillStyle1;
             this.treeMapControl.Appearance.SelectedLeafStyle.FillStyle = hatchFillStyle2;
             this.treeMapControl.DataAdapter = treeMapFlatDataAdapter1;
-            this.treeMapControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeMapControl.Location = new System.Drawing.Point(12, 34);
             this.treeMapControl.Name = "treeMapControl";
             this.treeMapControl.Size = new System.Drawing.Size(468, 534);
@@ -231,8 +232,6 @@ namespace TheStorageERP
             this.layoutControlItem9.Size = new System.Drawing.Size(454, 389);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
-            this.shapefileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\StorageERP\\Seoul.shp", System.UriKind.Absolute);
-            this.vectorItemsLayer1.Data = this.shapefileDataAdapter1;
             // 
             // infoReorganizedBindingSource
             // 
