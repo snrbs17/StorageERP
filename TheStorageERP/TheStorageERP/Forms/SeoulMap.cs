@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DevExpress.Map.Dashboard;
+using DevExpress.XtraMap;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +19,32 @@ namespace TheStorageERP.Forms
             InitializeComponent();
         }
 
-        private void SeoulMap_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
+            base.OnLoad(e);
 
+
+            Uri baseUri = new Uri(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            ShapefileDataAdapter adapter = new ShapefileDataAdapter();
+            adapter.FileUri = new Uri(baseUri, "../../SvgFile/Seoul.shp");
+            mapControl1.Layers.Add(new VectorItemsLayer
+            {
+                Data = adapter
+            });
+
+            mapControl1.Layers.Add(new ImageLayer()
+            {
+                DataProvider = new BingMapDataProvider()
+                {
+                    BingKey = "YOUR BING KEY"
+                }
+            });
+
+            
+            mapControl1.Layers.Add(new VectorItemsLayer()
+            {
+                
+            });
         }
     }
 }
