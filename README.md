@@ -102,6 +102,7 @@
 ## 순서도
 
 <div>
+<img width="90%" src="https://user-images.githubusercontent.com/32934089/102729356-cdeb9300-4373-11eb-9515-63c658c094d0.JPG">
 <img src="./TheProject/TheProject/Resources/동작화면/순서도1.png" width="30%">
 <img src="./TheProject/TheProject/Resources/동작화면/순서도2.png" width="60%">
 </div>

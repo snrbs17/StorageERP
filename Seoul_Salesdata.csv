@@ -1,0 +1,494 @@
+emd_cd,emd_eng_nm,법정구명,emd_kor_nm,sales vol
+11110101,Cheongun-dong, 종로구,청운동,376
+11110102,Singyo-dong, 종로구,신교동,396
+11110103,Gungjeong-dong, 종로구,궁정동,370
+11110104,Hyoja-dong, 종로구,효자동,75
+11110105,Changseong-dong, 종로구,창성동,122
+11110106,Tongui-dong, 종로구,통의동,444
+11110107,Jeokseon-dong, 종로구,적선동,17
+11110108,Tongin-dong, 종로구,통인동,384
+11110109,Nusang-dong, 종로구,누상동,335
+11110110,Nuha-dong, 종로구,누하동,424
+11110111,Ogin-dong, 종로구,옥인동,23
+11110112,Chebu-dong, 종로구,체부동,57
+11110113,Pirun-dong, 종로구,필운동,306
+11110114,Naeja-dong, 종로구,내자동,53
+11110115,Sajik-dong, 종로구,사직동,286
+11110116,Doryeom-dong, 종로구,도렴동,134
+11110117,Dangju-dong, 종로구,당주동,10
+11110118,Naesu-dong, 종로구,내수동,440
+11110119,Sejongno, 종로구,세종로,95
+11110120,Sinmunno 1(il)-ga, 종로구,신문로1가,114
+11110121,Sinmunno 2(i)-ga, 종로구,신문로2가,2
+11110122,Cheongjin-dong, 종로구,청진동,34
+11110123,Seorin-dong, 종로구,서린동,273
+11110124,Susong-dong, 종로구,수송동,179
+11110125,Junghak-dong, 종로구,중학동,64
+11110126,Jongno 1(il)-ga, 종로구,종로1가,192
+11110127,Gongpyeong-dong, 종로구,공평동,324
+11110128,Gwanhun-dong, 종로구,관훈동,74
+11110129,Gyeonji-dong, 종로구,견지동,272
+11110130,Waryong-dong, 종로구,와룡동,108
+11110131,Gwonnong-dong, 종로구,권농동,126
+11110132,Unni-dong, 종로구,운니동,282
+11110133,Ikseon-dong, 종로구,익선동,396
+11110134,Gyeongun-dong, 종로구,경운동,128
+11110135,Gwancheol-dong, 종로구,관철동,205
+11110136,Insa-dong, 종로구,인사동,102
+11110137,Nagwon-dong, 종로구,낙원동,129
+11110138,Jongno 2(i)-ga, 종로구,종로2가,171
+11110139,Palpan-dong, 종로구,팔판동,96
+11110140,Samcheong-dong, 종로구,삼청동,160
+11110141,Anguk-dong, 종로구,안국동,288
+11110142,Sogyeok-dong, 종로구,소격동,320
+11110143,Hwa-dong, 종로구,화동,171
+11110144,Sagan-dong, 종로구,사간동,306
+11110145,Songhyeon-dong, 종로구,송현동,98
+11110146,Gahoe-dong, 종로구,가회동,86
+11110147,Jae-dong, 종로구,재동,157
+11110148,Gye-dong, 종로구,계동,172
+11110149,Wonseo-dong, 종로구,원서동,260
+11110150,Hunjeong-dong, 종로구,훈정동,22
+11110151,Myo-dong, 종로구,묘동,417
+11110152,Bongik-dong, 종로구,봉익동,353
+11110153,Donui-dong, 종로구,돈의동,355
+11110154,Jangsa-dong, 종로구,장사동,219
+11110155,Gwansu-dong, 종로구,관수동,378
+11110156,Jongno 3(sam)-ga, 종로구,종로3가,130
+11110157,Inui-dong, 종로구,인의동,327
+11110158,Yeji -dong, 종로구,예지동,436
+11110159,Wonnam-dong, 종로구,원남동,383
+11110160,Yeonji-dong, 종로구,연지동,209
+11110161,Jongno 4(sa)-ga, 종로구,종로4가,383
+11110162,Hyoje-dong, 종로구,효제동,432
+11110163,Jongno 5(o)-ga, 종로구,종로5가,20
+11110164,Jongno 6(yuk)-ga, 종로구,종로6가,392
+11110165,Ihwa-dong, 종로구,이화동,439
+11110166,Yeongeon-dong, 종로구,연건동,200
+11110167,Chungsin-dong, 종로구,충신동,279
+11110168,Dongsung-dong, 종로구,동숭동,82
+11110169,Hyehwa-dong, 종로구,혜화동,8
+11110170,Myeongnyun 1(il)-ga, 종로구,명륜1가,52
+11110171,Myeongnyun 2(i)-ga, 종로구,명륜2가,108
+11110172,Myeongnyun 4(sa)-ga, 종로구,명륜4가,273
+11110173,Myeongnyun 3(sam)-ga, 종로구,명륜3가,263
+11110174,Changsin-dong, 종로구,창신동,287
+11110175,Sungin-dong, 종로구,숭인동,61
+11110176,Gyonam-dong, 종로구,교남동,143
+11110177,Pyeong-dong, 종로구,평동,323
+11110178,Songwol-dong, 종로구,송월동,203
+11110179,Hongpa-dong, 종로구,홍파동,213
+11110180,Gyobuk-dong, 종로구,교북동,303
+11110181,Haengchon-dong, 종로구,행촌동,315
+11110182,Gugi-dong, 종로구,구기동,163
+11110183,Pyeongchang-dong, 종로구,평창동,307
+11110184,Buam-dong, 종로구,부암동,329
+11110185,Hongji-dong, 종로구,홍지동,184
+11110186,Sinyeong-dong, 종로구,신영동,236
+11110187,Muak-dong, 종로구,무악동,432
+11140101,Mugyo-dong, 중구,무교동,44
+11140102,Da-dong, 중구,다동,206
+11140103,Taepyeongno 1(il)-ga, 중구,태평로1가,237
+11140104,Euljiro 1(il)-ga, 중구,을지로1가,388
+11140105,Euljiro 2(i)-ga, 중구,을지로2가,317
+11140106,Namdaemunno 1(il)-ga, 중구,남대문로1가,377
+11140107,Samgak-dong, 중구,삼각동,385
+11140108,Suha-dong, 중구,수하동,339
+11140109,Janggyo-dong, 중구,장교동,374
+11140110,Supyo-dong, 중구,수표동,117
+11140111,Sogong-dong, 중구,소공동,78
+11140112,Namchang-dong, 중구,남창동,71
+11140113,Bukchang-dong, 중구,북창동,309
+11140114,Taepyeongno 2(i)-ga, 중구,태평로2가,299
+11140115,Namdaemunno 2(i)-ga, 중구,남대문로2가,189
+11140116,Namdaemunno 3(sam)-ga, 중구,남대문로3가,288
+11140117,Namdaemunno 4(sa)-ga, 중구,남대문로4가,392
+11140118,Namdaemunno 5(o)-ga, 중구,남대문로5가,22
+11140119,Bongnae-dong 1(il)-ga, 중구,봉래동1가,156
+11140120,Bongnae-dong 2(i)-ga, 중구,봉래동2가,225
+11140121,Hoehyeon-dong 1(il)-ga, 중구,회현동1가,368
+11140122,Hoehyeon-dong 2(i)-ga, 중구,회현동2가,19
+11140123,Hoehyeon-dong 3(sam)-ga, 중구,회현동3가,405
+11140124,Chungmuro 1(il)-ga, 중구,충무로1가,404
+11140125,Chungmuro 2(i)-ga, 중구,충무로2가,269
+11140126,Myeong-dong 1(il)-ga, 중구,명동1가,44
+11140127,Myeong-dong 2(i)-ga, 중구,명동2가,323
+11140128,Namsan-dong 1(il)-ga, 중구,남산동1가,314
+11140129,Namsan-dong 2(i)-ga, 중구,남산동2가,118
+11140130,Namsan-dong 3(sam)-ga, 중구,남산동3가,84
+11140131,Jeo-dong 1(il)-ga, 중구,저동1가,233
+11140132,Chungmuro 4(sa)-ga, 중구,충무로4가,341
+11140133,Chungmuro 5(o)-ga, 중구,충무로5가,370
+11140134,Inhyeon-dong 2(i)-ga, 중구,인현동2가,129
+11140135,Yegwan-dong, 중구,예관동,141
+11140136,Mukjeong-dong, 중구,묵정동,360
+11140137,Pil-dong 1(il)-ga, 중구,필동1가,99
+11140138,Pildong 2(i)-ga, 중구,필동2가,408
+11140139,Pil-dong 3(sam)-ga, 중구,필동3가,348
+11140140,Namhak-dong, 중구,남학동,376
+11140141,Juja-dong, 중구,주자동,201
+11140142,Yejang-dong, 중구,예장동,214
+11140143,Jangchung-dong 1(il)-ga, 중구,장충동1가,46
+11140144,Jangchung-dong 2(i)-ga, 중구,장충동2가,324
+11140145,Gwanghui-dong 1(il)-ga, 중구,광희동1가,23
+11140146,Gwanghui-dong 2(i)-ga, 중구,광희동2가,213
+11140147,Ssangnim-dong, 중구,쌍림동,227
+11140148,Euljiro 6(yuk)-ga, 중구,을지로6가,221
+11140149,Euljiro 7(chil)-ga, 중구,을지로7가,399
+11140150,Euljiro 4(sa)-ga, 중구,을지로4가,311
+11140151,Euljiro 5(o)-ga, 중구,을지로5가,87
+11140152,Jugyo-dong, 중구,주교동,130
+11140153,Bangsan-dong, 중구,방산동,95
+11140154,Ojang-dong, 중구,오장동,57
+11140155,Euljiro 3(sam)-ga, 중구,을지로3가,47
+11140156,Ipjeong-dong, 중구,입정동,319
+11140157,Sallim-dong, 중구,산림동,126
+11140158,Chungmuro 3(sam)-ga, 중구,충무로3가,115
+11140159,Cho-dong, 중구,초동,116
+11140160,Inhyeon-dong 1(il)-ga, 중구,인현동1가,124
+11140161,Jeo-dong 2(i)-ga, 중구,저동2가,176
+11140162,Sindang-dong, 중구,신당동,296
+11140163,Heungin-dong, 중구,흥인동,219
+11140164,Muhak-dong, 중구,무학동,3
+11140165,Hwanghak-dong, 중구,황학동,71
+11140166,Seosomun-dong, 중구,서소문동,11
+11140167,Jeong-dong, 중구,정동,106
+11140168,Sunhwa-dong, 중구,순화동,286
+11140169,Uijuro 1(il)-ga, 중구,의주로1가,144
+11140170,Chungjeongno 1(il)-ga, 중구,충정로1가,421
+11140171,Jungnim-dong, 중구,중림동,244
+11140172,Uijuro 2(i)-ga, 중구,의주로2가,271
+11140173,Malli-dong 1(il)-ga, 중구,만리동1가,175
+11140174,Malli-dong 2(i)-ga, 중구,만리동2가,361
+11170101,Huam-dong, 용산구,후암동,72
+11170102,yongsan-dong  2(i)-ga, 용산구,용산동2가,211
+11170103,Yongsan-dong 4(sa)-ga, 용산구,용산동4가,213
+11170104,Garwol-dong, 용산구,갈월동,274
+11170105,Namyeong-dong, 용산구,남영동,308
+11170106,Yongsan-dong 1(il)-ga, 용산구,용산동1가,346
+11170107,Dongja-dong, 용산구,동자동,13
+11170108,Seogye-dong, 용산구,서계동,216
+11170109,Cheongpa-dong 1(il)-ga, 용산구,청파동1가,25
+11170110,Cheongpa-dong 2(i)-ga, 용산구,청파동2가,172
+11170111,Cheongpa-dong 3(sam)-ga, 용산구,청파동3가,309
+11170112,Wonhyoro 1(iI)-ga, 용산구,원효로1가,382
+11170113,Wonhyoro 2(i)-ga, 용산구,원효로2가,344
+11170114,Sinchang-dong, 용산구,신창동,24
+11170115,Sancheon-dong, 용산구,산천동,203
+11170116,Cheongam-dong, 용산구,청암동,174
+11170117,Wonhyoro 3(sam)-ga, 용산구,원효로3가,223
+11170118,Wonhyoro 4(sa)-ga, 용산구,원효로4가,194
+11170119,Hyochang-dong, 용산구,효창동,288
+11170120,Dowon-dong, 용산구,도원동,348
+11170121,Yongmun-dong, 용산구,용문동,173
+11170122,Munbae-dong, 용산구,문배동,12
+11170123,Singye-dong, 용산구,신계동,376
+11170124,Hangangno 1(il)-ga, 용산구,한강로1가,281
+11170125,Hangangno 2(i)-ga, 용산구,한강로2가,274
+11170126,Yongsan-dong 3(sam)-ga, 용산구,용산동3가,34
+11170127,Yongsan-dong 5(o)-ga, 용산구,용산동5가,357
+11170128,Hangangno 3(sam)-ga, 용산구,한강로3가,152
+11170129,Ichon-dong, 용산구,이촌동,395
+11170130,Itaewon-dong, 용산구,이태원동,139
+11170131,Hannam-dong, 용산구,한남동,359
+11170132,Dongbinggo-dong, 용산구,동빙고동,229
+11170133,Seobinggo-dong, 용산구,서빙고동,57
+11170134,Juseong-dong, 용산구,주성동,150
+11170135,Yongsan-dong 6(yuk)-ga, 용산구,용산동6가,388
+11170136,Bogwang-dong, 용산구,보광동,195
+11200101,Sangwangsimni-dong, 성동구,상왕십리동,4
+11200102,Hawangsimni-dong, 성동구,하왕십리동,334
+11200103,Hongik-dong, 성동구,홍익동,70
+11200104,Doseon-dong, 성동구,도선동,248
+11200105,Majang-dong, 성동구,마장동,109
+11200106,Sageun-dong, 성동구,사근동,204
+11200107,Haengdang-dong, 성동구,행당동,421
+11200108,Eungbong-dong, 성동구,응봉동,49
+11200109,Geumho-dong1(il)-ga, 성동구,금호동1가,266
+11200110,Geumho-dong2(i)-ga, 성동구,금호동2가,145
+11200111,Geumho-dong3(sam)-ga, 성동구,금호동3가,188
+11200112,Geumho-dong4(sa)-ga, 성동구,금호동4가,229
+11200113,Oksu-dong, 성동구,옥수동,426
+11200114,Seongsu-dong1(il)-ga, 성동구,성수동1가,80
+11200115,Seongsu-dong2(i)-ga, 성동구,성수동2가,144
+11200118,Songjeong-dong, 성동구,송정동,285
+11200122,Yongdap-dong, 성동구,용답동,33
+11215101,Junggok-dong, 광진구,중곡동,245
+11215102,Neung-dong, 광진구,능동,106
+11215103,Guui-dong, 광진구,구의동,55
+11215104,Gwangjang-dong, 광진구,광장동,109
+11215105,Jayang-dong, 광진구,자양동,114
+11215107,Hwayang-dong, 광진구,화양동,55
+11215109,Gunja-dong, 광진구,군자동,83
+11230101,Sinseol-dong, 동대문구,신설동,36
+11230102,Yongdu-dong, 동대문구,용두동,207
+11230103,Jegi-dong, 동대문구,제기동,354
+11230104,Jeonnong-dong, 동대문구,전농동,122
+11230105,Dapsipni-dong, 동대문구,답십리동,241
+11230106,Jangan-dong, 동대문구,장안동,7
+11230107,Cheongnyangni-dong, 동대문구,청량리동,443
+11230108,Hoegi-dong, 동대문구,회기동,348
+11230109,Hwigyeong-dong, 동대문구,휘경동,217
+11230110,Imun-dong, 동대문구,이문동,210
+11260101,Myeonmok-dong, 중랑구,면목동,425
+11260102,Sangbong-dong, 중랑구,상봉동,30
+11260103,Junghwa-dong, 중랑구,중화동,404
+11260104,Muk-dong, 중랑구,묵동,63
+11260105,Mangu-dong, 중랑구,망우동,275
+11260106,Sinnae-dong, 중랑구,신내동,232
+11290101,Seongbuk-dong, 성북구,성북동,373
+11290102,Seongbuk-dong 1(il)-ga, 성북구,성북동1가,335
+11290103,Donam-dong, 성북구,돈암동,80
+11290104,Dongsomun-dong 1(il)-ga, 성북구,동소문동1가,42
+11290105,Dongsomun-dong 2(i)-ga, 성북구,동소문동2가,338
+11290106,Dongsomun-dong 3(sam)-ga, 성북구,동소문동3가,391
+11290107,Dongsomun-dong 4(sa)-ga, 성북구,동소문동4가,86
+11290108,Dongsomun-dong 5(o)-ga, 성북구,동소문동5가,344
+11290109,Dongsomun-dong 6(yuk)-ga, 성북구,동소문동6가,188
+11290110,Dongsomun-dong 7(chil)-ga, 성북구,동소문동7가,363
+11290111,Samseon-dong 1(il)-ga, 성북구,삼선동1가,184
+11290112,Samseon-dong 2(i)-ga, 성북구,삼선동2가,64
+11290113,Samseon-dong 3(sam)-ga, 성북구,삼선동3가,74
+11290114,Samseon-dong 4(sa)-ga, 성북구,삼선동4가,319
+11290115,Samseon-dong 5(o)-ga, 성북구,삼선동5가,152
+11290116,Dongseon-dong 1(il)-ga, 성북구,동선동1가,69
+11290117,Dongseon-dong 2(i)-ga, 성북구,동선동2가,115
+11290118,Dongseon-dong 3(sam)-ga, 성북구,동선동3가,405
+11290119,Dongseon-dong 4(sa)-ga, 성북구,동선동4가,194
+11290120,Dongseon-dong 5(o)-ga, 성북구,동선동5가,63
+11290121,Anam-dong 1(il)-ga, 성북구,안암동1가,235
+11290122,Anam-dong 2(i)-ga, 성북구,안암동2가,5
+11290123,Anam-dong 3(sam)-ga, 성북구,안암동3가,288
+11290124,Anam-dong 4(sa)-ga, 성북구,안암동4가,134
+11290125,Anam-dong 5(o)-ga, 성북구,안암동5가,330
+11290126,Bomun-dong 4(sa)-ga, 성북구,보문동4가,411
+11290127,Bomun-dong 5(o)-ga, 성북구,보문동5가,372
+11290128,Bomun-dong 6(yuk)-ga, 성북구,보문동6가,160
+11290129,Bomun-dong 7(chil)-ga, 성북구,보문동7가,362
+11290130,Bomun-dong 1(il)-ga, 성북구,보문동1가,371
+11290131,Bomun-dong 2(i)-ga, 성북구,보문동2가,2
+11290132,Bomun-dong 3(sam)-ga, 성북구,보문동3가,150
+11290133,Jeongneung-dong, 성북구,정릉동,53
+11290134,Gireum-dong, 성북구,길음동,228
+11290135,Jongam-dong, 성북구,종암동,399
+11290136,Hawolgok-dong, 성북구,하월곡동,285
+11290137,Sangwolgok-dong, 성북구,상월곡동,349
+11290138,Jangwi-dong, 성북구,장위동,91
+11290139,Seokgwan-dong, 성북구,석관동,293
+11305101,Mia-dong, 강북구,미아동,428
+11305102,Beon-dong, 강북구,번동,197
+11305103,Suyu-dong, 강북구,수유동,64
+11305104,Ui-dong, 강북구,우이동,134
+11320105,Ssangmun-dong, 도봉구,쌍문동,341
+11320106,Banghak-dong, 도봉구,방학동,150
+11320107,Chang-dong, 도봉구,창동,298
+11320108,Dobong-dong, 도봉구,도봉동,353
+11350102,Wolgye-dong, 노원구,월계동,214
+11350103,Gongneung-dong, 노원구,공릉동,85
+11350104,Hagye-dong, 노원구,하계동,297
+11350105,Sanggye-dong, 노원구,상계동,421
+11350106,Junggye-dong, 노원구,중계동,189
+11380101,Susaek-dong, 은평구,수색동,246
+11380102,Nokbeon-dong, 은평구,녹번동,28
+11380103,Bulgwang-dong, 은평구,불광동,359
+11380104,Galhyeon-dong, 은평구,갈현동,132
+11380105,Gusan-dong, 은평구,구산동,26
+11380106,Daejo-dong, 은평구,대조동,33
+11380107,Eungam-dong, 은평구,응암동,82
+11380108,Yeokchon-dong, 은평구,역촌동,309
+11380109,Sinsa-dong, 은평구,신사동,323
+11380110,Jeungsan-dong, 은평구,증산동,36
+11380114,Jingwan-dong, 은평구,진관동,93
+11410101,Chungjeongno 2(i)-ga, 서대문구,충정로2가,111
+11410102,Chungjeongno 3(sam)-ga, 서대문구,충정로3가,387
+11410103,Hap-dong, 서대문구,합동,409
+11410104,Migeun-dong, 서대문구,미근동,215
+11410105,Naengcheon-dong, 서대문구,냉천동,30
+11410106,Cheonyeon-dong, 서대문구,천연동,437
+11410107,Okcheon-dong, 서대문구,옥천동,373
+11410108,Yeongcheon-dong, 서대문구,영천동,314
+11410109,Hyeonjeo-dong, 서대문구,현저동,361
+11410110,Bugahyeon-dong, 서대문구,북아현동,299
+11410111,Hongje-dong, 서대문구,홍제동,417
+11410112,Daehyeon-dong, 서대문구,대현동,290
+11410113,Daesin-dong, 서대문구,대신동,300
+11410114,Sinchon-dong, 서대문구,신촌동,272
+11410115,Bongwon-dong, 서대문구,봉원동,422
+11410116,Changcheon-dong, 서대문구,창천동,92
+11410117,Yeonhui-dong, 서대문구,연희동,283
+11410118,Hongeun-dong, 서대문구,홍은동,97
+11410119,Bukgajwa-dong, 서대문구,북가좌동,154
+11410120,Namgajwa-dong, 서대문구,남가좌동,313
+11440101,Ahyeon-dong, 마포구,아현동,87
+11440102,Gongdeok-dong, 마포구,공덕동,138
+11440103,Singongdeok-dong, 마포구,신공덕동,322
+11440104,Dohwa-dong, 마포구,도화동,299
+11440105,Yonggang-dong, 마포구,용강동,121
+11440106,Tojeong-dong, 마포구,토정동,165
+11440107,Mapo-dong, 마포구,마포동,25
+11440108,Daeheung-dong, 마포구,대흥동,146
+11440109,Yeomni-dong, 마포구,염리동,18
+11440110,Nogosan-dong, 마포구,노고산동,140
+11440111,Sinsu-dong, 마포구,신수동,249
+11440112,Hyeonseok-dong, 마포구,현석동,252
+11440113,Gusu-dong, 마포구,구수동,298
+11440114,Changjeon-dong, 마포구,창전동,121
+11440115,Sangsu-dong, 마포구,상수동,433
+11440116,Hajung-dong, 마포구,하중동,384
+11440117,Sinjeong-dong, 마포구,신정동,354
+11440118,Dangin-dong, 마포구,당인동,400
+11440120,Seogyo-dong, 마포구,서교동,309
+11440121,Donggyo-dong, 마포구,동교동,9
+11440122,Hapjeong-dong, 마포구,합정동,54
+11440123,Mangwon-dong, 마포구,망원동,296
+11440124,Yeonnam-dong, 마포구,연남동,58
+11440125,Seongsan-dong, 마포구,성산동,52
+11440126,Jung-dong, 마포구,중동,406
+11440127,Sangam-dong, 마포구,상암동,149
+11470101,Sinjeong-dong, 양천구,신정동,193
+11470102,Mok-dong, 양천구,목동,224
+11470103,Sinwol-dong, 양천구,신월동,284
+11500101,Yeomchang-dong, 강서구,염창동,409
+11500102,Deungchon-dong, 강서구,등촌동,238
+11500103,Hwagok-dong, 강서구,화곡동,323
+11500104,Gayang-dong, 강서구,가양동,108
+11500105,Magok-dong, 강서구,마곡동,306
+11500106,Naebalsan-dong, 강서구,내발산동,365
+11500107,Oebalsan-dong, 강서구,외발산동,167
+11500108,Gonghang-dong, 강서구,공항동,84
+11500109,Banghwa-dong, 강서구,방화동,143
+11500110,Gaehwa-dong, 강서구,개화동,0
+11500111,Gwahae-dong, 강서구,과해동,141
+11500112,Ogok-dong, 강서구,오곡동,102
+11500113,Osoe-dong, 강서구,오쇠동,330
+11530101,Sindorim-dong, 구로구,신도림동,339
+11530102,Guro-dong, 구로구,구로동,145
+11530103,Garibong-dong, 구로구,가리봉동,332
+11530106,Gocheok-dong, 구로구,고척동,121
+11530107,Gaebong-dong, 구로구,개봉동,154
+11530108,Oryu-dong, 구로구,오류동,158
+11530109,Gung-dong, 구로구,궁동,230
+11530110,Onsu-dong, 구로구,온수동,67
+11530111,Cheonwang-dong, 구로구,천왕동,51
+11530112,Hang-dong, 구로구,항동,192
+11545101,Gasan-dong, 금천구,가산동,27
+11545102,Doksan-dong, 금천구,독산동,57
+11545103,Siheung-dong, 금천구,시흥동,129
+11560101,Yeongdeungpo-dong, 영등포구,영등포동,441
+11560102,Yeongdeungpo-dong 1(il)-ga, 영등포구,영등포동1가,51
+11560103,Yeongdeungpo-dong 2(i)-ga, 영등포구,영등포동2가,411
+11560104,Yeongdeungpo-dong 3(sam)-ga, 영등포구,영등포동3가,210
+11560105,Yeongdeungpo-dong 4(sa)-ga, 영등포구,영등포동4가,187
+11560106,Yeongdeungpo-dong 5(o)-ga, 영등포구,영등포동5가,73
+11560107,Yeongdeungpo-dong 6(yuk)-ga, 영등포구,영등포동6가,65
+11560108,Yeongdeungpo-dong 7(chil)-ga, 영등포구,영등포동7가,62
+11560109,Yeongdeungpo-dong 8(pal)-ga, 영등포구,영등포동8가,323
+11560110,Yeouido-dong, 영등포구,여의도동,137
+11560111,Dangsan-dong 1(il)-ga, 영등포구,당산동1가,68
+11560112,Dangsan-dong 2(i)-ga, 영등포구,당산동2가,395
+11560113,Dangsan-dong 3(sam)-ga, 영등포구,당산동3가,47
+11560114,Dangsan-dong 4(sa)-ga, 영등포구,당산동4가,209
+11560115,Dangsan-dong 5(o)-ga, 영등포구,당산동5가,90
+11560116,Dangsan-dong 6(yuk)-ga, 영등포구,당산동6가,437
+11560117,Dangsan-dong, 영등포구,당산동,220
+11560118,Dorim-dong, 영등포구,도림동,199
+11560119,Mullae-dong 1(il)-ga, 영등포구,문래동1가,173
+11560120,Mullae-dong 2(i)-ga, 영등포구,문래동2가,18
+11560121,Mullae-dong 3(sam)-ga, 영등포구,문래동3가,425
+11560122,Mullae-dong 4(sa)-ga, 영등포구,문래동4가,173
+11560123,Mullae-dong 5(o)-ga, 영등포구,문래동5가,149
+11560124,Mullae-dong 6(yuk)-ga, 영등포구,문래동6가,382
+11560125,Yangpyeong-dong 1(il)-ga, 영등포구,양평동1가,248
+11560126,Yangpyeong-dong 2(i)-ga, 영등포구,양평동2가,436
+11560127,Yangpyeong-dong 3(sam)-ga, 영등포구,양평동3가,136
+11560128,Yangpyeong-dong 4(sa)-ga, 영등포구,양평동4가,256
+11560129,Yangpyeong-dong 5(o)-ga, 영등포구,양평동5가,277
+11560130,Yangpyeong-dong 6(yuk)-ga, 영등포구,양평동6가,42
+11560131,Yanghwa-dong, 영등포구,양화동,282
+11560132,Singil-dong, 영등포구,신길동,402
+11560133,Daerim-dong, 영등포구,대림동,362
+11560134,Yangpyeong-dong, 영등포구,양평동,36
+11590101,Noryangjin-dong, 동작구,노량진동,230
+11590102,Sangdo-dong, 동작구,상도동,150
+11590103,Sangdo 1(il)-dong, 동작구,상도1동,449
+11590104,Bon-dong, 동작구,본동,216
+11590105,Heukseok-dong, 동작구,흑석동,340
+11590106,Dongjak-dong, 동작구,동작동,286
+11590107,Sadang-dong, 동작구,사당동,75
+11590108,Daebang-dong, 동작구,대방동,119
+11590109,Sindaebang-dong, 동작구,신대방동,307
+11620101,Bongcheon-dong, 관악구,봉천동,367
+11620102,Sillim-dong, 관악구,신림동,388
+11620103,Namhyeon-dong, 관악구,남현동,123
+11650101,Bangbae-dong, 서초구,방배동,250
+11650102,Yangjae-dong, 서초구,양재동,47
+11650103,Umyeon-dong, 서초구,우면동,98
+11650104,Wonji-dong, 서초구,원지동,213
+11650106,Jamwon-dong, 서초구,잠원동,79
+11650107,Banpo-dong, 서초구,반포동,298
+11650108,Seocho-dong, 서초구,서초동,216
+11650109,Naegok-dong, 서초구,내곡동,312
+11650110,Yeomgok-dong, 서초구,염곡동,208
+11650111,Sinwon-dong, 서초구,신원동,246
+11680101,Yeoksam-dong, 강남구,역삼동,375
+11680103,Gaepo-dong, 강남구,개포동,73
+11680104,Cheongdam-dong, 강남구,청담동,110
+11680105,Samseong-dong, 강남구,삼성동,279
+11680106,Daechi-dong, 강남구,대치동,337
+11680107,Sinsa-dong, 강남구,신사동,397
+11680108,Nonhyeon-dong, 강남구,논현동,416
+11680110,Apgujeong-dong, 강남구,압구정동,182
+11680111,Segok-dong, 강남구,세곡동,82
+11680112,Jagok-dong, 강남구,자곡동,238
+11680113,Yulhyeon-dong, 강남구,율현동,217
+11680114,Irwon-dong, 강남구,일원동,47
+11680115,Suseo-dong, 강남구,수서동,68
+11680118,Dogok-dong, 강남구,도곡동,448
+11710101,Jamsil-dong, 송파구,잠실동,201
+11710102,Sincheon-dong, 송파구,신천동,417
+11710103,Pungnap-dong, 송파구,풍납동,383
+11710104,Songpa-dong, 송파구,송파동,39
+11710105,Seokchon-dong, 송파구,석촌동,245
+11710106,Samjeon-dong, 송파구,삼전동,223
+11710107,Garak-dong, 송파구,가락동,391
+11710108,Munjeong-dong, 송파구,문정동,195
+11710109,Jangji-dong, 송파구,장지동,14
+11710111,Bangi-dong, 송파구,방이동,254
+11710112,Ogeum-dong, 송파구,오금동,200
+11710113,Geoyeo-dong, 송파구,거여동,121
+11710114,Macheon-dong, 송파구,마천동,132
+11740101,Myeongil-dong, 강동구,명일동,210
+11740102,Godeok-dong, 강동구,고덕동,123
+11740103,Sangil-dong, 강동구,상일동,430
+11740105,Gil-dong, 강동구,길동,207
+11740106,Dunchon-dong, 강동구,둔촌동,31
+11740107,Amsa-dong, 강동구,암사동,435
+11740108,Seongnae-dong, 강동구,성내동,292
+11740109,Cheonho-dong, 강동구,천호동,287
+11740110,Gangil-dong, 강동구,강일동,187
+11000000,,,서울특별시,
+11110000,,,종로구,
+11140000,,,중구,
+11170000,,,용산구,
+11200000,,,성동구,
+11215000,,,광진구,
+11230000,,,동대문구,
+11260000,,,중랑구,
+11290000,,,성북구,
+11305000,,,강북구,
+11320000,,,도봉구,
+11350000,,,노원구,
+11380000,,,은평구,
+11410000,,,서대문구,
+11440000,,,마포구,
+11470000,,,양천구,
+11500000,,,강서구,
+11530000,,,구로구,
+11545000,,,금천구,
+11560000,,,영등포구,
+11590000,,,동작구,
+11620000,,,관악구,
+11650000,,,서초구,
+11680000,,,강남구,
+11710000,,,송파구,
+11740000,,,강동구,
