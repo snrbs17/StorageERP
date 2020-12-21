@@ -221,7 +221,6 @@
     <EmbeddedResource Include="FinancialStatement.resx">
       <DependentUpon>FinancialStatement.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\FakeAccountInfo.datasource" />
     <None Include="Properties\DataSources\TheStorageERP.Dao.AccountInfoDao.datasource" />
