@@ -90,10 +90,10 @@ namespace TheStorageERP.Forms
             this.mapControl1.TabIndex = 0;
             this.mapControl1.ZoomLevel = 10D;
             this.miniMapVectorItemsLayer1.Data = this.shapefileDataAdapter1;
-            this.shapefileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\tl_emd_seoul_4326\\Seoul.shp", System.UriKind.Absolute);
+            this.shapefileDataAdapter1.FileUri = new System.Uri(@"./../SvgFile/Seoul.shp", System.UriKind.Relative);
             this.bingMapDataProvider1.BingKey = "AubFnqHZplmeCYwVruQ5HelHfa6Xk92I0BvwGlraSadj2NiNuNQ3aAldhzn1apNb";
             this.imageLayer1.DataProvider = this.bingMapDataProvider1;
-            this.shapefileDataAdapter2.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\tl_emd_seoul_4326\\Seoul.shp", System.UriKind.Absolute);
+            this.shapefileDataAdapter2.FileUri = new System.Uri(@"./../SvgFile/Seoul.shp", System.UriKind.Relative);
             colorizerColorItem1.Color = System.Drawing.Color.Maroon;
             colorizerColorItem2.Color = System.Drawing.Color.LightCoral;
             colorizerColorItem3.Color = System.Drawing.Color.OrangeRed;
