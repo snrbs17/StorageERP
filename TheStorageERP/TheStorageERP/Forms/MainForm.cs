@@ -19,11 +19,18 @@ namespace TheStorageERP
             this.WindowState = FormWindowState.Maximized;
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            CreateForm(new StorageInfo());
+        }
+
         private void CreateForm(Form form)
         {
             
             form.MdiParent = this;
             form.Show();
+            
         }
 
         private void StorageInfoBtn(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -50,6 +57,11 @@ namespace TheStorageERP
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             CreateForm(new BreakEvenAnalysis());
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Close();
         }
     }
 }

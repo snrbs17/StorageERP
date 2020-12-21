@@ -16,8 +16,7 @@
 ### 1. 관리자 메인 화면
 
 <div>
-<img src="./TheProject/TheProject/Resources/동작화면/관리자_초기.png" width="45%">
-<img src="./TheProject/TheProject/Resources/동작화면/관리자_출력.png" width="45%">
+<img src="./TheStorageERP/TheStorageERP/Picture/GanttChart.png" width="100%">
 </div>
 
 - 연간/월간 수입을 월별/일별로 구분하여 시각화한다.
@@ -27,8 +26,7 @@
 ### 2. BingMap 화면
 
 <div>
-<img src="./TheProject/TheProject/Resources/동작화면/관리자_초기.png" width="45%">
-<img src="./TheProject/TheProject/Resources/동작화면/관리자_출력.png" width="45%">
+<img src="./TheStorageERP/TheStorageERP/Picture/BingMap.png" width="100%">
 </div>
 
 - 서울내에 보관함의 위치를 MapPushPin을 사용하여 BingMap에 나타낸다.
@@ -38,8 +36,7 @@
 ### 3. GanttChart 화면
 
 <div>
-<img src="./TheProject/TheProject/Resources/동작화면/관리자_초기.png" width="45%">
-<img src="./TheProject/TheProject/Resources/동작화면/관리자_출력.png" width="45%">
+<img src="./TheStorageERP/TheStorageERP/Picture/GanttChart.png" width="100%">
 </div>
 
 - 보관소 위치별 보관함 사용 현황을 알 수 있다.
@@ -69,6 +66,7 @@
 - .Net FrameWork 4.8
 - EntityFrameWork 6.4
 - Winform
+- DevExpress v20.2
 
 ## 데이터베이스
 
@@ -102,6 +100,7 @@
 ## 순서도
 
 <div>
+<img width="90%" src="https://user-images.githubusercontent.com/32934089/102729356-cdeb9300-4373-11eb-9515-63c658c094d0.JPG">
 <img src="./TheProject/TheProject/Resources/동작화면/순서도1.png" width="30%">
 <img src="./TheProject/TheProject/Resources/동작화면/순서도2.png" width="60%">
 </div>

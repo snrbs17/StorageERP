@@ -235,12 +235,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SvgFile\Seoul.dbf" />
+    <None Include="SvgFile\Seoul.shp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Picture\BingMap.png" />
+    <Content Include="Picture\flowChart.JPG" />
+    <Content Include="Picture\GanttChart.png" />
     <Content Include="SvgFile\828px-Map_Seoul-teukbyeolsi.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
