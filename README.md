@@ -105,7 +105,7 @@
 
 ## User Case Diagram
 
-<img src="./TheProject/TheProject/Resources/동작화면/UserCaseDiagram.png">
+<img src="./TheStorageERP/TheStorageERP/Picture/usecase.png" width="100%">
 
 ## 순서도
 
