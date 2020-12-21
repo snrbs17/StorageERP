@@ -131,6 +131,8 @@ namespace TheStorageERP.Forms
             // 
             // vGridControl1
             // 
+            this.vGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.vGridControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.vGridControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.vGridControl1.CustomizationFormBounds = new System.Drawing.Rectangle(624, 243, 269, 353);
