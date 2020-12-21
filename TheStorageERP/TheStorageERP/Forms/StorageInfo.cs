@@ -23,27 +23,35 @@ namespace TheStorageERP
             InitializeComponent();
         }
 
+        List<fakeDB> fakeDBs = new List<fakeDB>();
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
 
-           
+            fakeDBs.Add(new fakeDB() { Name = "강서구", Sale = 1 });
+            fakeDBs.Add(new fakeDB() { Name = "강남구", Sale = 5 });
+            fakeDBs.Add(new fakeDB() { Name = "서초구", Sale = 10 });
+            fakeDBs.Add(new fakeDB() { Name = "강북구", Sale = 20 });
+            fakeDBs.Add(new fakeDB() { Name = "강동구", Sale = 15 });
+            fakeDBs.Add(new fakeDB() { Name = "종로구", Sale = 7 });
+            fakeDBs.Add(new fakeDB() { Name = "어디구", Sale = 40 });
 
-            svgMapControl.CenterPoint = new GeoPoint(37.54164, 126.84035);
-            svgMapControl.ZoomLevel = 13;
+            svgMapControl.CenterPoint = new GeoPoint(37.51243, 126.96995);
+            svgMapControl.ZoomLevel = 12;
 
-            CreateDB();
+            CreateDB(fakeDBs);
         }
 
-        private void CreateDB()
+        private void CreateDB(List<fakeDB> fakeDBs)
         {
-            var fakeDB = Clients.FakeAccountInfoes.GetFakeAccountInfoesAsync().Result;
+            //var fakeDB = Clients.FakeAccountInfoes.GetFakeAccountInfoesAsync().Result;
             
             TreeMapFlatDataAdapter adapter = new TreeMapFlatDataAdapter
             {
-                DataSource = fakeDB,
-                LabelDataMember = "InfoId",
-                ValueDataMember = "Sales"
+                DataSource = fakeDBs,
+                LabelDataMember = "Name",
+                ValueDataMember = "Sale"
             };
 
             treeMapControl.DataAdapter = adapter;
@@ -66,6 +74,18 @@ namespace TheStorageERP
         //    return infos;
         //}
 
+    }
+
+    public class fakeDB
+    {
+        public string Name { get; set; }
+        public int Sale { get; set; }
+
+        //public fakeDB(string _name, int _sale)
+        //{
+        //    Name = _name;
+        //    Sale = _sale;
+        //}
     }
 }
 

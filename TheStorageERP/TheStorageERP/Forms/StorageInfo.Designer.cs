@@ -90,9 +90,9 @@ namespace TheStorageERP
             // svgMapControl
             // 
             this.svgMapControl.Layers.Add(this.vectorItemsLayer1);
-            this.svgMapControl.Location = new System.Drawing.Point(484, 12);
+            this.svgMapControl.Location = new System.Drawing.Point(320, 12);
             this.svgMapControl.Name = "svgMapControl";
-            this.svgMapControl.Size = new System.Drawing.Size(450, 385);
+            this.svgMapControl.Size = new System.Drawing.Size(614, 385);
             this.svgMapControl.TabIndex = 12;
             this.vectorItemsLayer1.Data = this.shapefileDataAdapter1;
             this.shapefileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\StorageERP\\Seoul.shp", System.UriKind.Absolute);
@@ -100,9 +100,9 @@ namespace TheStorageERP
             // labelControl4
             // 
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.Location = new System.Drawing.Point(484, 401);
+            this.labelControl4.Location = new System.Drawing.Point(320, 401);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(450, 18);
+            this.labelControl4.Size = new System.Drawing.Size(614, 18);
             this.labelControl4.StyleController = this.layoutControl1;
             this.labelControl4.TabIndex = 11;
             this.labelControl4.Text = "labelControl4";
@@ -112,7 +112,7 @@ namespace TheStorageERP
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl3.Location = new System.Drawing.Point(12, 572);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(468, 18);
+            this.labelControl3.Size = new System.Drawing.Size(304, 18);
             this.labelControl3.StyleController = this.layoutControl1;
             this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "labelControl3";
@@ -122,7 +122,7 @@ namespace TheStorageERP
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Location = new System.Drawing.Point(12, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(468, 18);
+            this.labelControl1.Size = new System.Drawing.Size(304, 18);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 7;
             this.labelControl1.Text = "보관소별 매출현황";
@@ -135,7 +135,7 @@ namespace TheStorageERP
             this.treeMapControl.DataAdapter = treeMapFlatDataAdapter1;
             this.treeMapControl.Location = new System.Drawing.Point(12, 34);
             this.treeMapControl.Name = "treeMapControl";
-            this.treeMapControl.Size = new System.Drawing.Size(468, 534);
+            this.treeMapControl.Size = new System.Drawing.Size(304, 534);
             this.treeMapControl.TabIndex = 5;
             // 
             // chartControl1
@@ -146,13 +146,13 @@ namespace TheStorageERP
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(484, 423);
+            this.chartControl1.Location = new System.Drawing.Point(320, 423);
             this.chartControl1.Name = "chartControl1";
             series1.Name = "Series 1";
             series1.View = splineAreaSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(450, 167);
+            this.chartControl1.Size = new System.Drawing.Size(614, 167);
             this.chartControl1.TabIndex = 4;
             // 
             // Root
@@ -173,9 +173,9 @@ namespace TheStorageERP
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.chartControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(472, 411);
+            this.layoutControlItem1.Location = new System.Drawing.Point(308, 411);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(454, 171);
+            this.layoutControlItem1.Size = new System.Drawing.Size(618, 171);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -184,7 +184,7 @@ namespace TheStorageERP
             this.layoutControlItem2.Control = this.treeMapControl;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 22);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(472, 538);
+            this.layoutControlItem2.Size = new System.Drawing.Size(308, 538);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -195,7 +195,7 @@ namespace TheStorageERP
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(0, 22);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(18, 22);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(472, 22);
+            this.layoutControlItem4.Size = new System.Drawing.Size(308, 22);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
@@ -207,7 +207,7 @@ namespace TheStorageERP
             this.layoutControlItem7.MaxSize = new System.Drawing.Size(0, 22);
             this.layoutControlItem7.MinSize = new System.Drawing.Size(18, 22);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(472, 22);
+            this.layoutControlItem7.Size = new System.Drawing.Size(308, 22);
             this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
@@ -215,11 +215,11 @@ namespace TheStorageERP
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.labelControl4;
-            this.layoutControlItem8.Location = new System.Drawing.Point(472, 389);
+            this.layoutControlItem8.Location = new System.Drawing.Point(308, 389);
             this.layoutControlItem8.MaxSize = new System.Drawing.Size(0, 22);
             this.layoutControlItem8.MinSize = new System.Drawing.Size(18, 22);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(454, 22);
+            this.layoutControlItem8.Size = new System.Drawing.Size(618, 22);
             this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
@@ -227,9 +227,9 @@ namespace TheStorageERP
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.svgMapControl;
-            this.layoutControlItem9.Location = new System.Drawing.Point(472, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(308, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(454, 389);
+            this.layoutControlItem9.Size = new System.Drawing.Size(618, 389);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
