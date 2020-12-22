@@ -17,14 +17,18 @@
 ### 1. 관리자 메인 화면
 
 <div>
-<img src="./TheStorageERP/TheStorageERP/Picture/BreakEvenAnalysis.png" width="100%">
+<img src="./TheStorageERP/TheStorageERP/Picture/BreakEvenAnalysis.png" width="55%">
+<img src="./TheStorageERP/TheStorageERP/Picture/Report.png" width="35%">
 </div>
+
 
 - 좌측 상단 버튼으로 월별/분기별 분석 선택 가능
 - View_Report 버튼을 누르면 출력 가능한 형태의 report 생성 가능
 - 하단 grid view에는 총 수입, 고정 비용, 변동 비용을 출력, 같은 내용이 우측 chart에 표현됨
 - 하단 view의 날짜를 누르면 좌측 view와 pie chart에 상세 내용 출력
 - 상단 report 버튼으로도 해당 form을 부를 수 있음.
+
+
 ### 2. BingMap 화면
 
 <div>
