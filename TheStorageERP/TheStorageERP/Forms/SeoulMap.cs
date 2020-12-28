@@ -36,7 +36,7 @@ namespace TheStorageERP.Forms
             {
                 DataProvider = new BingMapDataProvider()
                 {
-                    BingKey = "YOUR BING KEY"
+                    BingKey = "AubFnqHZplmeCYwVruQ5HelHfa6Xk92I0BvwGlraSadj2NiNuNQ3aAldhzn1apNb"
                 }
             });
 

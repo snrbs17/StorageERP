@@ -57,6 +57,7 @@ namespace TheStorageERP.Forms
                 .Select(x => x).ToList();
 
             vGridControl2.DataSource = Dao.Dao.InfoSummarized.GetInfoes();
+            radioButton1.PerformClick();
         }
 
 
@@ -128,7 +129,7 @@ namespace TheStorageERP.Forms
                         q = cn.GetCellDisplayText(row, hitInfo).ToString();
                         
                         vGridControl1.DataSource = Dao.Dao.fakeAccountInfo.GetInfoReorganized()
-                                                    .Where(x => x.InfoId == int.Parse(q)-1)
+                                                    .Where(x => x.InfoId == int.Parse(q))
                                                     .Select(x => x).ToList();
                         chartControl2.Series[0].DataSource = DataPoint.GetDataPoints(Dao.Dao.fakeAccountInfo.GetInfoReorganized().ToList()[int.Parse(q)-1]);
                     }

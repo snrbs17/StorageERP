@@ -18,6 +18,8 @@ namespace TheStorageERP
     {
         //const string csvFilepath = @"C:\Users\kccistc\Desktop\StorageERP\Seoul.csv";
 
+        ColorizerColorItem[] colorItems = Factors.Items1;
+        ShapefileDataAdapter adapter = new ShapefileDataAdapter();
         public StorageInfo()
         {
             InitializeComponent();
@@ -35,18 +37,50 @@ namespace TheStorageERP
             fakeDBs.Add(new fakeDB() { Name = "강북구", Sale = 20 });
             fakeDBs.Add(new fakeDB() { Name = "강동구", Sale = 15 });
             fakeDBs.Add(new fakeDB() { Name = "종로구", Sale = 7 });
-            fakeDBs.Add(new fakeDB() { Name = "어디구", Sale = 40 });
+            fakeDBs.Add(new fakeDB() { Name = "노원구", Sale = 40 });
 
             svgMapControl.CenterPoint = new GeoPoint(37.51243, 126.96995);
-            svgMapControl.ZoomLevel = 12;
+            svgMapControl.ZoomLevel = 10;
 
             CreateDB(fakeDBs);
+
+
+            Uri baseUri = new Uri(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            adapter.FileUri = new Uri(baseUri, "../../SvgFile/Seoul.shp");
+            svgMapControl.Layers.Add(new VectorItemsLayer
+            {
+                Data = adapter,
+                Colorizer = CreatorColorizer()
+            });
+
+            svgMapControl.Layers.Add(new ImageLayer()
+            {
+                DataProvider = new BingMapDataProvider()
+                {
+                    BingKey = "AubFnqHZplmeCYwVruQ5HelHfa6Xk92I0BvwGlraSadj2NiNuNQ3aAldhzn1apNb"
+                }
+            });
+
+
+        }
+
+        private MapColorizer CreatorColorizer()
+        {
+            ChoroplethColorizer colorizer = new ChoroplethColorizer();
+            colorizer.ColorItems.AddRange(colorItems);
+
+            colorizer.RangeStops.AddRange(new double[] {11110000,
+11140000,11170000,11200000,11215000,11230000,11260000,11290000,11305000,11320000,11350000,11380000,11410000,11440000,11470000,11500000,11530000,11545000,11560000,11590000,11620000,11650000,11680000,11710000,11740000 });
+
+            colorizer.ValueProvider = new ShapeAttributeValueProvider() { AttributeName = "emd_cd" };
+
+            return colorizer;
         }
 
         private void CreateDB(List<fakeDB> fakeDBs)
         {
             //var fakeDB = Clients.FakeAccountInfoes.GetFakeAccountInfoesAsync().Result;
-            
+
             TreeMapFlatDataAdapter adapter = new TreeMapFlatDataAdapter
             {
                 DataSource = fakeDBs,
@@ -55,6 +89,51 @@ namespace TheStorageERP
             };
 
             treeMapControl.DataAdapter = adapter;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            colorItems = Factors.Items1;
+            svgMapControl.Layers.Add(new VectorItemsLayer
+            {
+                Data = adapter,
+                Colorizer = CreatorColorizer()
+            });
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            colorItems = Factors.Items2;
+            svgMapControl.Layers.Add(new VectorItemsLayer
+            {
+                Data = adapter,
+                Colorizer = CreatorColorizer()
+            });
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            colorItems = Factors.Items3;
+            svgMapControl.Layers.Add(new VectorItemsLayer
+            {
+                Data = adapter,
+                Colorizer = CreatorColorizer()
+            });
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            colorItems = Factors.Items4;
+            svgMapControl.Layers.Add(new VectorItemsLayer
+            {
+                Data = adapter,
+                Colorizer = CreatorColorizer()
+            });
+
         }
 
         //List<BillionaireInfo> CreateBillionaireInfos()

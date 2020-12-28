@@ -1,7 +1,8 @@
 # StorageERP(v1.0.0) : 
 
 # 개요
-- 범용적으로 사용하는 물품 보관 시스템
+- 범용적으로 사용하는 물품 보관 시스템 ERP
+- Web API를 이용한 분산컴퓨팅 기술 적용
 
 # 개발 기간
 - 2020년 12월 14일 ~ 2020년 12월 21일 (2차 Mini Project)
@@ -16,12 +17,17 @@
 ### 1. 관리자 메인 화면
 
 <div>
-<img src="./TheStorageERP/TheStorageERP/Picture/GanttChart.png" width="100%">
+<img src="./TheStorageERP/TheStorageERP/Picture/BreakEvenAnalysis.png" width="55%">
+<img src="./TheStorageERP/TheStorageERP/Picture/Report.png" width="35%">
 </div>
 
-- 연간/월간 수입을 월별/일별로 구분하여 시각화한다.
-- 보관함의 종류별로 구분하여 시각화 가능하다.
-- Storage Activate/Deactivate를 통해 보관함의 활성화 여부를 실시간 업데이트 가능하다.
+
+- 좌측 상단 버튼으로 월별/분기별 분석 선택 가능
+- View_Report 버튼을 누르면 출력 가능한 형태의 report 생성 가능
+- 하단 grid view에는 총 수입, 고정 비용, 변동 비용을 출력, 같은 내용이 우측 chart에 표현됨
+- 하단 view의 날짜를 누르면 좌측 view와 pie chart에 상세 내용 출력
+- 상단 report 버튼으로도 해당 form을 부를 수 있음.
+
 
 ### 2. BingMap 화면
 
@@ -51,19 +57,15 @@
 
 - 보관소 내 온도, 습도, 진동을 실시간으로 파악할 수 있다.
 
+### 5. Storage Info 화면
 
+<div>
+<img src="./TheStorageERP/TheStorageERP/Picture/StorageInfo.png" width="100%">
+</div>
 
-# 관리 항목
-
-### 1. 보관함 정보
-
-- 현재 보관함 상태에 따라 활성화/비활성화를 선택할 수 있다.
-### 2. 관리자용 정보
-
-- 월간/연간 매출액 추이를 그래프로 확인할 수 있다.
-- 보관함 종류에 따라 데이터를 구분해 시각화할 수 있다.
-
-
+- 좌측 tree map은 지역별 보관함 이용 획수를 크기로 형상화해 표현
+- 우측 map control은 지역별로 구분해 표현.
+- 하단 버튼을 통해 지역별 색상 변경 가능
 
 # 사용 기술
 
@@ -92,10 +94,7 @@
 
 <img src="./TheStorageERP/TheStorageERP/Picture/DB.png" width="100%">
 
-- Purchase 테이블의 PurchaseAmount 항목은 역정규화한 결과이다.
-
-- 이외의 모든 항목이 제 3 정규화까지 완료됐다
-
+- FakeAccountInfo 테이블을 제외하고 모두 제3정규화까지 완료함.
 
 # UML
 
@@ -115,29 +114,75 @@
 
 # Point of Interest
 
-# Data Analysis시 기본값이 제대로 출력되지 않는 문제 [#11](https://github.com/snrbs17/603_TeamProject/issues/11)
+# Pie chart에 data입력이 안되는 문제 [#15](https://github.com/snrbs17/StorageERP/issues/15)
 
 ## 증상
-- TimeScope를 Yearly로 설정한 후 바로 Search를 누를 경우 잘못된 값이 출력됨
+- GridView와 같은 방식으로 DataSource에 list를 넣었으나 출력되지 않음
 
 ## 원인
-- Form 전체에 default값이 Monthly TimeScope 11월을 기준으로 설정되어 있음
+- Pie chart에는 string 변수와 double 변수가 쌍을 이루는 값이 여러개 입력되어야 함
 
 ## 결과
-- TimeScope 설정이 바꿨을 때 default값이 새로 지정되도록 함수의 위치를 변경
+~~~
+        var list = Dao.Dao.fakeAccountInfo.GetInfoReorganized().ToList();
 
-# DGV_Search 에 페이지를 나누는 동작이 반영되지 않은 문제 [#9](https://github.com/snrbs17/603_TeamProject/issues/9)
+        chartControl2.Titles.Add(new ChartTitle() { Text = "Profit&Loss" });
+        chartControl2.Series[0].DataSource = DataPoint.GetDataPoints(list[0]);
+        chartControl2.Series[0].ArgumentDataMember = "Argument";
+        chartControl2.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
+        chartControl2.Series[0].LegendTextPattern = "{A}";
+
+        public class DataPoint
+        {
+            public string Argument { get; set; }
+            public int Value { get; set; }
+
+            public static List<DataPoint> GetDataPoints(InfoReorganized info)
+            {
+                return new List<DataPoint> {
+                new DataPoint { Argument = "Sales", Value = info.Sales},
+                new DataPoint { Argument = "OtherRevenues", Value = info.OtherRevenues},
+                new DataPoint { Argument = "SalesReturns", Value = info.SalesReturns},
+                new DataPoint { Argument = "GrossProfit", Value = info.GrossProfit},
+                new DataPoint { Argument = "Wages", Value = info.Wages},
+                new DataPoint { Argument = "Depreciation", Value = info.Depreciation},
+                new DataPoint { Argument = "OtherSupplies", Value = info.OtherSupplies},
+                new DataPoint { Argument = "Utilities", Value = info.Utilities},
+                new DataPoint { Argument = "Insurance", Value = info.Insurance},
+                new DataPoint { Argument = "Maintenance", Value = info.Maintenance},
+                new DataPoint { Argument = "Advertising", Value = info.Advertising},
+                new DataPoint { Argument = "OtherExpenses", Value = info.OtherExpenses}
+                };
+~~~
+- 공식 문서를 참고하여 해결.
+- DataSource외에 argumen와 value가 필요함.
+
+
+# Data Analysis시 기본값이 제대로 출력되지 않는 문제 [#8](https://github.com/snrbs17/StorageERP/issues/8)
 
 ## 증상
-- DGV에 항목을 5개씩 표시해주고 이전/다음페이지 누르면 넘어가게 구현중이나 항목 나눠지는게 안먹히고 한번에 다 나옴
+- Groupby 함수로 묶인 class들의 property 총합을 구할 수 없는 문제
 
 ## 원인
-- 가져온 코드에서 상황에 맞춰 바꾼 부분이 원인으로 예상됨 (원인 찾는중)
+- Class들이 collection으로 묶여 있어 property를 추출해내기 어려움
 
 ## 결과
-- 작업중
+- Groupby 후 select 단계에서 lambda식을 이용해 계산
+~~~
+var value = Clients.FakeAccountInfoes.GetFakeAccountInfoesAsync().Result
+.GroupBy(x => x.Date.Day, x => x,
+(day, info) => new {Info.Sum(x => x.Sales)}
+~~~
 
+# BingMap MapPushPin ToolTip 좌표값 문제 [#16](https://github.com/snrbs17/StorageERP/issues/16)
 
+## 증상
+- MapPushPin을 runtime에 추가해주고 그 위에 마우스를 가져다대면 Tooltip이 떠야하나 좌표값이 맞지않아 다른 위치에서 뜬다.
 
+## 원인
+- BingMap이 runtime 후 좌표가 안맞는걸로 사료됨(정확하게 못찾음)
+
+## 결과
+- 따로 Tooltip을 추가하지않고 애초에 mapPushPin의 메서드로 toolTip을 찾아서 사용하였더니 위치가 서로 맞았다.
 
 

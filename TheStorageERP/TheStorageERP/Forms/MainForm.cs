@@ -22,7 +22,7 @@ namespace TheStorageERP
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            CreateForm(new StorageInfo());
+            CreateForm(new BreakEvenAnalysis());
         }
 
         private void CreateForm(Form form)
