@@ -50,7 +50,10 @@ namespace TheStorageERP
             svgMapControl.Layers.Add(new VectorItemsLayer
             {
                 Data = adapter,
-                Colorizer = CreatorColorizer()
+                Colorizer = CreatorColorizer(doubleList1, attribute2),
+                //ToolTipPattern = "{VAL1}"
+                ShapeTitlesPattern = "{EMD_ENG_NM}",
+                ShapeTitlesVisibility = VisibilityMode.Auto
             });
 
             svgMapControl.Layers.Add(new ImageLayer()
@@ -64,18 +67,25 @@ namespace TheStorageERP
 
         }
 
-        private MapColorizer CreatorColorizer()
+        private MapColorizer CreatorColorizer(double[] doubleList, string attribute)
         {
             ChoroplethColorizer colorizer = new ChoroplethColorizer();
             colorizer.ColorItems.AddRange(colorItems);
 
-            colorizer.RangeStops.AddRange(new double[] {11110000,
-11140000,11170000,11200000,11215000,11230000,11260000,11290000,11305000,11320000,11350000,11380000,11410000,11440000,11470000,11500000,11530000,11545000,11560000,11590000,11620000,11650000,11680000,11710000,11740000 });
+            colorizer.RangeStops.AddRange(doubleList);
 
-            colorizer.ValueProvider = new ShapeAttributeValueProvider() { AttributeName = "emd_cd" };
+            colorizer.ValueProvider = new ShapeAttributeValueProvider() { AttributeName = attribute };
 
             return colorizer;
         }
+
+        double[] doubleList2 ={11110000,
+11140000,11170000,11200000,11215000,11230000,11260000,11290000,11305000,11320000,11350000,11380000,11410000,11440000,11470000,11500000,11530000,11545000,11560000,11590000,11620000,11650000,11680000,11710000,11740000 };
+        double[] doubleList1 = { 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 };
+        string attribute1 = "EMD_CD";
+        string attribute2 = "VAL1";
+
+
 
         private void CreateDB(List<fakeDB> fakeDBs)
         {
@@ -97,7 +107,7 @@ namespace TheStorageERP
             svgMapControl.Layers.Add(new VectorItemsLayer
             {
                 Data = adapter,
-                Colorizer = CreatorColorizer()
+                Colorizer = CreatorColorizer(doubleList2, attribute1)
             });
 
         }
@@ -109,7 +119,7 @@ namespace TheStorageERP
             svgMapControl.Layers.Add(new VectorItemsLayer
             {
                 Data = adapter,
-                Colorizer = CreatorColorizer()
+                Colorizer = CreatorColorizer(doubleList1, "VAL1")
             });
 
         }
@@ -120,7 +130,7 @@ namespace TheStorageERP
             svgMapControl.Layers.Add(new VectorItemsLayer
             {
                 Data = adapter,
-                Colorizer = CreatorColorizer()
+                Colorizer = CreatorColorizer(doubleList1, "VAL2")
             });
 
         }
@@ -131,7 +141,7 @@ namespace TheStorageERP
             svgMapControl.Layers.Add(new VectorItemsLayer
             {
                 Data = adapter,
-                Colorizer = CreatorColorizer()
+                Colorizer = CreatorColorizer(doubleList1, "VAL3")
             });
 
         }

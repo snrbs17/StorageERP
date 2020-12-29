@@ -253,6 +253,7 @@
     </Compile>
     <None Include="SvgFile\Seoul.dbf" />
     <None Include="SvgFile\Seoul.shp" />
+    <None Include="SvgFile\Seoul2.dbf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

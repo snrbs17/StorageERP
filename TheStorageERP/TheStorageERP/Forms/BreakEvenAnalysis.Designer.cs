@@ -39,6 +39,16 @@ namespace TheStorageERP.Forms
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.vGridControl1 = new DevExpress.XtraVerticalGrid.VGridControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.vGridControl2 = new DevExpress.XtraVerticalGrid.VGridControl();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.infoSummarizedBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.row_Date = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowGrossProfit1 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowVariableCost = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
+            this.rowFixedCost = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowInfoId = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowSales = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowOtherRevenues = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
@@ -53,16 +63,6 @@ namespace TheStorageERP.Forms
             this.rowMaintenance = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowAdvertising = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             this.rowOtherExpenses = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.vGridControl2 = new DevExpress.XtraVerticalGrid.VGridControl();
-            this.infoSummarizedBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.row_Date = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowGrossProfit1 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowVariableCost = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.rowFixedCost = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.infoReorganizedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.infoSummarizedBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.accountInfoDaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -157,6 +157,103 @@ namespace TheStorageERP.Forms
             this.vGridControl1.Size = new System.Drawing.Size(241, 290);
             this.vGridControl1.TabIndex = 2;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.chartControl1);
+            this.panelControl1.Controls.Add(this.chartControl2);
+            this.panelControl1.Location = new System.Drawing.Point(259, 12);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(884, 376);
+            this.panelControl1.TabIndex = 4;
+            // 
+            // vGridControl2
+            // 
+            this.vGridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.vGridControl2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.vGridControl2.DataSource = this.infoSummarizedBindingSource2;
+            this.vGridControl2.Location = new System.Drawing.Point(12, 394);
+            this.vGridControl2.Name = "vGridControl2";
+            this.vGridControl2.Rows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
+            this.row_Date,
+            this.rowGrossProfit1,
+            this.rowVariableCost,
+            this.rowFixedCost});
+            this.vGridControl2.Size = new System.Drawing.Size(1126, 150);
+            this.vGridControl2.TabIndex = 5;
+            this.vGridControl2.SelectedChanged += new DevExpress.XtraVerticalGrid.Events.SelectedChangedHandler(this.vGridControl2_SelectedChanged);
+            this.vGridControl2.MouseCaptureChanged += new System.EventHandler(this.vGridControl2_MouseCaptureChanged);
+            this.vGridControl2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.vGridControl2_Click);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(12, 25);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(69, 19);
+            this.radioButton2.TabIndex = 8;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Month";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(12, 49);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(76, 19);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Quarter";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(98, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 58);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "View_Report";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // infoSummarizedBindingSource2
+            // 
+            this.infoSummarizedBindingSource2.DataSource = typeof(TheStorageERP.Entities.InfoSummarized);
+            // 
+            // row_Date
+            // 
+            this.row_Date.Height = 27;
+            this.row_Date.Name = "row_Date";
+            this.row_Date.Properties.Caption = "Date";
+            this.row_Date.Properties.FieldName = "_Date";
+            // 
+            // rowGrossProfit1
+            // 
+            this.rowGrossProfit1.Height = 35;
+            this.rowGrossProfit1.Name = "rowGrossProfit1";
+            this.rowGrossProfit1.Properties.Caption = "Gross Profit";
+            this.rowGrossProfit1.Properties.FieldName = "GrossProfit";
+            // 
+            // rowVariableCost
+            // 
+            this.rowVariableCost.Height = 42;
+            this.rowVariableCost.Name = "rowVariableCost";
+            this.rowVariableCost.Properties.Caption = "Variable Cost";
+            this.rowVariableCost.Properties.FieldName = "VariableCost";
+            // 
+            // rowFixedCost
+            // 
+            this.rowFixedCost.Height = 33;
+            this.rowFixedCost.Name = "rowFixedCost";
+            this.rowFixedCost.Properties.Caption = "Fixed Cost";
+            this.rowFixedCost.Properties.FieldName = "FixedCost";
+            // 
             // rowInfoId
             // 
             this.rowInfoId.Name = "rowInfoId";
@@ -246,103 +343,6 @@ namespace TheStorageERP.Forms
             this.rowOtherExpenses.Properties.Caption = "Other Expenses";
             this.rowOtherExpenses.Properties.FieldName = "OtherExpenses";
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl1.Controls.Add(this.chartControl1);
-            this.panelControl1.Controls.Add(this.chartControl2);
-            this.panelControl1.Location = new System.Drawing.Point(259, 12);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(884, 376);
-            this.panelControl1.TabIndex = 4;
-            // 
-            // vGridControl2
-            // 
-            this.vGridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.vGridControl2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.vGridControl2.DataSource = this.infoSummarizedBindingSource2;
-            this.vGridControl2.Location = new System.Drawing.Point(12, 394);
-            this.vGridControl2.Name = "vGridControl2";
-            this.vGridControl2.Rows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
-            this.row_Date,
-            this.rowGrossProfit1,
-            this.rowVariableCost,
-            this.rowFixedCost});
-            this.vGridControl2.Size = new System.Drawing.Size(1126, 150);
-            this.vGridControl2.TabIndex = 5;
-            this.vGridControl2.SelectedChanged += new DevExpress.XtraVerticalGrid.Events.SelectedChangedHandler(this.vGridControl2_SelectedChanged);
-            this.vGridControl2.MouseCaptureChanged += new System.EventHandler(this.vGridControl2_MouseCaptureChanged);
-            this.vGridControl2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.vGridControl2_Click);
-            // 
-            // infoSummarizedBindingSource2
-            // 
-            this.infoSummarizedBindingSource2.DataSource = typeof(TheStorageERP.Entities.InfoSummarized);
-            // 
-            // row_Date
-            // 
-            this.row_Date.Height = 27;
-            this.row_Date.Name = "row_Date";
-            this.row_Date.Properties.Caption = "Date";
-            this.row_Date.Properties.FieldName = "_Date";
-            // 
-            // rowGrossProfit1
-            // 
-            this.rowGrossProfit1.Height = 35;
-            this.rowGrossProfit1.Name = "rowGrossProfit1";
-            this.rowGrossProfit1.Properties.Caption = "Gross Profit";
-            this.rowGrossProfit1.Properties.FieldName = "GrossProfit";
-            // 
-            // rowVariableCost
-            // 
-            this.rowVariableCost.Height = 42;
-            this.rowVariableCost.Name = "rowVariableCost";
-            this.rowVariableCost.Properties.Caption = "Variable Cost";
-            this.rowVariableCost.Properties.FieldName = "VariableCost";
-            // 
-            // rowFixedCost
-            // 
-            this.rowFixedCost.Height = 33;
-            this.rowFixedCost.Name = "rowFixedCost";
-            this.rowFixedCost.Properties.Caption = "Fixed Cost";
-            this.rowFixedCost.Properties.FieldName = "FixedCost";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 25);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(69, 19);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Month";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 49);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(76, 19);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Quarter";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(98, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 58);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "View_Report";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // infoReorganizedBindingSource
             // 
             this.infoReorganizedBindingSource.DataSource = typeof(TheStorageERP.Entities.InfoReorganized);
@@ -371,7 +371,7 @@ namespace TheStorageERP.Forms
             this.Controls.Add(this.vGridControl1);
             this.Controls.Add(this.panelControl1);
             this.Name = "BreakEvenAnalysis";
-            this.Text = "BreakEvenAnalysis";
+            this.Text = "      ";
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
