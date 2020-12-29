@@ -133,7 +133,7 @@ namespace TheStorageERP
             this.svgMapControl.TabIndex = 12;
             this.svgMapControl.ZoomLevel = 1.1D;
             this.vectorItemsLayer1.Data = this.shapefileDataAdapter1;
-            this.shapefileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\StorageERP\\Seoul.shp", System.UriKind.Absolute);
+            //this.shapefileDataAdapter1.FileUri = new System.Uri("C:\\Users\\kccistc\\Desktop\\StorageERP\\Seoul.shp", System.UriKind.Absolute);
             // 
             // labelControl1
             // 
