@@ -1,16 +1,11 @@
-﻿using DevExpress.XtraMap;
+﻿using DbfDataReader;
+using DevExpress.XtraMap;
 using DevExpress.XtraTreeMap;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TheStorageERP.Client;
 
 namespace TheStorageERP
 {
@@ -31,18 +26,12 @@ namespace TheStorageERP
         {
             base.OnLoad(e);
 
-            fakeDBs.Add(new fakeDB() { Name = "강서구", Sale = 1 });
-            fakeDBs.Add(new fakeDB() { Name = "강남구", Sale = 5 });
-            fakeDBs.Add(new fakeDB() { Name = "서초구", Sale = 10 });
-            fakeDBs.Add(new fakeDB() { Name = "강북구", Sale = 20 });
-            fakeDBs.Add(new fakeDB() { Name = "강동구", Sale = 15 });
-            fakeDBs.Add(new fakeDB() { Name = "종로구", Sale = 7 });
-            fakeDBs.Add(new fakeDB() { Name = "노원구", Sale = 40 });
+            fakeDBs.AddRange(GetFakeDBs());
 
             svgMapControl.CenterPoint = new GeoPoint(37.51243, 126.96995);
             svgMapControl.ZoomLevel = 10;
 
-            CreateDB(fakeDBs);
+            CreateDB(fakeDBs);//.OrderBy(x=>x.val1).Take(10).ToList());
 
 
             Uri baseUri = new Uri(System.Reflection.Assembly.GetExecutingAssembly().Location);
@@ -67,6 +56,38 @@ namespace TheStorageERP
 
         }
 
+        int i = 0;
+        private List<fakeDB> GetFakeDBs()
+        {
+            var fakeDBs = new List<fakeDB>();
+
+            var dbfPath = "../../SvgFile/Seoul.dbf";
+            List<int> list= new List<int>();
+
+            for(i =0; i<500; i++)
+            {
+                list.Add(i);
+            }
+
+            using (var dbf = new DbfTable(dbfPath, DbfDataReader.EncodingProvider.UTF8))
+            {
+                var dbfRecord = new DbfRecord(dbf);
+                i = 0;
+                while(dbf.Read(dbfRecord))//480번 반복
+                {
+                    fakeDB fakeDB = new fakeDB();
+                    fakeDB.emd_cd = int.Parse(dbfRecord.Values[0].ToString());
+                    fakeDB.eng = dbfRecord.Values[1].ToString();
+                    fakeDB.val1 = int.Parse(dbfRecord.Values[3].ToString());
+                    //fakeDB.val1 = list[i++];
+                    fakeDB.val2 = int.Parse(dbfRecord.Values[4].ToString());
+                    fakeDB.val3 = int.Parse(dbfRecord.Values[5].ToString());
+                    fakeDBs.Add(fakeDB);
+                }
+            }
+            return fakeDBs;
+        }
+
         private MapColorizer CreatorColorizer(double[] doubleList, string attribute)
         {
             ChoroplethColorizer colorizer = new ChoroplethColorizer();
@@ -76,8 +97,20 @@ namespace TheStorageERP
 
             colorizer.ValueProvider = new ShapeAttributeValueProvider() { AttributeName = attribute };
 
+            /*KeyColorColorizer colorizer = new KeyColorColorizer()
+            {
+                ItemKeyProvider = new AttributeItemKeyProvider() { AttributeName = "emd_cd" },
+                PredefinedColorSchema = PredefinedColorSchema.Palette
+            };
+
+            var list = GetFakeDBs();
+            foreach (var item in list)
+            {
+                colorizer.Keys.Add(new ColorizerKeyItem() { Key = item.emd_cd, Name = item.eng});
+            }*/
             return colorizer;
         }
+
 
         double[] doubleList2 ={11110000,
 11140000,11170000,11200000,11215000,11230000,11260000,11290000,11305000,11320000,11350000,11380000,11410000,11440000,11470000,11500000,11530000,11545000,11560000,11590000,11620000,11650000,11680000,11710000,11740000 };
@@ -94,8 +127,8 @@ namespace TheStorageERP
             TreeMapFlatDataAdapter adapter = new TreeMapFlatDataAdapter
             {
                 DataSource = fakeDBs,
-                LabelDataMember = "Name",
-                ValueDataMember = "Sale"
+                LabelDataMember = nameof(fakeDB.eng),
+                ValueDataMember = nameof(fakeDB.val1)
             };
 
             treeMapControl.DataAdapter = adapter;
@@ -121,7 +154,6 @@ namespace TheStorageERP
                 Data = adapter,
                 Colorizer = CreatorColorizer(doubleList1, "VAL1")
             });
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -167,8 +199,11 @@ namespace TheStorageERP
 
     public class fakeDB
     {
-        public string Name { get; set; }
-        public int Sale { get; set; }
+        public int emd_cd { get; set; }
+        public string eng { get; set; }
+        public int val1 { get; set; }
+        public int val2 { get; set; }
+        public int val3 { get; set; }
 
         //public fakeDB(string _name, int _sale)
         //{

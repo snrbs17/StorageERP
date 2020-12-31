@@ -279,5 +279,11 @@
     <Content Include="Picture\usecase.png" />
     <Content Include="SvgFile\828px-Map_Seoul-teukbyeolsi.svg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DbfDataReader-master\src\DbfDataReader\DbfDataReader.csproj">
+      <Project>{66392e6f-631d-4652-9dee-2ba21aa9dfb8}</Project>
+      <Name>DbfDataReader</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
